@@ -54,259 +54,7 @@
 {"@type":"Question","name":"DİDİ Otel Sapanca merkeze ve havalimanına ne kadar uzaklıkta?","acceptedAnswer":{"@type":"Answer","text":"Otel, Sapanca merkeze 3 km, İstanbul-Ankara otoyolu Sapanca gişelerine 500 m, Sakarya merkeze 15 km ve Sabiha Gökçen Havalimanı'na yaklaşık 95 km mesafededir."}},
 {"@type":"Question","name":"Kahvaltı fiyata dahil mi?","acceptedAnswer":{"@type":"Answer","text":"Evet, tüm konaklamalara zengin serpme kahvaltı dahildir."}}]}
 </script>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
---bone:#F4F0E8;--paper:#FBF9F4;--ink:#1A1916;--ink2:#56524A;--faint:#8B867B;
---line:rgba(26,25,22,.13);--line2:rgba(26,25,22,.07);
---green:#2E4A3C;--green2:#3C5E4D;--sand:#B5996C;--sand2:#C9B089;
---glass:rgba(251,249,244,.62);--glassBorder:rgba(255,255,255,.6);
---ease:cubic-bezier(.4,0,.1,1);--ease2:cubic-bezier(.22,1,.36,1);
---sf:'SF Pro Display','SF Pro Text',-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',system-ui,sans-serif;
---maxw:1340px;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bone);color:var(--ink);font-family:var(--sf);font-weight:400;line-height:1.55;
--webkit-font-smoothing:antialiased;letter-spacing:-.01em;overflow-x:hidden;max-width:100vw}
-img,canvas,video{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-h1,h2,h3,h4{font-weight:300;line-height:1.02;letter-spacing:-.03em}
-::selection{background:var(--green);color:#fff}
-.thin{font-weight:200}.med{font-weight:500}
-/* ── preloader ── */
-.pre{position:fixed;inset:0;z-index:9999;background:var(--bone);display:grid;place-items:center;transition:opacity .9s var(--ease),visibility .9s;
-animation:preSafety 0s linear 3.2s forwards}
-.pre.gone{opacity:0;visibility:hidden;animation:none}
-@keyframes preSafety{to{opacity:0;visibility:hidden}}
-.pre img{height:58px;opacity:0;animation:preIn 1s var(--ease) .1s forwards}
-@keyframes preIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.pre .bar{position:absolute;bottom:0;left:0;height:2px;width:0;background:var(--green);transition:width .3s linear}
-/* ── nav ── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;
-padding:22px clamp(18px,4vw,52px);transition:all .5s var(--ease)}
-.nav.scr{background:var(--glass);backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);
-padding-top:14px;padding-bottom:14px;border-bottom:1px solid var(--line2)}
-.nav-logo img{height:42px;width:auto;transition:height .5s var(--ease)}
-.nav-logo .logo-w{filter:brightness(0) invert(1)}
-.nav-logo .logo-n{display:none}
-.nav.scr .nav-logo .logo-w{display:none}
-.nav.scr .nav-logo .logo-n{display:block}
-.nav.scr .nav-logo img{height:34px}
-.nav-links{display:flex;align-items:center;gap:34px}
-.nav-links a{font-size:13px;font-weight:500;letter-spacing:.01em;color:#fff;opacity:.9;transition:opacity .3s}
-.nav.scr .nav-links a{color:var(--ink);opacity:.78}
-.nav-links a:hover{opacity:1}
-.nav-right{display:flex;align-items:center;gap:16px}
-.btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:0;
-padding:12px 24px;border-radius:100px;transition:all .45s var(--ease);cursor:pointer;border:1px solid transparent;white-space:nowrap}
-.btn-fill{background:var(--green);color:#fff}
-.btn-fill:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 12px 28px rgba(46,74,60,.28)}
-.btn-line{background:transparent;border-color:rgba(255,255,255,.5);color:#fff}
-.nav.scr .btn-line{border-color:var(--line);color:var(--ink)}
-.btn-line:hover{background:rgba(255,255,255,.14)}
-.nav.scr .btn-line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-.btn-ink{background:var(--ink);color:var(--bone)}.btn-ink:hover{background:var(--green);transform:translateY(-2px)}
-.burger{display:none;flex-direction:column;gap:5px;width:30px;height:24px;justify-content:center;cursor:pointer;background:none;border:0;z-index:210}
-.burger span{height:1.5px;background:#fff;transition:.4s var(--ease)}
-.nav.scr .burger span{background:var(--ink)}
-.burger.x span{background:var(--ink)}
-.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.burger.x span:nth-child(2){opacity:0}.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mob{position:fixed;inset:0;z-index:205;background:var(--paper);display:flex;flex-direction:column;justify-content:center;
-padding:0 34px;gap:2px;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
-.mob.open{opacity:1;visibility:visible}
-.mob a{font-size:32px;font-weight:300;letter-spacing:-.03em;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line2);
-opacity:0;transform:translateY(14px);transition:all .5s var(--ease)}
-.mob.open a{opacity:1;transform:none}
-.mob.open a:nth-child(1){transition-delay:.06s}.mob.open a:nth-child(2){transition-delay:.1s}.mob.open a:nth-child(3){transition-delay:.14s}
-.mob.open a:nth-child(4){transition-delay:.18s}.mob.open a:nth-child(5){transition-delay:.22s}.mob.open a:nth-child(6){transition-delay:.26s}
-/* ── scrub hero ── */
-.scrub{position:relative;height:360vh}
-.scrub-pin{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center}
-.scrub-pin canvas,.scrub-pin .fallimg,.scrub-pin .fallvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.scrub-pin .fallvid{display:none}
-.scrub-pin::after{content:"";position:absolute;inset:0;z-index:1;
-background:linear-gradient(180deg,rgba(18,20,16,.40) 0%,rgba(18,20,16,.10) 24%,rgba(18,20,16,.30) 58%,rgba(18,20,16,.86) 100%)}
-.hero-c{position:relative;z-index:2;align-self:end;text-align:center;color:#fff;padding:0 22px;width:100%;max-width:1100px;
-margin-bottom:clamp(78px,13vh,140px);text-shadow:0 2px 34px rgba(15,18,14,.55),0 1px 4px rgba(15,18,14,.45)}
-.hero-c::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:130%;height:280%;z-index:-1;
-background:radial-gradient(closest-side,rgba(15,18,14,.55),rgba(15,18,14,.28) 55%,transparent 78%);filter:blur(18px);pointer-events:none}
-.hero-kick{font-size:13px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;opacity:0;margin-bottom:24px;
-animation:fin 1.2s var(--ease) .4s forwards}
-.hero-c h1{font-size:clamp(46px,9.2vw,140px);font-weight:200;line-height:.92;letter-spacing:-.045em}
-.hero-c h1 span{display:block;opacity:0;transform:translateY(30px);animation:fin 1.3s var(--ease) forwards}
-.hero-c h1 span:nth-child(1){animation-delay:.5s}.hero-c h1 span:nth-child(2){animation-delay:.66s}
-.hero-sub{font-size:clamp(15px,1.7vw,19px);font-weight:400;opacity:0;margin-top:24px;letter-spacing:-.01em;color:rgba(255,255,255,.92);
-animation:fin 1.2s var(--ease) 1s forwards}
-.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px;opacity:0;animation:fin 1.2s var(--ease) 1.15s forwards}
-@keyframes fin{to{opacity:1;transform:none}}
-.hero-scrollhint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;color:#fff;font-size:11px;
-letter-spacing:.28em;text-transform:uppercase;opacity:.0;display:flex;flex-direction:column;align-items:center;gap:10px;
-animation:fin 1s var(--ease) 1.5s forwards}
-.hero-scrollhint .d{width:1px;height:42px;background:linear-gradient(#fff,transparent);animation:drop 2s var(--ease) infinite}
-@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-/* ── booking bar (luxury chain signature) ── */
-.book{position:relative;z-index:60;max-width:var(--maxw);margin:-46px auto 0;padding:0 clamp(18px,4vw,52px)}
-.book-card{background:var(--glass);backdrop-filter:blur(26px) saturate(180%);-webkit-backdrop-filter:blur(26px) saturate(180%);
-border:1px solid var(--glassBorder);border-radius:14px;box-shadow:0 24px 60px rgba(26,25,22,.16);
-display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:8px;padding:14px;align-items:end}
-.book-f{display:flex;flex-direction:column;gap:7px;padding:8px 14px;border-right:1px solid var(--line2)}
-.book-f:nth-child(3){border-right:0}
-.book-f{min-width:0}
-.book-f label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
-.book-f input,.book-f select{width:100%;max-width:100%;border:0;background:transparent;font-family:var(--sf);font-size:15px;font-weight:500;color:var(--ink);padding:2px 0;cursor:pointer}
-.book-f input:focus,.book-f select:focus{outline:none}
-.book .btn-fill{height:100%;padding:16px 28px;border-radius:10px}
-@media(max-width:780px){.book{margin-top:-30px}.book-card{grid-template-columns:1fr 1fr;gap:6px}
-.book-f{border-right:0;border-bottom:1px solid var(--line2)}.book .btn-fill{grid-column:1/3;justify-content:center;margin-top:4px}}
-/* ── general ── */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(18px,4vw,52px)}
-.sec{padding:clamp(80px,12vh,160px) 0}
-.kick{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);display:flex;align-items:center;gap:12px;margin-bottom:26px}
-.kick::before{content:"";width:30px;height:1px;background:var(--sand)}
-.dh{font-size:clamp(32px,5.2vw,68px);font-weight:200;line-height:1.0;letter-spacing:-.04em}
-.dh b{font-weight:400;font-style:normal}
-.lead{font-size:clamp(16px,1.7vw,20px);font-weight:300;color:var(--ink2);line-height:1.6;letter-spacing:-.01em}
-.rev{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease2),transform 1s var(--ease2);transition-delay:calc(var(--i,0)*90ms)}
-.rev.in{opacity:1;transform:none}
-/* statement */
-.statement{text-align:center}
-.statement .dh{max-width:18ch;margin:0 auto}
-.stat-row{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(28px,6vw,90px);margin-top:64px;padding-top:46px;border-top:1px solid var(--line)}
-.stat-row .it .n{font-size:clamp(30px,3.4vw,46px);font-weight:200;letter-spacing:-.03em}
-.stat-row .it .l{font-size:13px;color:var(--faint);margin-top:8px;letter-spacing:.02em}
-/* privileges (minimalist) */
-.feat{background:var(--paper)}
-.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:54px;border-top:1px solid var(--line)}
-.feat-it{display:flex;gap:18px;padding:36px 34px 38px 0;border-bottom:1px solid var(--line)}
-.feat-it:not(:nth-child(3n)){border-right:1px solid var(--line);padding-right:34px}
-.feat-it:not(:nth-child(3n)) > div{padding-right:0}
-.feat-it .fn{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--sand);flex-shrink:0;padding-top:3px}
-.feat-it h4{font-size:21px;font-weight:400;letter-spacing:-.02em;margin-bottom:9px}
-.feat-it p{font-size:14px;color:var(--ink2);font-weight:300;line-height:1.55}
-@media(max-width:860px){.feat-grid{grid-template-columns:1fr 1fr}.feat-it:nth-child(2n){border-right:0}.feat-it:not(:nth-child(2n)){border-right:1px solid var(--line)}}
-@media(max-width:560px){.feat-grid{grid-template-columns:1fr}.feat-it,.feat-it:not(:nth-child(3n)){border-right:0;padding-right:0}}
-/* rooms editorial */
-.room{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(28px,5vw,84px);padding:clamp(40px,7vh,90px) 0;border-top:1px solid var(--line)}
-.room:nth-child(even) .room-txt{order:2}
-.room-media{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:5/4}
-.room-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
-.room:hover .room-media img{transform:scale(1.05)}
-.room-idx{font-size:13px;font-weight:600;letter-spacing:.2em;color:var(--sand);margin-bottom:16px}
-.room-txt h3{font-size:clamp(28px,4vw,52px);font-weight:200;letter-spacing:-.035em;margin-bottom:16px}
-.room-feat{display:flex;gap:22px;margin:22px 0 28px;flex-wrap:wrap}
-.room-feat span{font-size:14px;color:var(--ink2);display:flex;align-items:center;gap:7px}
-.room-price{font-size:15px;color:var(--ink);margin-bottom:24px}
-.room-price b{font-weight:500}
-.room-cta{display:flex;gap:12px;flex-wrap:wrap}
-/* experiences */
-.exp{background:var(--paper)}
-.exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,1.6vw,22px);margin-top:54px}
-.exp-card{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:16/11;cursor:pointer}
-.exp-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease)}
-.exp-card:hover img{transform:scale(1.06)}
-.exp-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,18,14,.66),rgba(15,18,14,0) 55%)}
-.exp-card .cap{position:absolute;left:26px;bottom:24px;z-index:2;color:#fff}
-.exp-card .cap h4{font-size:clamp(22px,2.4vw,30px);font-weight:300;letter-spacing:-.03em}
-.exp-card .cap p{font-size:14px;opacity:.85;margin-top:4px;font-weight:300}
-/* parallax break (second cinematic moment) */
-.break{position:relative;height:84vh;min-height:520px;overflow:hidden;display:grid;place-items:center}
-.break-bg{position:absolute;inset:-12% 0;z-index:0;will-change:transform}
-.break-bg img{width:100%;height:100%;object-fit:cover}
-.break::after{content:"";position:absolute;inset:0;background:rgba(15,18,14,.34)}
-.break-c{position:relative;z-index:2;text-align:center;color:#fff;padding:0 24px;max-width:900px}
-.break-c h2{font-size:clamp(30px,5.4vw,72px);font-weight:200;letter-spacing:-.04em;line-height:1.0}
-/* mare */
-.mare-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,80px);align-items:center}
-.mare-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.mare-imgs a{border-radius:6px;overflow:hidden;aspect-ratio:3/4}
-.mare-imgs a:first-child{grid-column:1/3;aspect-ratio:16/10}
-.mare-imgs img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
-.mare-imgs a:hover img{transform:scale(1.05)}
-.tags{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
-.tags span{font-size:13px;color:var(--ink2);padding:8px 16px;border:1px solid var(--line);border-radius:100px}
-/* location */
-.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
-.dist{list-style:none;margin-top:30px}
-.dist li{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
-.dist li .p{font-size:16px}.dist li .v{font-size:24px;font-weight:200;color:var(--green);letter-spacing:-.03em}
-.loc-media{border-radius:6px;overflow:hidden;aspect-ratio:1/1;position:relative}
-.loc-media img{width:100%;height:100%;object-fit:cover}
-.loc-media .badge{position:absolute;left:24px;bottom:24px;color:#fff;z-index:2}
-.loc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,18,14,.6),transparent 50%)}
-.loc-media .badge .s{font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
-.loc-media .badge .b{font-size:22px;font-weight:300;margin-top:5px}
-/* gallery */
-.gal{columns:3;column-gap:14px;margin-top:50px}
-.gal a{display:block;margin-bottom:14px;border-radius:6px;overflow:hidden;break-inside:avoid;cursor:pointer}
-.gal img{width:100%;transition:transform 1s var(--ease)}
-.gal a:hover img{transform:scale(1.05)}
-/* cta */
-.cta{background:var(--green);color:#fff;text-align:center}
-.cta .dh{color:#fff;max-width:20ch;margin:0 auto 30px}
-.cta .lead{color:rgba(255,255,255,.8)}
-.cta .btn-fill{background:#fff;color:var(--green)}.cta .btn-fill:hover{background:var(--bone)}
-.cta .btn-line{border-color:rgba(255,255,255,.4);color:#fff}.cta .btn-line:hover{background:rgba(255,255,255,.12)}
-/* contact */
-.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px)}
-.cline{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
-.cline svg{width:20px;height:20px;color:var(--green);flex-shrink:0;margin-top:3px}
-.cline .l{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:5px}
-.cline .v{font-size:17px}
-.form{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:34px}
-.form .f{margin-bottom:16px}
-.form label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:7px}
-.form input,.form textarea{width:100%;background:var(--bone);border:1px solid var(--line);border-radius:8px;padding:13px 15px;
-font-family:var(--sf);font-size:15px;color:var(--ink);transition:border-color .3s}
-.form input:focus,.form textarea:focus{outline:none;border-color:var(--green)}
-.form textarea{resize:vertical;min-height:92px}
-/* footer */
-.foot{background:var(--ink);color:var(--bone);padding:72px 0 34px}
-.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;margin-bottom:48px}
-.foot img{height:46px;margin-bottom:18px;filter:brightness(0) invert(1)}
-.foot p{color:rgba(244,240,232,.55);font-size:14px;font-weight:300;max-width:34ch}
-.foot h5{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,240,232,.5);margin-bottom:18px}
-.foot ul{list-style:none}.foot li{margin-bottom:11px}
-.foot li a{color:rgba(244,240,232,.7);font-size:14px;transition:color .3s}.foot li a:hover{color:#fff}
-.foot-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);
-font-size:13px;color:rgba(244,240,232,.4)}
-/* wa + progress + lightbox */
-.wa{position:fixed;bottom:24px;right:24px;z-index:150;width:56px;height:56px;border-radius:50%;background:#25D366;
-display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.4);transition:transform .4s var(--ease)}
-.wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;fill:#fff}
-.prog{position:fixed;top:0;left:0;height:2px;background:var(--green);z-index:300;width:0}
-.lb{position:fixed;inset:0;z-index:500;background:rgba(20,20,18,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-display:none;align-items:center;justify-content:center;padding:30px}
-.lb.open{display:flex}
-.lb img{max-width:92vw;max-height:88vh;border-radius:6px}
-.lb button{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;
-width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:grid;place-items:center}
-.lb .x{top:24px;right:26px}.lb .pv{left:24px;top:50%;transform:translateY(-50%)}.lb .nx{right:24px;top:50%;transform:translateY(-50%)}
-@media(max-width:960px){
-.nav-links{display:none}.burger{display:flex}
-.room,.mare-grid,.loc-grid,.con-grid{grid-template-columns:1fr}
-.room:nth-child(even) .room-txt{order:0}.room-media{order:-1}
-.exp-grid{grid-template-columns:1fr}.gal{columns:2}.foot-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:760px){
-.scrub{height:100svh}.scrub-pin{position:relative;height:100svh}
-#heroCanvas{display:none!important}.scrub-pin .fallvid{display:block}.scrub-pin .fallimg{display:none}
-.hero-c{margin-bottom:clamp(56px,9vh,90px)}.hero-scrollhint{display:none}
-.nav-right .btn-fill{display:none}
-.sec{padding:clamp(64px,9vh,90px) 0}
-}
-@media(max-width:600px){
-.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:30px 18px;text-align:center}
-.gal{columns:1}.foot-grid{grid-template-columns:1fr}
-.nav .btn-line{display:none}
-.hero-cta{width:100%}.hero-cta .btn{flex:1;justify-content:center}
-.book-card{padding:10px;grid-template-columns:1fr}.book-f{border-right:0;border-bottom:1px solid var(--line2)}
-.book-f:last-of-type{border-bottom:0}.book .btn-fill{grid-column:auto}
-}
-@media(prefers-reduced-motion:reduce){
-*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-.rev{opacity:1;transform:none}.hero-c h1 span,.hero-kick,.hero-sub,.hero-scrollhint{opacity:1;animation:none}
-}
-</style>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 <div class="prog" id="prog"></div>
@@ -392,7 +140,7 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 <div class="room-txt"><div class="room-idx">01 — SÜİT</div><h3>King Suit Oda</h3>
 <p class="lead">En geniş suitimiz; king yatak, ferah oturma alanı ve zarif detaylar. İki misafir için.</p>
 <div class="room-feat"><span>2 Misafir</span><span>King Yatak</span><span>Minibar · WiFi · Klima</span></div>
-<div class="room-cta"><a href="https://sapancadidiotel.com/rooms/4" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=4" class="btn btn-ink">Bu Odayı Seç</a></div></div>
+<div class="room-cta"><a href="/odalar/king-suit/" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=4" class="btn btn-ink">Bu Odayı Seç</a></div></div>
 <div class="room-media"><picture><source type="image/avif" srcset="/assets/web/rooms/king-suit/00-800.avif 800w,/assets/web/rooms/king-suit/00-1280.avif 1280w" sizes="(max-width:960px) 100vw,50vw"><img src="/assets/web/rooms/king-suit/00.jpg" loading="lazy" decoding="async" width="1280" height="960" alt="King Suit Oda"></picture></div>
 </article>
 
@@ -400,7 +148,7 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 <div class="room-txt"><div class="room-idx">02 — SÜİT</div><h3>Junior Suit Oda</h3>
 <p class="lead">Şık ve dengeli bir suit; konfor ile zarafeti bir araya getirir. İki misafir için.</p>
 <div class="room-feat"><span>2 Misafir</span><span>King Yatak</span><span>Minibar · WiFi · Klima</span></div>
-<div class="room-cta"><a href="https://sapancadidiotel.com/rooms/5" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=5" class="btn btn-ink">Bu Odayı Seç</a></div></div>
+<div class="room-cta"><a href="/odalar/junior-suit/" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=5" class="btn btn-ink">Bu Odayı Seç</a></div></div>
 <div class="room-media"><picture><source type="image/avif" srcset="/assets/web/rooms/junior-suit/00-800.avif 800w,/assets/web/rooms/junior-suit/00-1280.avif 1280w" sizes="(max-width:960px) 100vw,50vw"><img src="/assets/web/rooms/junior-suit/00.jpg" loading="lazy" decoding="async" width="1280" height="960" alt="Junior Suit Oda"></picture></div>
 </article>
 
@@ -408,7 +156,7 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 <div class="room-txt"><div class="room-idx">03 — ODA</div><h3>Superior Oda</h3>
 <p class="lead">Konforlu ve aydınlık superior odamız; kısa ya da uzun konaklamalar için ideal.</p>
 <div class="room-feat"><span>2 Misafir</span><span>Konforlu</span><span>Minibar · WiFi · Klima</span></div>
-<div class="room-cta"><a href="https://sapancadidiotel.com/rooms/6" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=6" class="btn btn-ink">Bu Odayı Seç</a></div></div>
+<div class="room-cta"><a href="/odalar/superior/" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=6" class="btn btn-ink">Bu Odayı Seç</a></div></div>
 <div class="room-media"><picture><source type="image/avif" srcset="/assets/web/rooms/superior/00-800.avif 800w,/assets/web/rooms/superior/00-1280.avif 1280w" sizes="(max-width:960px) 100vw,50vw"><img src="/assets/web/rooms/superior/00.jpg" loading="lazy" decoding="async" width="1280" height="960" alt="Superior Oda"></picture></div>
 </article>
 
@@ -416,7 +164,7 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 <div class="room-txt"><div class="room-idx">04 — AİLE</div><h3>Aile Odası</h3>
 <p class="lead">Bağlantılı aile odamız; dört misafir için geniş ve pratik bir konaklama alanı.</p>
 <div class="room-feat"><span>4 Misafir</span><span>Bağlantılı</span><span>Minibar · WiFi · Klima</span></div>
-<div class="room-cta"><a href="https://sapancadidiotel.com/rooms/7" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=7" class="btn btn-ink">Bu Odayı Seç</a></div></div>
+<div class="room-cta"><a href="/odalar/aile/" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=7" class="btn btn-ink">Bu Odayı Seç</a></div></div>
 <div class="room-media"><picture><source type="image/avif" srcset="/assets/web/rooms/family/00-800.avif 800w,/assets/web/rooms/family/00-1280.avif 1280w" sizes="(max-width:960px) 100vw,50vw"><img src="/assets/web/rooms/family/00.jpg" loading="lazy" decoding="async" width="1280" height="960" alt="Aile Odası"></picture></div>
 </article>
 
@@ -424,7 +172,7 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 <div class="room-txt"><div class="room-idx">05 — ODA</div><h3>Triple Oda</h3>
 <p class="lead">Üç misafir için ferah ve konforlu seçenek; arkadaş grupları ve aileler için ideal.</p>
 <div class="room-feat"><span>3 Misafir</span><span>Ferah</span><span>Minibar · WiFi · Klima</span></div>
-<div class="room-cta"><a href="https://sapancadidiotel.com/rooms/8" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=8" class="btn btn-ink">Bu Odayı Seç</a></div></div>
+<div class="room-cta"><a href="/odalar/triple/" class="btn btn-line" style="border-color:var(--line);color:var(--ink)">İncele</a><a href="https://sapancadidiotel.com/reservation/book?room=8" class="btn btn-ink">Bu Odayı Seç</a></div></div>
 <div class="room-media"><picture><source type="image/avif" srcset="/assets/web/rooms/triple/00-800.avif 800w,/assets/web/rooms/triple/00-1280.avif 1280w" sizes="(max-width:960px) 100vw,50vw"><img src="/assets/web/rooms/triple/00.jpg" loading="lazy" decoding="async" width="1280" height="960" alt="Triple Oda"></picture></div>
 </article>
 </div></section>
@@ -595,6 +343,13 @@ document.getElementById('lbPrev').addEventListener('click',()=>go(-1));
 document.getElementById('lbNext').addEventListener('click',()=>go(1));
 lb.addEventListener('click',e=>{if(e.target===lb)close()});
 addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1)});
+// booking dates: prefill today / tomorrow so inputs read as real, clickable dates
+(function(){const i=document.getElementById('bIn'),o=document.getElementById('bOut');if(!i||!o)return;
+  const iso=x=>x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');
+  const t=new Date();const tm=new Date();tm.setDate(tm.getDate()+1);
+  i.min=iso(t);i.value=iso(t);o.min=iso(tm);o.value=iso(tm);
+  i.addEventListener('change',()=>{const n=new Date(i.value);if(isNaN(n))return;n.setDate(n.getDate()+1);o.min=iso(n);if(!o.value||new Date(o.value)<=new Date(i.value))o.value=iso(n);});
+})();
 // booking bar -> OTELYONET
 function book(e){e.preventDefault();const i=document.getElementById('bIn').value,o=document.getElementById('bOut').value,g=document.getElementById('bGuest').value;
   let u='https://sapancadidiotel.com/reservation/book';const q=[];if(i)q.push('check_in='+i);if(o)q.push('check_out='+o);if(g)q.push('adult='+g);if(q.length)u+='?'+q.join('&');
