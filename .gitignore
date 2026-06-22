@@ -1,0 +1,10 @@
+# original high-res sources (kept local; only assets/web/ optimized derivatives are deployed)
+assets/editorial/
+assets/photos/
+assets/rooms/
+assets/gallery/
+assets/hero/
+assets/video/hero.mp4
+.DS_Store
+__pycache__/
+*.pyc
