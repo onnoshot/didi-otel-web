@@ -9,3 +9,5 @@ assets/video/hero.mp4
 __pycache__/
 *.pyc
 .vercel
+assets/video/hero-2k.mp4
+assets/video/hero-web.mp4
