@@ -8,3 +8,4 @@ assets/video/hero.mp4
 .DS_Store
 __pycache__/
 *.pyc
+.vercel
