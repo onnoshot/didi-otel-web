@@ -270,9 +270,10 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 .amlist svg{width:17px;height:17px;color:var(--green);flex-shrink:0}
 .rside .btn{width:100%;justify-content:center}
 .rside .note{font-size:13px;color:var(--faint);text-align:center;margin-top:12px}
-.rgal{columns:3;column-gap:14px}
-.rgal a{display:block;margin-bottom:14px;border-radius:6px;overflow:hidden;break-inside:avoid;cursor:pointer}
-.rgal img{width:100%;transition:transform 1s var(--ease)}
+.rgal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rgal a{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;cursor:pointer}
+.rgal a>picture{display:block;width:100%;height:100%}
+.rgal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
 .rgal a:hover img{transform:scale(1.05)}
 .others{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
 .ocard{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5}
@@ -280,5 +281,5 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 .ocard:hover img{transform:scale(1.06)}
 .ocard::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,20,16,.7),transparent 55%)}
 .ocard span{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-size:16px;font-weight:400;letter-spacing:-.02em}
-@media(max-width:960px){.rdetail{grid-template-columns:1fr}.rside{position:static}.rgal{columns:2}.others{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.rgal{columns:1}.others{grid-template-columns:1fr 1fr}.rmeta-row{gap:16px}}
+@media(max-width:960px){.rdetail{grid-template-columns:1fr}.rside{position:static}.rgal{grid-template-columns:repeat(2,1fr)}.others{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.rgal{grid-template-columns:repeat(2,1fr);gap:10px}.others{grid-template-columns:1fr 1fr}.rmeta-row{gap:16px}}
