@@ -283,3 +283,9 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 .ocard span{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-size:16px;font-weight:400;letter-spacing:-.02em}
 @media(max-width:960px){.rdetail{grid-template-columns:1fr}.rside{position:static}.rgal{grid-template-columns:repeat(2,1fr)}.others{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.rgal{grid-template-columns:repeat(2,1fr);gap:10px}.others{grid-template-columns:1fr 1fr}.rmeta-row{gap:16px}}
+
+/* footer credits (ajans + otelyonet) */
+.foot-credits{display:flex;justify-content:space-between;gap:10px 30px;flex-wrap:wrap;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(244,240,232,.55)}
+.foot-credits a{color:rgba(244,240,232,.85);text-decoration:underline;text-underline-offset:2px;transition:color .3s}
+.foot-credits a:hover{color:#fff}
+.foot-credits+.foot-bot{border-top:0;padding-top:16px}
