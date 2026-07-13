@@ -147,7 +147,7 @@ def build(r):
 <link rel="icon" type="image/png" href="/assets/brand/adidilogo.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb_ld,ensure_ascii=False)}</script>
-<link rel="stylesheet" href="/css/site.css?v=4">
+<link rel="stylesheet" href="/css/site.css?v=5">
 </head>
 <body>
 <div class="prog" id="prog" style="display:none"></div>

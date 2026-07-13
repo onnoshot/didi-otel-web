@@ -285,3 +285,65 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 .foot-credits a{color:rgba(244,240,232,.85);text-decoration:underline;text-underline-offset:2px;transition:color .3s}
 .foot-credits a:hover{color:#fff}
 .foot-credits+.foot-bot{border-top:0;padding-top:16px}
+
+/* ── blog ── */
+.blog-hero{padding:150px 0 40px;text-align:center}
+.blog-hero .dh{max-width:16ch;margin:14px auto 0}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:20px}
+.bcard{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.bcard:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(26,25,22,.12)}
+.bcard-img{aspect-ratio:16/10;overflow:hidden}
+.bcard-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.bcard:hover .bcard-img img{transform:scale(1.05)}
+.bcard-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+.bcard .cat{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin-bottom:12px}
+.bcard h3{font-size:21px;font-weight:400;letter-spacing:-.02em;line-height:1.15;margin-bottom:10px}
+.bcard p{font-size:14px;color:var(--ink2);font-weight:300;line-height:1.55;flex:1}
+.bcard .more{margin-top:16px;font-size:13px;font-weight:500;color:var(--green)}
+/* article */
+.article{max-width:760px;margin:0 auto;padding:0 clamp(18px,4vw,52px)}
+.art-hero{position:relative;height:56vh;min-height:420px;overflow:hidden;display:flex;align-items:flex-end;margin-bottom:0}
+.art-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.art-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,20,16,.35),rgba(18,20,16,.05) 40%,rgba(18,20,16,.8) 100%)}
+.art-hero-c{position:relative;z-index:2;color:#fff;max-width:900px;margin:0 auto;width:100%;padding:0 clamp(18px,4vw,52px) 44px}
+.art-hero-c .cat{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sand2);margin-bottom:14px}
+.art-hero-c h1{font-size:clamp(28px,4.4vw,50px);font-weight:300;letter-spacing:-.03em;line-height:1.06;max-width:22ch}
+.art-meta{display:flex;gap:18px;font-size:13px;color:rgba(255,255,255,.85);margin-top:16px}
+.art-body{padding:clamp(40px,6vh,64px) 0 20px;font-size:17px;line-height:1.75;color:#2b2924}
+.art-body .lead-p{font-size:20px;line-height:1.6;color:var(--ink);font-weight:300;margin-bottom:28px}
+.art-body h2{font-size:clamp(22px,3vw,30px);font-weight:400;letter-spacing:-.02em;margin:40px 0 14px;color:var(--ink)}
+.art-body h3{font-size:20px;font-weight:500;margin:26px 0 10px}
+.art-body p{margin-bottom:18px}
+.art-body ul,.art-body ol{margin:0 0 18px 22px}.art-body li{margin-bottom:8px}
+.art-body a{color:var(--green);text-decoration:underline;text-underline-offset:2px;font-weight:500}
+.art-body strong{font-weight:600;color:var(--ink)}
+.art-body table{width:100%;border-collapse:collapse;margin:8px 0 24px;font-size:15px}
+.art-body th,.art-body td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+.art-body th{font-weight:600;color:var(--ink);background:var(--paper)}
+.art-body td:last-child,.art-body th:last-child{text-align:right;white-space:nowrap;color:var(--green)}
+.art-body blockquote{border-left:2px solid var(--sand);padding:6px 0 6px 22px;margin:24px 0;font-size:20px;font-weight:300;color:var(--ink2);font-style:italic}
+.art-faq{margin-top:36px;border-top:1px solid var(--line);padding-top:30px}
+.art-faq h2{margin-top:0}
+.art-faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.art-faq summary{font-size:17px;font-weight:500;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px;color:var(--ink)}
+.art-faq summary::-webkit-details-marker{display:none}
+.art-faq summary::after{content:"+";color:var(--green);font-size:22px;line-height:1}
+.art-faq details[open] summary::after{content:"−"}
+.art-faq details p{margin:12px 0 2px;color:var(--ink2);font-size:16px}
+.art-cta{background:var(--green);color:#fff;border-radius:14px;padding:38px;text-align:center;margin:44px 0}
+.art-cta h3{font-size:clamp(22px,3vw,28px);font-weight:300;margin-bottom:8px}
+.art-cta p{color:rgba(255,255,255,.82);margin-bottom:22px}
+.art-cta .btn-fill{background:#fff;color:var(--green)}.art-cta .btn-fill:hover{background:var(--bone)}
+@media(max-width:960px){.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.blog-grid{grid-template-columns:1fr}.art-body{font-size:16px}}
+
+/* blog: kalıcı buzlu nav (light zeminlerde okunur) */
+.nav.scr-force{background:var(--glass);backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);padding-top:14px;padding-bottom:14px;border-bottom:1px solid var(--line2)}
+.nav.scr-force .nav-links a{color:var(--ink);opacity:.78}
+.nav.scr-force .nav-links a:hover{opacity:1}
+.nav.scr-force .btn-line{border-color:var(--line);color:var(--ink)}
+.nav.scr-force .btn-line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.nav.scr-force .nav-logo .logo-w{display:none}
+.nav.scr-force .nav-logo .logo-n{display:block}
+.nav.scr-force .nav-logo img{height:34px}
+.nav.scr-force .burger span{background:var(--ink)}

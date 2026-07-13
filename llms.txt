@@ -4,10 +4,21 @@
 
 ## Temel Bilgiler
 - [Odalar ve Suitler](https://sapancadidiotel.com/#odalar): King Suit, Junior Suit, Superior, Aile ve Triple oda tipleri; kapasite ve donanım.
-- [MARE Restoran](https://sapancadidiotel.com/#mare): Otel bahçesinde Akdeniz mutfağı ve deniz ürünleri; rezervasyon.
+- [Mare Gastro Restoran](https://sapancadidiotel.com/#mare): Otel bahçesinde Akdeniz mutfağı ve deniz ürünleri; rezervasyon.
 - [Havuz ve Bahçe](https://sapancadidiotel.com/#havuz): Sezonluk açık havuz, bahçe cabanaları, şezlonglar.
 - [Konum ve Ulaşım](https://sapancadidiotel.com/#konum): Adres, harita, havalimanı ve merkez mesafeleri.
 - [İletişim](https://sapancadidiotel.com/#iletisim): Telefon, WhatsApp, e-posta, giriş/çıkış saatleri.
+
+## Blog — Sapanca Gezi & Konaklama Rehberi
+- [Sapanca'da Gezilecek Yerler](https://sapancadidiotel.com/blog/sapancada-gezilecek-yerler/): Göl, Uzunkum Parkı, Maşukiye, Kartepe, Poyrazlar Gölü.
+- [İstanbul'a Yakın Doğa Kaçamağı](https://sapancadidiotel.com/blog/istanbula-yakin-doga-kacamagi/): İstanbul'a ~1,5 saat; hafta sonu rehberi.
+- [Sapanca'ya Nasıl Gidilir](https://sapancadidiotel.com/blog/sapancaya-nasil-gidilir/): Otoyol, tren, havalimanı mesafeleri.
+- [Maşukiye ve Kartepe Gezisi](https://sapancadidiotel.com/blog/masukiye-kartepe-gezi/): Günübirlik rotalar ve mesafeler.
+- [Sapanca'ya Hangi Mevsimde Gidilir](https://sapancadidiotel.com/blog/sapanca-hangi-mevsim-gidilir/): Dört mevsim rehberi.
+- [Sapanca Gölü Aktiviteler](https://sapancadidiotel.com/blog/sapanca-golu-aktiviteler/): Bisiklet, tekne, yürüyüş.
+- [Romantik Hafta Sonu](https://sapancadidiotel.com/blog/sapancada-romantik-hafta-sonu/) · [Ailecek Tatil](https://sapancadidiotel.com/blog/ailecek-sapanca-tatili/) · [Balayı](https://sapancadidiotel.com/blog/sapancada-balayi-ozel-gunler/): Kitleye özel öneriler.
+- [Kahvaltı ve Yemek](https://sapancadidiotel.com/blog/sapancada-kahvalti-ve-yemek/) · [Havuzlu Otel](https://sapancadidiotel.com/blog/sapancada-havuzlu-otel/) · [Kırkpınar Konaklama](https://sapancadidiotel.com/blog/kirkpinar-sapanca-konaklama/).
+- Tüm yazılar: [Blog](https://sapancadidiotel.com/blog/)
 
 ## Bilgiler
 - Adres: Kırkpınar, Sapanca / Sakarya, Türkiye
