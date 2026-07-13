@@ -30,6 +30,14 @@ ROOMS = [
           "Sıcak ve davetkâr atmosferiyle, doğanın içinde birlikte geçireceğiniz zamanı özel kılar."],
   "extra":[]},
 ]
+GA = '''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C8D22FPDET"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C8D22FPDET');
+</script>'''
 BASE_AM = ["Klima","LCD TV + Uydu","Ücretsiz WiFi","Minibar","Su Isıtıcısı","Saç Kurutma Makinesi","Duşakabin","Banyo Malzemeleri"]
 CHECK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>'
 
@@ -125,6 +133,7 @@ def build(r):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+{GA}
 <title>{title}</title>
 <meta name="description" content="{html.escape(desc_meta)}">
 <meta name="theme-color" content="#F5F1EA">
