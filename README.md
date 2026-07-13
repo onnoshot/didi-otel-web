@@ -1,7 +1,7 @@
 # DİDİ Otel Sapanca — Web Sitesi
 
 Kırkpınar Sapanca'daki DİDİ Otel için premium, statik (build gerektirmeyen) tanıtım sitesi.
-Apple/SF-Pro estetiği, scroll-scrub video hero (mobilde boomerang video), lüks zincir-otel yapısı.
+Apple/SF-Pro estetiği, otomatik-oynayan tanıtım videosu hero, lüks zincir-otel yapısı.
 
 - **Canlı:** https://didi-otel-web.vercel.app
 - **Teknoloji:** Saf HTML + CSS + vanilla JS (framework yok, derleme yok). Görseller AVIF/WebP.
@@ -53,8 +53,7 @@ css/site.css               Tüm sitenin paylaşılan tasarım sistemi
 odalar/<slug>/index.html   Oda detay sayfaları (generate-rooms.py ile üretilir)
 assets/
   brand/                   Logo (beyaz + lacivert)
-  video/                   hero-loop.mp4 (mobil boomerang), seq/f001..f075.webp
-                           (masaüstü scroll-scrub kareleri), hero-poster.jpg
+  video/                   hero-loop.mp4 (hero tanıtım videosu, sessiz/loop), hero-poster.jpg
   web/                     Siteye giden optimize görseller (AVIF/WebP/JPG, çoklu genişlik)
     editorial/  rooms/<oda>/  gallery/  photos/
 generate-rooms.py          Oda sayfası üretici (idempotent)
@@ -98,4 +97,4 @@ Google Analytics 4 (gtag.js) tüm sayfaların `<head>`'ine gömülüdür.
 - **Restoran:** "Mare Gastro" (otel bahçesindeki restoran).
 - **Künye:** Uniqbee (uniqbee.com) tarafından hazırlanmıştır; otel Otelyonet (otelyonet.com.tr) ile yönetilir.
 - **Sıradaki (planlı):** ayrı MARE/galeri/konum/hakkımızda/SSS sayfaları ve 5 dil (TR/EN/AR-RTL/DE/RU).
-- **Erişilebilirlik/performans:** `prefers-reduced-motion` desteklenir; LCP görseli preload'lu; scroll-scrub yalnızca masaüstünde, mobilde hafif boomerang video.
+- **Erişilebilirlik/performans:** `prefers-reduced-motion` desteklenir (video yerine poster gösterilir); LCP posteri preload'lu; hero videosu sessiz + `faststart` (hızlı açılır).

@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/brand/adidilogo.png">
 <link rel="apple-touch-icon" href="/assets/brand/adidilogo.png">
-<link rel="preload" as="image" fetchpriority="high" href="/assets/video/seq/f001.webp">
+<link rel="preload" as="image" fetchpriority="high" href="/assets/video/hero-poster.jpg">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Hotel","@id":"https://sapancadidiotel.com/#hotel",
 "name":"DİDİ Otel Sapanca","url":"https://sapancadidiotel.com/","logo":"https://sapancadidiotel.com/assets/brand/adidilogo.png",
@@ -62,7 +62,7 @@
 {"@type":"Question","name":"DİDİ Otel Sapanca merkeze ve havalimanına ne kadar uzaklıkta?","acceptedAnswer":{"@type":"Answer","text":"Otel, Sapanca merkeze 3 km, İstanbul-Ankara otoyolu Sapanca gişelerine 500 m, Sakarya merkeze 15 km ve Sabiha Gökçen Havalimanı'na yaklaşık 95 km mesafededir."}},
 {"@type":"Question","name":"Kahvaltı fiyata dahil mi?","acceptedAnswer":{"@type":"Answer","text":"Evet, tüm konaklamalara zengin serpme kahvaltı dahildir."}}]}
 </script>
-<link rel="stylesheet" href="/css/site.css?v=3">
+<link rel="stylesheet" href="/css/site.css?v=4">
 </head>
 <body>
 <div class="prog" id="prog"></div>
@@ -84,12 +84,11 @@
 <a href="https://sapancadidiotel.com/reservation/book" style="color:var(--green)">Rezervasyon Yap →</a>
 </div>
 
-<!-- HERO — desktop: scroll-scrub canvas · mobile: autoplay video -->
-<header class="scrub" id="scrub">
-<div class="scrub-pin">
-<canvas id="heroCanvas"></canvas>
-<video class="fallvid" id="heroVid" muted loop playsinline preload="none" poster="/assets/video/hero-poster.jpg"></video>
-<img class="fallimg" id="heroFall" src="/assets/video/seq/f001.webp" alt="DİDİ Otel Sapanca havuz ve dış cephe" fetchpriority="high">
+<!-- HERO — otomatik-oynayan tanıtım videosu (loop) -->
+<header class="hero" id="top">
+<video class="hero-video" id="heroVid" autoplay muted loop playsinline preload="auto" poster="/assets/video/hero-poster.jpg">
+<source src="/assets/video/hero-loop.mp4" type="video/mp4">
+</video>
 <div class="hero-c">
 <div class="hero-kick">Sapanca · Kırkpınar</div>
 <h1 class="thin"><span>Sakin bir lüks,</span><span>doğanın içinde.</span></h1>
@@ -100,7 +99,6 @@
 </div>
 </div>
 <div class="hero-scrollhint"><span>Kaydırın</span><span class="d"></span></div>
-</div>
 </header>
 
 <!-- BOOKING BAR -->
@@ -314,32 +312,11 @@ const io=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.
 document.querySelectorAll('.rev').forEach(el=>io.observe(el));
 if(!('IntersectionObserver'in window))document.querySelectorAll('.rev').forEach(el=>el.classList.add('in'));
 
-// ── SCROLL-SCRUB VIDEO HERO (canvas frame sequence) ──
-(function(){
-  const FRAMES=75, PAD=3, base='/assets/video/seq/f', ext='.webp';
-  const cv=document.getElementById('heroCanvas'),fall=document.getElementById('heroFall'),sec=document.getElementById('scrub');
-  const ctx=cv.getContext('2d'); const imgs=new Array(FRAMES); let loaded=0,ready=false,target=0,cur=0,dpr=Math.min(devicePixelRatio||1,2);
-  function size(){cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';draw(Math.round(cur*(FRAMES-1)))}
-  function cover(img){if(!img||!img.complete||!img.naturalWidth)return;const cw=cv.width,ch=cv.height,iw=img.naturalWidth,ih=img.naturalHeight;
-    const s=Math.max(cw/iw,ch/ih),w=iw*s,h=ih*s;ctx.drawImage(img,(cw-w)/2,(ch-h)/2,w,h)}
-  function draw(i){const im=imgs[i];if(im&&im.complete&&im.naturalWidth){cover(im)}else{for(let k=i;k>=0;k--){if(imgs[k]&&imgs[k].complete){cover(imgs[k]);break}}}}
-  function prog(){const r=sec.getBoundingClientRect();return Math.min(1,Math.max(0,-r.top/(sec.offsetHeight-innerHeight)))}
-  let vis=true,raf=0;
-  function loop(){cur+=(target-cur)*0.14;if(Math.abs(target-cur)>0.0005)draw(Math.round(cur*(FRAMES-1)));raf=vis?requestAnimationFrame(loop):0}
-  // mobile / reduced-motion: autoplay-loop video instead of scroll-scrub (scrub janks on mobile)
-  const vid=document.getElementById('heroVid');
-  if(RM||innerWidth<760){
-    if(vid&&!RM){vid.src='/assets/video/hero-loop.mp4';vid.load();vid.play().catch(()=>{});
-      new IntersectionObserver(es=>{es[0].isIntersecting?vid.play().catch(()=>{}):vid.pause()}).observe(vid);}
-    return;
-  }
-  fall.style.display='none';cv.style.display='block';
-  for(let i=0;i<FRAMES;i++){const im=new Image();im.onload=()=>{loaded++;if(i===0){size();draw(0)};if(loaded>=FRAMES)ready=true};im.onerror=()=>{loaded++};im.src=base+String(i+1).padStart(PAD,'0')+ext;imgs[i]=im;}
-  addEventListener('scroll',()=>{target=prog()},{passive:true});
-  addEventListener('resize',size);
-  // only run the loop while the hero is on screen
-  new IntersectionObserver(es=>{vis=es[0].isIntersecting;if(vis&&!raf)raf=requestAnimationFrame(loop)}).observe(sec);
-  raf=requestAnimationFrame(loop);
+// ── HERO VIDEO — autoplay loop, gated by visibility; reduced-motion keeps poster ──
+(function(){const v=document.getElementById('heroVid');if(!v)return;
+  if(RM){v.removeAttribute('autoplay');v.pause();return;}
+  const play=()=>v.play().catch(()=>{});play();
+  new IntersectionObserver(es=>{es[0].isIntersecting?play():v.pause()},{threshold:0.1}).observe(v);
 })();
 
 // parallax break
