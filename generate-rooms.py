@@ -79,7 +79,7 @@ NAV = '''<nav class="nav" id="nav">
 <a href="/#odalar">Odalar</a><a href="/#deneyim">Deneyim</a><a href="/#mare">Mare Gastro</a><a href="/#konum">Konum</a><a href="/#iletisim">İletişim</a>
 </div>
 <div class="nav-right">
-<a href="tel:+902645921212" class="btn btn-line">0264 592 12 12</a>
+<a href="tel:+905331350888" class="btn btn-line">0533 135 08 88</a>
 <a href="https://sapancadidiotel.com/reservation/book" class="btn btn-fill">Rezervasyon</a>
 <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
 </div>
@@ -168,7 +168,7 @@ def build(r):
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb_ld,ensure_ascii=False)}</script>
-<link rel="stylesheet" href="/css/site.css?v=5">
+<link rel="stylesheet" href="/css/site.css?v=6">
 </head>
 <body>
 <div class="prog" id="prog" style="display:none"></div>

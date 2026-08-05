@@ -43,7 +43,7 @@ NAV = '''<nav class="nav scr-force" id="nav">
 <a href="/#odalar">Odalar</a><a href="/#mare">Mare Gastro</a><a href="/#konum">Konum</a><a href="/blog/">Blog</a><a href="/#iletisim">İletişim</a>
 </div>
 <div class="nav-right">
-<a href="tel:+902645921212" class="btn btn-line">0264 592 12 12</a>
+<a href="tel:+905331350888" class="btn btn-line">0533 135 08 88</a>
 <a href="https://sapancadidiotel.com/reservation/book" class="btn btn-fill">Rezervasyon</a>
 <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
 </div>
@@ -432,7 +432,7 @@ def build_post(p, others):
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 {lds}
-<link rel="stylesheet" href="/css/site.css?v=5">
+<link rel="stylesheet" href="/css/site.css?v=6">
 </head>
 <body>
 {NAV}
@@ -500,7 +500,7 @@ def build_index():
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb,ensure_ascii=False)}</script>
-<link rel="stylesheet" href="/css/site.css?v=5">
+<link rel="stylesheet" href="/css/site.css?v=6">
 </head>
 <body>
 {NAV}
