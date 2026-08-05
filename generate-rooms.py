@@ -30,7 +30,9 @@ ROOMS = [
           "Sıcak ve davetkâr atmosferiyle, doğanın içinde birlikte geçireceğiniz zamanı özel kılar."],
   "extra":[]},
 ]
-GA = '''<!-- Google tag (gtag.js) -->
+GA = '''<link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+<link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://www.facebook.com">
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8D22FPDET"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
