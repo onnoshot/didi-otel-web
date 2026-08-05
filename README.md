@@ -86,7 +86,7 @@ python3 optimize-images.py editorial   # veya: rooms gallery photos all
 ## Analytics
 
 Google Analytics 4 (gtag.js) tüm sayfaların `<head>`'ine gömülüdür.
-**Ölçüm Kimliği:** `G-C8D22FPDET` — değiştirmek için `index.html` ve `generate-rooms.py` (GA sabiti) içindeki kimliği güncelleyip oda sayfalarını yeniden üretin.
+**Ölçüm Kimliği:** `G-XJPPK8EQY6` — değiştirmek için `index.html` ve `generate-rooms.py` (GA sabiti) içindeki kimliği güncelleyip oda sayfalarını yeniden üretin.
 
 ---
 
