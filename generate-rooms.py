@@ -163,7 +163,9 @@ def build(r):
 <meta property="og:url" content="{SITE}/odalar/{r["slug"]}/">
 <meta property="og:image" content="{SITE}/assets/web/rooms/{r["folder"]}/{nums[0]}-1280.webp">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" href="/assets/brand/adidilogo.png">
+<link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb_ld,ensure_ascii=False)}</script>
 <link rel="stylesheet" href="/css/site.css?v=5">
