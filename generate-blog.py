@@ -366,6 +366,58 @@ POSTS = [
         ("Balayı için hangi oda önerilir?","Geniş ve zarif King Suit veya Junior Suit odaları özel günler için idealdir."),
         ("Özel gün için talepte bulunabilir miyim?","Evet, özel gün taleplerinizi WhatsApp üzerinden paylaşabilirsiniz.")],
 },
+{
+ "slug":"didi-otel-nereden-rezervasyon-yapilir","cat":"Rezervasyon","img":"dis-cephe","date":"2026-07-14",
+ "title":"DİDİ Otel Sapanca'da Nereden Rezervasyon Yapılır?",
+ "desc":"DİDİ Otel Sapanca; Etstur, Tatilbudur, Otelz, Airbnb gibi kanallarda listelenir. Hangi kanaldan rezervasyon yapmalısınız ve doğrudan rezervasyonun farkı nedir?",
+ "lead":"DİDİ Otel Sapanca'yı ararken karşınıza birden fazla platform çıkabilir. Hangisinin güncel, hangisinin avantajlı olduğunu bilmek fiyat ve müsaitlik konusunda zaman kazandırır.",
+ "body":"""
+<h2>DİDİ Otel Sapanca'yı nerede bulabilirsiniz?</h2>
+<p>DİDİ Otel Sapanca, kendi web sitesinin yanı sıra <strong>Etstur, Tatilbudur, Otelz, Enuygun, Airbnb, Trivago, Expedia</strong> ve <strong>Kayak</strong> gibi platformlarda da listelenir. TripAdvisor üzerinden de fiyat karşılaştırması yapılabilir. Bu kanalların her biri farklı bir kitleye ulaşır, ama hepsinde geçerli tek kural şudur: en güncel fiyat ve müsaitlik bilgisi doğrudan otelden alınır.</p>
+<h2>Booking.com'da arıyorsanız</h2>
+<p>Sık karşılaştığımız bir soru: "DİDİ Otel Sapanca Booking.com'da var mı?" Şu an için hayır — otel bu platform üzerinden satışa açık değil. Booking.com'da arayıp bulamayan misafirlerimiz, aşağıdaki kanallardan biri ya da doğrudan WhatsApp üzerinden rezervasyon yapabilir.</p>
+<h2>Kanal karşılaştırması</h2>
+<table><thead><tr><th>Kanal</th><th>Ne zaman tercih edilir</th></tr></thead><tbody>
+<tr><td>Doğrudan (WhatsApp/telefon)</td><td>En iyi fiyat garantisi, komisyonsuz, anında onay</td></tr>
+<tr><td>Etstur, Tatilbudur, Otelz, Enuygun</td><td>Taksit seçenekleri, kampanya kodları</td></tr>
+<tr><td>Airbnb</td><td>Oda bazlı arama ve platform içi mesajlaşma alışkanlığı</td></tr>
+<tr><td>Trivago, Expedia, Kayak, TripAdvisor</td><td>Fiyat karşılaştırma, uluslararası misafirler</td></tr>
+</tbody></table>
+<h2>Neden doğrudan rezervasyon daha avantajlı?</h2>
+<p>Online seyahat acenteleri, otellerden konaklama başına genellikle %15 ile %30 arasında değişen bir komisyon alır. Bu maliyet er ya da geç fiyata yansır. DİDİ Otel Sapanca'da <strong>doğrudan WhatsApp üzerinden</strong> yapılan rezervasyonlarda aracı komisyonu olmadığı için en iyi fiyat garantisi uygulanır; ayrıca oda tercihi, geç check-out veya özel gün talebi gibi konularda doğrudan otelle konuşmuş olursunuz.</p>
+<h2>Nasıl doğrudan rezervasyon yapılır?</h2>
+<p>Anasayfadaki <a href="/#rezervasyon">rezervasyon adımlarını</a> kullanarak tarih, oda tipi ve misafir sayınızı seçip son adımda WhatsApp üzerinden anında onay alabilirsiniz. Dilerseniz doğrudan <a href="tel:+902645921212">0264 592 12 12</a> numaralı hattı da arayabilirsiniz.</p>
+""",
+ "faq":[("DİDİ Otel Sapanca Booking.com'da mı?","Hayır, otel şu an Booking.com üzerinden satışa açık değildir. Etstur, Tatilbudur, Otelz, Airbnb, Trivago, Expedia, Kayak veya doğrudan WhatsApp üzerinden rezervasyon yapılabilir."),
+        ("Hangi platformlardan rezervasyon yapılabilir?","Etstur, Tatilbudur, Otelz, Enuygun, Airbnb, Trivago, Expedia ve Kayak'ta listelenir; en güncel fiyat için doğrudan otel önerilir."),
+        ("Doğrudan rezervasyon neden daha avantajlı?","Aracı komisyonu olmadığı için en iyi fiyat garantisi uygulanır ve oda/tarih tercihleriniz doğrudan otelle netleşir."),
+        ("Rezervasyon değişikliği nasıl yapılır?","WhatsApp (0533 135 08 88) veya telefonla (0264 592 12 12) otelle doğrudan iletişime geçebilirsiniz.")],
+},
+{
+ "slug":"didi-otel-sapanca-misafir-yorumlari","cat":"Misafir Deneyimi","img":"resepsiyon1","date":"2026-07-15",
+ "title":"DİDİ Otel Sapanca Yorumları: Misafirler Ne Diyor?",
+ "desc":"TripAdvisor ve Google'daki gerçek misafir yorumlarına göre DİDİ Otel Sapanca'nın öne çıkan artıları ve rezervasyon öncesi dikkat edilmesi gereken noktalar.",
+ "lead":"Bir oteli seçmeden önce oradan geçmiş misafirlerin ne dediğine bakmak en doğal adımdır. TripAdvisor ve Google Haritalar'daki yorumlar, DİDİ Otel Sapanca hakkında oldukça tutarlı bir tablo çiziyor.",
+ "body":"""
+<h2>Genel puan ve izlenim</h2>
+<p>DİDİ Otel Sapanca, TripAdvisor'da ortalama <strong>4/5</strong> puanla değerlendiriliyor ve Sapanca'daki oteller arasında istikrarlı bir sırada yer alıyor. Google Haritalar ve rezervasyon platformlarındaki yorumlar da benzer bir görünüm sunuyor: temiz odalar, ilgili personel ve göle yakın sakin bir konum.</p>
+<h2>Misafirlerin en çok övdüğü noktalar</h2>
+<ul>
+<li><strong>Temizlik</strong> — oda ve ortak alanların temizliği hemen her yorumda öne çıkıyor.</li>
+<li><strong>Personel ilgisi</strong> — resepsiyon ve servis ekibinin sıcak, yardımsever tutumu sık sık vurgulanıyor.</li>
+<li><strong>Konum</strong> — Sapanca Gölü'ne yürüme mesafesi ve Kırkpınar'ın sakin dokusu beğeniliyor.</li>
+<li><strong>Kahvaltı</strong> — zengin serpme kahvaltı, güne iyi bir başlangıç olarak anılıyor.</li>
+</ul>
+<h2>Dürüst olalım: nelere dikkat etmeli</h2>
+<p>Otelin ana cadde üzerindeki konumu, bazı yorumlara yol trafiği sesi olarak yansımış. Sessizliğe önem veren misafirler, rezervasyon sırasında bahçeye veya havuza bakan bir oda talep edebilir — bu tercihinizi WhatsApp'tan rezervasyon yaparken belirtmeniz yeterli.</p>
+<h2>Güncel yorumları nereden okuyabilirsiniz?</h2>
+<p>Doğrulanmış ve güncel misafir yorumlarına <a href="https://www.tripadvisor.com/Hotel_Review-g612463-d4068817-Reviews-Didi_Otel_Sapanca-Sapanca_Sakarya_Province.html" target="_blank" rel="noopener">TripAdvisor</a> ve Google Haritalar üzerinden ulaşabilirsiniz. Siz de konaklamanızın ardından deneyiminizi paylaşarak sonraki misafirlere yol gösterebilirsiniz.</p>
+""",
+ "faq":[("DİDİ Otel Sapanca'nın puanı kaç?","TripAdvisor'da ortalama 4/5 civarındadır; Sapanca'daki oteller arasında istikrarlı bir sırada yer alır."),
+        ("En çok hangi konular övülüyor?","Temizlik, personel ilgisi, göle yakın sakin konum ve zengin kahvaltı öne çıkan konulardır."),
+        ("Odalarda gürültü oluyor mu?","Bazı misafirler ana cadde trafiğinden söz etmiştir; bahçeye veya havuza bakan odalar daha sessizdir, rezervasyonda talep edilebilir."),
+        ("Güncel yorumları nereden okuyabilirim?","TripAdvisor ve Google Haritalar üzerindeki DİDİ Otel Sapanca sayfalarından güncel yorumlara ulaşabilirsiniz.")],
+},
 ]
 
 def slug_url(s): return f"{SITE}/blog/{s}/"
