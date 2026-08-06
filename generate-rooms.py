@@ -169,7 +169,7 @@ def build(r):
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb_ld,ensure_ascii=False)}</script>
-<link rel="stylesheet" href="/css/site.css?v=7">
+<link rel="stylesheet" href="/css/site.css?v=8">
 </head>
 <body>
 <div class="prog" id="prog" style="display:none"></div>

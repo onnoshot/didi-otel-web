@@ -432,7 +432,7 @@ def build_post(p, others):
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 {lds}
-<link rel="stylesheet" href="/css/site.css?v=7">
+<link rel="stylesheet" href="/css/site.css?v=8">
 </head>
 <body>
 {NAV}
@@ -500,7 +500,7 @@ def build_index():
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb,ensure_ascii=False)}</script>
-<link rel="stylesheet" href="/css/site.css?v=7">
+<link rel="stylesheet" href="/css/site.css?v=8">
 </head>
 <body>
 {NAV}
