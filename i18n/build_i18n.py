@@ -143,6 +143,8 @@ for l in LANGS:
     out = out.replace('content="tr_TR"', 'content="%s"' % LOCALE[l])
     out = out.replace("'tr-TR'", "'%s'" % JSLOCALE[l])
     out = out.replace('"inLanguage":"tr"', '"inLanguage":"%s"' % l)
+    if l != "tr":
+        out = out.replace('href="/odalar/', 'href="/%s/odalar/' % l)
 
     outdir = PROJ if l == "tr" else f"{PROJ}/{l}"
     os.makedirs(outdir, exist_ok=True)

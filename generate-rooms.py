@@ -1,37 +1,39 @@
 #!/usr/bin/env python3
-"""DİDİ Otel — oda detay sayfası üretici.
-Her oda için /odalar/<slug>/index.html üretir (paylaşılan css/site.css).
+"""DİDİ Otel — oda detay sayfası üretici (5 dil: tr/en/ru/ar/de).
+Her oda + dil için index.html üretir (paylaşılan css/site.css).
 Galeriyi assets/web/rooms/<folder>/ içindeki görsellerden kurar. Idempotent.
+Metinler i18n/{lang}.json (ortak arayüz) + i18n/rooms_i18n.json (oda içerikleri) içinden gelir.
 """
-import os, glob, re, html
+import os, glob, re, html, json
 from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-_strip = lambda t: re.sub(r"<[^>]+>","",t)
+I18N = f"{ROOT}/i18n"
+_strip = lambda t: re.sub(r"<[^>]+>", "", t)
 SITE = "https://www.sapancadidiotel.com"
 
-ROOMS = [
- {"slug":"king-suit","folder":"king-suit","name":"King Suit Oda","id":4,"cap":2,"capt":"2 Misafir","bed":"King Yatak","tag":"En Geniş Süit",
-  "desc":["King Suit, otelimizin en geniş ve en ayrıcalıklı süitidir. En belirgin farkı, odanın içinde konumlanan <strong>serbest duran jakuzi/küveti</strong>; king yatağın hemen yanında keyifli bir dinlenme deneyimi sunar. Ferah bir oturma salonu, kavisli koltuk ve balkona açılan doğa manzarasıyla adeta bir daire konforunda.",
-          "Oda içi jakuzi, geniş oturma alanı ve yağmurlamalı ayrı duşuyla King Suit; balayı, yıldönümü ve kendinize özel zaman ayırmak istediğiniz anlar için idealdir. Diğer odalardan farkı: en geniş metrekare, oda içi küvet ve salon düzeni."],
-  "extra":["Oda İçi Jakuzi / Küvet","Geniş Oturma Salonu","Balkon ve Doğa Manzarası","Yağmurlamalı Ayrı Duş"]},
- {"slug":"junior-suit","folder":"junior-suit","name":"Junior Suit Oda","id":5,"cap":2,"capt":"2 Misafir","bed":"King Yatak","tag":"Süit",
-  "desc":["Junior Suit, king yatağı ve şık bir <strong>oturma köşesiyle</strong> konfor ile zarafeti bir araya getirir. İki koltuk ve küçük bir masadan oluşan dinlenme köşesi, kahvenizi manzara eşliğinde yudumlamak için ideal bir alan yaratır.",
-          "Balkonu ve sıcak tonlu tasarımıyla Junior Suit, King Suit'e göre daha kompakt ama süit konforunu koruyan bir seçenektir. Banyosunda yağmurlamalı duş bulunur (King Suit'teki oda içi jakuzi bu odada yer almaz)."],
-  "extra":["Şık Oturma Köşesi","Balkon","Yağmurlamalı Duş"]},
- {"slug":"superior","folder":"superior","name":"Superior Oda","id":6,"cap":2,"capt":"2 Misafir","bed":"Çift Kişilik Yatak","tag":"Manzaralı Oda",
-  "desc":["Superior oda, konforlu ve aydınlık atmosferiyle dinlendirici bir konaklama sunar. En öne çıkan özelliği <strong>Fransız balkonu ve göl/bahçe manzarası</strong>; sabah perdeleri araladığınızda doğanın içinde uyanırsınız.",
-          "Süit düzeni olmadan konforlu bir konaklama arayanlar için idealdir. Banyosunda modern yağmurlamalı duş bulunur. King ve Junior Suit'ten farkı: oturma salonu/köşesi yerine sade ve şık bir oda düzeni sunar."],
-  "extra":["Fransız Balkon","Göl / Bahçe Manzarası","Yağmurlamalı Duş"]},
- {"slug":"aile","folder":"family","name":"Aile Odası","id":7,"cap":4,"capt":"4 Misafir","bed":"Bağlantılı 2 Oda","tag":"Aile",
-  "desc":["Aile Odası, <strong>birbirine bağlanan iki ayrı odadan</strong> oluşur ve dört misafir için tasarlanmıştır. Bağlantılı yapısı sayesinde hem bir aradalığı hem de mahremiyeti aynı anda yaşarsınız; ebeveynler ve çocuklar için ayrı alanlar sunar.",
-          "İki banyosu, orman manzaralı balkonu ve ferah düzeniyle çocuklu aileler ve birlikte seyahat eden gruplar için en uygun seçenektir. Diğer odalardan farkı: tek oda değil, bağlantılı iki oda ve iki banyo."],
-  "extra":["Bağlantılı 2 Oda","2 Ayrı Banyo","Orman Manzaralı Balkon"]},
- {"slug":"triple","folder":"triple","name":"Triple Oda","id":8,"cap":3,"capt":"3 Misafir","bed":"Üç Kişilik Düzen","tag":"Oda",
-  "desc":["Triple oda, üç misafir için tek mekânda ferah ve konforlu bir düzen sunar. <strong>Bahçe manzaralı balkonu</strong> ve oturma köşesiyle, arkadaş grupları ve üç kişilik aileler için pratik ve keyifli bir seçenektir.",
-          "Aile Odası'ndan farkı: bağlantılı iki oda değil, üç yatak düzenine sahip tek geniş odadır. Konforlu, aydınlık ve doğayla iç içe."],
-  "extra":["Üç Kişilik Ferah Düzen","Bahçe Manzaralı Balkon","Oturma Alanı"]},
+LANGS = ["tr", "en", "ru", "ar", "de"]
+LOCALE   = {"tr": "tr_TR", "en": "en_US", "ru": "ru_RU", "ar": "ar_SA", "de": "de_DE"}
+LANGNAME = {"tr": "Türkçe", "en": "English", "ru": "Русский", "ar": "العربية", "de": "Deutsch"}
+FLAG     = {"tr": "🇹🇷", "en": "🇬🇧", "ru": "🇷🇺", "ar": "🇸🇦", "de": "🇩🇪"}
+RTL = {"ar"}
+
+UI = {l: json.load(open(f"{I18N}/{l}.json", encoding="utf-8")) for l in LANGS}
+ROOMS_I18N = json.load(open(f"{I18N}/rooms_i18n.json", encoding="utf-8"))
+
+ROOMS_META = [
+ {"slug": "king-suit", "folder": "king-suit", "id": 4},
+ {"slug": "junior-suit", "folder": "junior-suit", "id": 5},
+ {"slug": "superior", "folder": "superior", "id": 6},
+ {"slug": "aile", "folder": "family", "id": 7},
+ {"slug": "triple", "folder": "triple", "id": 8},
 ]
+SLUGS = [m["slug"] for m in ROOMS_META]
+CAP_BY_SLUG = {"king-suit": 2, "junior-suit": 2, "superior": 2, "aile": 4, "triple": 3}
+
+BASE_AM_KEYS = ["amenity_klima", "amenity_tv_uydu", "amenity_wifi", "amenity_minibar",
+                "amenity_su_isitici", "amenity_sac_kurutma", "amenity_dusakabin", "amenity_banyo_malzeme"]
+
 GA = '''<link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://connect.facebook.net" crossorigin>
 <link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://www.facebook.com">
 <!-- Google tag (gtag.js) -->
@@ -59,7 +61,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1475183377973476&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->'''
-BASE_AM = ["Klima","LCD TV + Uydu","Ücretsiz WiFi","Minibar","Su Isıtıcısı","Saç Kurutma Makinesi","Duşakabin","Banyo Malzemeleri"]
 CHECK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>'
 
 # ── özellik/donanım ikonları (SVG, stroke=currentColor) ──
@@ -85,7 +86,7 @@ _IC = {
 }
 def _svg(k, w="1.7"):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{w}" stroke-linecap="round" stroke-linejoin="round">{_IC.get(k,_IC["check"])}</svg>'
-# anahtar kelime -> ikon (öncelik sırası)
+# anahtar kelime -> ikon (öncelik sırası) — HER ZAMAN TR metne göre eşleştirilir (dil bağımsız ikon seçimi için)
 _MAP = [("jakuzi","jakuzi"),("küvet","jakuzi"),("bağlant","link"),
         ("oturma","sofa"),("salon","sofa"),("köşe","sofa"),("ferah","sofa"),("düzen","sofa"),
         ("fransız","door"),("balkon","door"),("manzara","view"),("göl","view"),("orman","view"),
@@ -93,8 +94,8 @@ _MAP = [("jakuzi","jakuzi"),("küvet","jakuzi"),("bağlant","link"),
         ("klima","climate"),("tv","tv"),("wifi","wifi"),("minibar","fridge"),
         ("ısıt","kettle"),("su ","kettle"),("saç","dryer"),("kurutma","dryer"),
         ("yatak","bed"),("king","bed"),("kişi","users"),("misafir","users")]
-def feat_icon(name):
-    n = name.lower()
+def feat_icon(tr_name):
+    n = tr_name.lower()
     for kw, ic in _MAP:
         if kw in n:
             return _svg(ic)
@@ -113,33 +114,94 @@ def picture(folder, n, sizes, cls="", alt="", lazy=True, w=1280, h=960):
             f'<source type="image/webp" srcset="{p}-800.webp 800w,{p}-1280.webp 1280w" sizes="{sizes}">'
             f'<img src="{p}.jpg" {lo} width="{w}" height="{h}" alt="{alt}" class="{cls}"></picture>')
 
-NAV = '''<nav class="nav" id="nav">
-<a href="/" class="nav-logo" aria-label="DİDİ Otel Sapanca"><img class="logo-w" src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><img class="logo-n" src="/assets/brand/adidilogo-navy.png" alt="" aria-hidden="true"></a>
+def room_url(lang, slug):
+    base = SITE if lang == "tr" else f"{SITE}/{lang}"
+    return f"{base}/odalar/{slug}/"
+
+def home_url(lang):
+    return f"{SITE}/" if lang == "tr" else f"{SITE}/{lang}/"
+
+LANGSW_CSS = (
+    '<style>'
+    '.langsw{position:relative;display:flex;align-items:center}'
+    '.langsw-btn{display:flex;align-items:center;gap:6px;background:transparent;border:1px solid rgba(255,255,255,.35);'
+    'color:#fff;font-family:var(--sf);font-size:12.5px;letter-spacing:.02em;padding:8px 12px;border-radius:100px;'
+    'cursor:pointer;transition:background .3s var(--ease),border-color .3s var(--ease)}'
+    '.nav.scr .langsw-btn{border-color:var(--line);color:var(--ink)}'
+    '.langsw-btn:hover{background:rgba(255,255,255,.14)}'
+    '.nav.scr .langsw-btn:hover{background:var(--bone)}'
+    '.langsw-btn .chev{width:9px;height:9px;opacity:.7;transition:transform .3s var(--ease)}'
+    '.langsw.open .chev{transform:rotate(180deg)}'
+    '.langsw-menu{position:absolute;top:calc(100% + 10px);right:0;min-width:168px;background:var(--paper);'
+    'border:1px solid var(--line);border-radius:14px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);'
+    'transition:all .28s var(--ease);z-index:220;box-shadow:0 20px 50px rgba(26,25,22,.16)}'
+    '.langsw.open .langsw-menu{opacity:1;visibility:visible;transform:translateY(0)}'
+    '.langsw-menu a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:9px;color:var(--ink);'
+    'text-decoration:none;font-size:13.5px;letter-spacing:.01em;transition:background .2s}'
+    '.langsw-menu a:hover{background:var(--bone)}'
+    '.langsw-menu a.on{color:var(--green);font-weight:500}'
+    '[dir=rtl] .langsw-menu{right:auto;left:0}'
+    '.mob-langs{display:flex;flex-wrap:wrap;gap:8px;padding:18px 34px 4px;border-top:1px solid var(--line2)}'
+    '.mob-langs a{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--ink2);text-decoration:none;'
+    'padding:8px 13px;border:1px solid var(--line);border-radius:100px}'
+    '.mob-langs a.on{color:var(--green);border-color:var(--green)}'
+    '</style>'
+)
+
+def langsw(cur, slug):
+    items = "".join(
+        '<a href="%s" class="%s">%s %s</a>' % (room_url(l, slug), "on" if l == cur else "", FLAG[l], LANGNAME[l])
+        for l in LANGS
+    )
+    return (
+        LANGSW_CSS +
+        '<div class="langsw" id="langsw">'
+        '<button class="langsw-btn" onclick="document.getElementById(\'langsw\').classList.toggle(\'open\')" aria-label="Language / Dil">'
+        + FLAG[cur] + ' ' + cur.upper() +
+        '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>'
+        '</button>'
+        '<div class="langsw-menu">' + items + '</div>'
+        '</div>'
+        '<script>document.addEventListener("click",function(e){var s=document.getElementById("langsw");if(s&&!s.contains(e.target))s.classList.remove("open")})</script>'
+    )
+
+def mob_langs(cur, slug):
+    return '<div class="mob-langs">' + "".join(
+        '<a href="%s" class="%s">%s %s</a>' % (room_url(l, slug), "on" if l == cur else "", FLAG[l], LANGNAME[l]) for l in LANGS
+    ) + '</div>'
+
+def nav_html(lang, slug):
+    d = UI[lang]
+    wa_text = quote('Merhaba, DİDİ Otel Sapanca için rezervasyon yapmak istiyorum.')
+    return f'''<nav class="nav" id="nav">
+<a href="{home_url(lang)}" class="nav-logo" aria-label="DİDİ Otel Sapanca"><img class="logo-w" src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><img class="logo-n" src="/assets/brand/adidilogo-navy.png" alt="" aria-hidden="true"></a>
 <div class="nav-links">
-<a href="/#odalar">Odalar</a><a href="/#deneyim">Deneyim</a><a href="/#mare">Mare Gastro</a><a href="/#konum">Konum</a><a href="/#iletisim">İletişim</a>
+<a href="{home_url(lang)}#odalar">{d["nav_odalar"]}</a><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a><a href="{home_url(lang)}#mare">Mare Gastro</a><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a><a href="{home_url(lang)}#iletisim">{d["nav_iletisim"]}</a>
 </div>
-<div class="nav-right">
-<a href="tel:+905331350888" class="btn btn-line">0533 135 08 88</a>
-<a href="https://wa.me/905331350888?text=Merhaba%2C%20D%C4%B0D%C4%B0%20Otel%20Sapanca%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." class="btn btn-fill">Rezervasyon</a>
-<button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+<div class="nav-right">{langsw(lang, slug)}
+<a href="tel:+905331350888" class="btn btn-line" dir="ltr">0533 135 08 88</a>
+<a href="https://wa.me/905331350888?text={wa_text}" class="btn btn-fill">{d["nav_rezervasyon"]}</a>
+<button class="burger" id="burger" aria-label="{d["nav_menu_aria"]}"><span></span><span></span><span></span></button>
 </div>
 </nav>
-<div class="mob" id="mob">
-<a href="/#odalar">Odalar</a><a href="/#deneyim">Deneyim</a><a href="/#mare">Mare Gastro</a><a href="/#konum">Konum</a><a href="/#iletisim">İletişim</a>
-<a href="https://wa.me/905331350888?text=Merhaba%2C%20D%C4%B0D%C4%B0%20Otel%20Sapanca%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." style="color:var(--green)">Rezervasyon Yap →</a>
+<div class="mob" id="mob">{mob_langs(lang, slug)}
+<a href="{home_url(lang)}#odalar">{d["nav_odalar"]}</a><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a><a href="{home_url(lang)}#mare">Mare Gastro</a><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a><a href="{home_url(lang)}#iletisim">{d["nav_iletisim"]}</a>
+<a href="https://wa.me/905331350888?text={wa_text}" style="color:var(--green)">{d["mob_rez_yap"]}</a>
 </div>'''
 
-FOOT = '''<footer class="foot"><div class="wrap">
+def foot_html(lang):
+    d = UI[lang]
+    return f'''<footer class="foot"><div class="wrap">
 <div class="foot-grid">
-<div><img src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><p>Kırkpınar Sapanca'da göl ve orman arasında butik bir konaklama. Sapanca'nın tek klorsuz havuzu ve Mare Gastro restoranıyla.</p></div>
-<div><h5>Sayfalar</h5><ul><li><a href="/#odalar">Odalar</a></li><li><a href="/#deneyim">Deneyim</a></li><li><a href="/#mare">Mare Gastro</a></li><li><a href="/#konum">Konum</a></li><li><a href="/#galeri">Galeri</a></li></ul></div>
-<div><h5>İletişim</h5><ul><li><a href="tel:+902645921212">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=K%C4%B1rkp%C4%B1nar+Sapanca%2C+Sakarya" target="_blank" rel="noopener">Yol Tarifi</a></li></ul></div>
+<div><img src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><p>{d["foot_desc"]}</p></div>
+<div><h5>{d["foot_sayfalar"]}</h5><ul><li><a href="{home_url(lang)}#odalar">{d["nav_odalar"]}</a></li><li><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a></li><li><a href="{home_url(lang)}#mare">Mare Gastro</a></li><li><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a></li><li><a href="{home_url(lang)}#galeri">{d["gal_kick"]}</a></li></ul></div>
+<div><h5>{d["nav_iletisim"]}</h5><ul><li><a href="tel:+902645921212" dir="ltr">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=K%C4%B1rkp%C4%B1nar+Sapanca%2C+Sakarya" target="_blank" rel="noopener">{d["foot_yol_tarifi"]}</a></li></ul></div>
 </div>
-<div class="foot-credits"><span>Bu web sitesi <a href="https://uniqbee.com" target="_blank" rel="noopener">Uniqbee</a> tarafından hazırlanmıştır.</span><span>DİDİ Otel, <a href="https://otelyonet.com.tr/" target="_blank" rel="noopener">Otelyonet</a> sistemleri ile yönetilmektedir.</span></div>
-<div class="foot-bot"><span>© 2026 DİDİ Otel Sapanca. Tüm hakları saklıdır.</span><span>Kırkpınar · Sapanca · Sakarya</span></div>
+<div class="foot-credits"><span>{d["foot_credit1"]}</span><span>{d["foot_credit2"]}</span></div>
+<div class="foot-bot"><span>{d["foot_rights"]}</span><span>Kırkpınar · Sapanca · Sakarya</span></div>
 </div></footer>
 <a class="wa" href="https://wa.me/905331350888?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.8-1.4.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
-<div class="lb" id="lb"><button class="x" id="lbX" aria-label="Kapat">×</button><button class="pv" id="lbPrev" aria-label="Önceki">‹</button><img id="lbImg" src="" alt=""><button class="nx" id="lbNext" aria-label="Sonraki">›</button></div>'''
+<div class="lb" id="lb"><button class="x" id="lbX" aria-label="{d["aria_kapat"]}">×</button><button class="pv" id="lbPrev" aria-label="{d["aria_onceki"]}">‹</button><img id="lbImg" src="" alt=""><button class="nx" id="lbNext" aria-label="{d["aria_sonraki"]}">›</button></div>'''
 
 JS = '''<script>
 const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scr',scrollY>40),{passive:true});
@@ -158,39 +220,54 @@ lb.addEventListener('click',e=>{if(e.target===lb)close()});
 addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1)});
 </script>'''
 
-def build(r):
-    nums = imgs_for(r["folder"])
-    hero = picture(r["folder"], nums[0], "100vw", alt=r["name"], lazy=False, w=1280, h=960)
-    am = BASE_AM + r.get("extra",[])
-    amgrid = "".join(f'<div class="am-it">{feat_icon(a)}<span>{a}</span></div>' for a in am)
-    hl = "".join(f'<div class="rhl-card"><div class="rhl-ic">{feat_icon(e)}</div><div class="rhl-t">{e}</div></div>'
-                 for e in r.get("extra",[]))
-    gal = "".join(f'<a data-lb="/assets/web/rooms/{r["folder"]}/{n}.jpg">'
-                  + picture(r["folder"], n, "(max-width:560px) 100vw,(max-width:960px) 50vw,33vw", alt=f'{r["name"]} - {i+1}')
-                  + '</a>' for i,n in enumerate(nums))
-    desc = "".join(f'<p class="lead">{d}</p>' for d in r["desc"])
-    others = [x for x in ROOMS if x["slug"]!=r["slug"]]
-    ocards = "".join(f'<a href="/odalar/{o["slug"]}/" class="ocard">'
-                     + picture(o["folder"], imgs_for(o["folder"])[0], "25vw", alt=o["name"])
-                     + f'<span>{o["name"]}</span></a>' for o in others)
+def hreflang_block(slug):
+    lines = ['<link rel="alternate" hreflang="%s" href="%s">' % (l, room_url(l, slug)) for l in LANGS]
+    lines.append('<link rel="alternate" hreflang="x-default" href="%s">' % room_url("tr", slug))
+    return "\n".join(lines)
+
+def build(meta, lang):
+    slug, folder = meta["slug"], meta["folder"]
+    r = ROOMS_I18N[lang][slug]
+    r_tr = ROOMS_I18N["tr"][slug]
+    d = UI[lang]
+    nums = imgs_for(folder)
+    hero = picture(folder, nums[0], "100vw", alt=r["name"], lazy=False, w=1280, h=960)
+
+    base_am_tr = [UI["tr"][k] for k in BASE_AM_KEYS]
+    base_am_loc = [d[k] for k in BASE_AM_KEYS]
+    am_pairs = list(zip(base_am_tr, base_am_loc)) + list(zip(r_tr["extra"], r["extra"]))
+    amgrid = "".join(f'<div class="am-it">{feat_icon(tr_txt)}<span>{loc_txt}</span></div>' for tr_txt, loc_txt in am_pairs)
+    hl = "".join(f'<div class="rhl-card"><div class="rhl-ic">{feat_icon(tr_e)}</div><div class="rhl-t">{loc_e}</div></div>'
+                 for tr_e, loc_e in zip(r_tr["extra"], r["extra"]))
+    gal = "".join(f'<a data-lb="/assets/web/rooms/{folder}/{n}.jpg">'
+                  + picture(folder, n, "(max-width:560px) 100vw,(max-width:960px) 50vw,33vw", alt=f'{r["name"]} - {i+1}')
+                  + '</a>' for i, n in enumerate(nums))
+    desc = "".join(f'<p class="lead">{p}</p>' for p in r["desc"])
+    others = [m for m in ROOMS_META if m["slug"] != slug]
+    ocards = "".join(f'<a href="{room_url(lang, o["slug"])}" class="ocard">'
+                     + picture(o["folder"], imgs_for(o["folder"])[0], "25vw", alt=ROOMS_I18N[lang][o["slug"]]["name"])
+                     + f'<span>{ROOMS_I18N[lang][o["slug"]]["name"]}</span></a>' for o in others)
+
     ld = {
-      "@context":"https://schema.org","@type":"HotelRoom","name":r["name"],
-      "url":f'{SITE}/odalar/{r["slug"]}/',
-      "description":_strip(r["desc"][0]),
-      "occupancy":{"@type":"QuantitativeValue","minValue":1,"maxValue":r["cap"]},
-      "bed":{"@type":"BedDetails","typeOfBed":r["bed"]},
-      "amenityFeature":[{"@type":"LocationFeatureSpecification","name":a,"value":True} for a in am],
-      "containedInPlace":{"@id":f"{SITE}/#hotel"},
-      "image":f'{SITE}/assets/web/rooms/{r["folder"]}/{nums[0]}-1280.webp'}
-    import json
-    crumb_ld = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Anasayfa","item":f"{SITE}/"},
-        {"@type":"ListItem","position":2,"name":"Odalar","item":f"{SITE}/#odalar"},
-        {"@type":"ListItem","position":3,"name":r["name"]}]}
+      "@context": "https://schema.org", "@type": "HotelRoom", "name": r["name"],
+      "url": room_url(lang, slug),
+      "description": _strip(r["desc"][0]),
+      "occupancy": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": CAP_BY_SLUG[slug]},
+      "bed": {"@type": "BedDetails", "typeOfBed": r["bed"]},
+      "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": a, "value": True} for a in ([d[k] for k in BASE_AM_KEYS] + r["extra"])],
+      "containedInPlace": {"@id": f"{SITE}/#hotel"},
+      "image": f'{SITE}/assets/web/rooms/{folder}/{nums[0]}-1280.webp',
+      "inLanguage": lang}
+    crumb_ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": d["room_breadcrumb_anasayfa"], "item": home_url(lang)},
+        {"@type": "ListItem", "position": 2, "name": d["nav_odalar"], "item": home_url(lang) + "#odalar"},
+        {"@type": "ListItem", "position": 3, "name": r["name"]}]}
+
     title = f'{r["name"]} | DİDİ Otel Sapanca'
     desc_meta = f'{r["name"]} — DİDİ Otel Sapanca. {_strip(r["desc"][0])[:120]}'
+    lang_attr = f'lang="{lang}" dir="rtl"' if lang in RTL else f'lang="{lang}"'
     page = f'''<!DOCTYPE html>
-<html lang="tr">
+<html {lang_attr}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -198,12 +275,14 @@ def build(r):
 <title>{title}</title>
 <meta name="description" content="{html.escape(desc_meta)}">
 <meta name="theme-color" content="#F5F1EA">
-<link rel="canonical" href="{SITE}/odalar/{r["slug"]}/">
+<link rel="canonical" href="{room_url(lang, slug)}">
+{hreflang_block(slug)}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc_meta)}">
-<meta property="og:url" content="{SITE}/odalar/{r["slug"]}/">
-<meta property="og:image" content="{SITE}/assets/web/rooms/{r["folder"]}/{nums[0]}-1280.webp">
+<meta property="og:url" content="{room_url(lang, slug)}">
+<meta property="og:image" content="{SITE}/assets/web/rooms/{folder}/{nums[0]}-1280.webp">
+<meta property="og:locale" content="{LOCALE[lang]}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
@@ -214,11 +293,11 @@ def build(r):
 </head>
 <body>
 <div class="prog" id="prog" style="display:none"></div>
-{NAV}
+{nav_html(lang, slug)}
 <header class="rhero">
 {hero}
 <div class="rhero-c">
-<div class="crumb"><a href="/">Anasayfa</a> · <a href="/#odalar">Odalar</a> · {r["name"]}</div>
+<div class="crumb"><a href="{home_url(lang)}">{d["room_breadcrumb_anasayfa"]}</a> · <a href="{home_url(lang)}#odalar">{d["nav_odalar"]}</a> · {r["name"]}</div>
 <div class="rtag">{_svg("star")}{r["tag"]}</div>
 <h1 class="thin">{r["name"]}</h1>
 <div class="rmeta-row"><span>{_svg("users")}{r["capt"]}</span><span>{_svg("bed")}{r["bed"]}</span></div>
@@ -226,50 +305,52 @@ def build(r):
 </header>
 
 <section class="sec rhl-sec"><div class="wrap">
-<div class="rev" style="text-align:center;margin-bottom:38px"><div class="kick" style="justify-content:center">Öne Çıkanlar</div><h2 class="dh">Bu odayı <b>özel</b> kılan detaylar</h2></div>
+<div class="rev" style="text-align:center;margin-bottom:38px"><div class="kick" style="justify-content:center">{d["room_hl_kick"]}</div><h2 class="dh">{d["room_hl_h2"]}</h2></div>
 <div class="rhl rev">{hl}</div>
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap rdetail">
 <div class="rdesc rev">
-<div class="kick">Oda Detayı</div>
+<div class="kick">{d["room_detail_kick"]}</div>
 {desc}
-<div class="am-title">Oda Donanımı</div>
+<div class="am-title">{d["room_donanim_title"]}</div>
 <div class="amgrid">{amgrid}</div>
 </div>
 <aside class="rside rev">
 <div class="rside-facts">
-<div class="rf"><span class="rf-ic">{_svg("users")}</span><div><div class="rf-l">Kapasite</div><div class="rf-v">{r["capt"]}</div></div></div>
-<div class="rf"><span class="rf-ic">{_svg("bed")}</span><div><div class="rf-l">Yatak Düzeni</div><div class="rf-v">{r["bed"]}</div></div></div>
-<div class="rf"><span class="rf-ic">{feat_icon(r["extra"][0])}</span><div><div class="rf-l">Öne Çıkan</div><div class="rf-v">{r["extra"][0]}</div></div></div>
+<div class="rf"><span class="rf-ic">{_svg("users")}</span><div><div class="rf-l">{d["room_kapasite"]}</div><div class="rf-v">{r["capt"]}</div></div></div>
+<div class="rf"><span class="rf-ic">{_svg("bed")}</span><div><div class="rf-l">{d["room_yatak_duzeni"]}</div><div class="rf-v">{r["bed"]}</div></div></div>
+<div class="rf"><span class="rf-ic">{feat_icon(r_tr["extra"][0])}</span><div><div class="rf-l">{d["room_one_cikan"]}</div><div class="rf-v">{r["extra"][0]}</div></div></div>
 </div>
-<div class="rside-badge">{_svg("star")}Aracısız en uygun fiyat garantisi</div>
-<a href="https://wa.me/905331350888?text={quote('Merhaba, DİDİ Otel Sapanca '+r["name"]+' için rezervasyon yapmak istiyorum.')}" class="btn btn-fill" style="width:100%;justify-content:center">Bu Odayı Seç</a>
-<div class="note">Güncel fiyat ve müsaitlik için WhatsApp hattımızdan yazın.</div>
+<div class="rside-badge">{_svg("star")}{d["room_price_badge"]}</div>
+<a href="https://wa.me/905331350888?text={quote('Merhaba, DİDİ Otel Sapanca '+r_tr["name"]+' için rezervasyon yapmak istiyorum.')}" class="btn btn-fill" style="width:100%;justify-content:center">{d["btn_bu_odayi_sec"]}</a>
+<div class="note">{d["room_note_wa"]}</div>
 </aside>
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap">
-<div class="rev" style="margin-bottom:40px"><div class="kick">Galeri</div><h2 class="dh">{r["name"]} <b>Görselleri</b></h2></div>
+<div class="rev" style="margin-bottom:40px"><div class="kick">{d["gal_kick"]}</div><h2 class="dh">{r["name"]} <b>{d["room_gal_h2_suffix"]}</b></h2></div>
 <div class="rgal">{gal}</div>
 </div></section>
 
 <section class="sec exp"><div class="wrap">
-<div class="rev" style="margin-bottom:8px"><div class="kick">Diğer Odalar</div><h2 class="dh">Diğer konaklama <b>seçenekleri</b></h2></div>
+<div class="rev" style="margin-bottom:8px"><div class="kick">{d["room_diger_kick"]}</div><h2 class="dh">{d["room_diger_h2"]}</h2></div>
 <div class="others rev">{ocards}</div>
 </div></section>
 
-{FOOT}
+{foot_html(lang)}
 {JS}
 </body>
 </html>'''
-    outdir = f'{ROOT}/odalar/{r["slug"]}'
+    outdir = ROOT if lang == "tr" else f"{ROOT}/{lang}"
+    outdir = f"{outdir}/odalar/{slug}"
     os.makedirs(outdir, exist_ok=True)
-    open(f'{outdir}/index.html','w',encoding='utf-8').write(page)
+    open(f'{outdir}/index.html', 'w', encoding='utf-8').write(page)
     return len(nums)
 
-if __name__=="__main__":
-    for r in ROOMS:
-        n=build(r)
-        print(f'✓ /odalar/{r["slug"]}/  ({n} foto)')
+if __name__ == "__main__":
+    for meta in ROOMS_META:
+        for lang in LANGS:
+            n = build(meta, lang)
+        print(f'✓ odalar/{meta["slug"]}/  (5 dil, {n} foto)')
     print("Tamam.")
