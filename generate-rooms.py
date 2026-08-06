@@ -7,29 +7,30 @@ import os, glob, re, html
 from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+_strip = lambda t: re.sub(r"<[^>]+>","",t)
 SITE = "https://www.sapancadidiotel.com"
 
 ROOMS = [
- {"slug":"king-suit","folder":"king-suit","name":"King Suit Oda","id":4,"cap":2,"capt":"2 Misafir","bed":"King Yatak","tag":"Süit",
-  "desc":["Otelimizin en geniş suiti olan King Suit, king yatağı, ferah oturma alanı ve özenle seçilmiş detaylarıyla ayrıcalıklı bir konaklama sunar. Doğal ışıkla aydınlanan mekânda, sıcak dokular ve sakin bir atmosfer bir araya gelir.",
-          "İki misafir için tasarlanan suit; uzun konaklamalar, özel günler ve kendinize zaman ayırmak istediğiniz anlar için idealdir. Sessizliğin ve konforun bir arada olduğu, dinlendirici bir kaçış."],
-  "extra":["Geniş Oturma Alanı"]},
+ {"slug":"king-suit","folder":"king-suit","name":"King Suit Oda","id":4,"cap":2,"capt":"2 Misafir","bed":"King Yatak","tag":"En Geniş Süit",
+  "desc":["King Suit, otelimizin en geniş ve en ayrıcalıklı süitidir. En belirgin farkı, odanın içinde konumlanan <strong>serbest duran jakuzi/küveti</strong>; king yatağın hemen yanında keyifli bir dinlenme deneyimi sunar. Ferah bir oturma salonu, kavisli koltuk ve balkona açılan doğa manzarasıyla adeta bir daire konforunda.",
+          "Oda içi jakuzi, geniş oturma alanı ve yağmurlamalı ayrı duşuyla King Suit; balayı, yıldönümü ve kendinize özel zaman ayırmak istediğiniz anlar için idealdir. Diğer odalardan farkı: en geniş metrekare, oda içi küvet ve salon düzeni."],
+  "extra":["Oda İçi Jakuzi / Küvet","Geniş Oturma Salonu","Balkon ve Doğa Manzarası","Yağmurlamalı Ayrı Duş"]},
  {"slug":"junior-suit","folder":"junior-suit","name":"Junior Suit Oda","id":5,"cap":2,"capt":"2 Misafir","bed":"King Yatak","tag":"Süit",
-  "desc":["Junior Suit, konfor ile zarafeti dengeli bir şekilde bir araya getirir. King yatağı ve şık iç tasarımıyla, iki misafire huzurlu ve ferah bir alan sunar.",
-          "Modern çizgiler ve sıcak tonların buluştuğu oda, hem kısa kaçamaklar hem de keyifli konaklamalar için ideal bir seçenektir."],
-  "extra":[]},
- {"slug":"superior","folder":"superior","name":"Superior Oda","id":6,"cap":2,"capt":"2 Misafir","bed":"Çift Kişilik Yatak","tag":"Oda",
-  "desc":["Superior odalarımız, konforlu ve aydınlık atmosferiyle dinlendirici bir konaklama vadeder. İhtiyaç duyduğunuz her ayrıntı, sade ve şık bir tasarımla bir araya gelir.",
-          "İster kısa bir mola ister uzun bir konaklama olsun, Superior oda doğanın içinde keyifli bir sığınak sunar."],
-  "extra":[]},
- {"slug":"aile","folder":"family","name":"Aile Odası","id":7,"cap":4,"capt":"4 Misafir","bed":"Bağlantılı Oda","tag":"Aile",
-  "desc":["Bağlantılı aile odamız, dört misafir için geniş ve pratik bir konaklama alanı sunar. Aileler ve birlikte seyahat eden gruplar için özel olarak düşünülmüş, ferah bir düzen.",
-          "Birbirine bağlanan odalar sayesinde hem bir aradalığı hem de mahremiyeti aynı anda yaşayabilirsiniz. Çocuklu aileler için ideal."],
-  "extra":["Bağlantılı Oda Düzeni"]},
- {"slug":"triple","folder":"triple","name":"Triple Oda","id":8,"cap":3,"capt":"3 Misafir","bed":"Üç Kişilik","tag":"Oda",
-  "desc":["Triple odamız, üç misafir için ferah ve konforlu bir seçenektir. Arkadaş grupları ve aileler için pratik ve keyifli bir konaklama alanı sunar.",
-          "Sıcak ve davetkâr atmosferiyle, doğanın içinde birlikte geçireceğiniz zamanı özel kılar."],
-  "extra":[]},
+  "desc":["Junior Suit, king yatağı ve şık bir <strong>oturma köşesiyle</strong> konfor ile zarafeti bir araya getirir. İki koltuk ve küçük bir masadan oluşan dinlenme köşesi, kahvenizi manzara eşliğinde yudumlamak için ideal bir alan yaratır.",
+          "Balkonu ve sıcak tonlu tasarımıyla Junior Suit, King Suit'e göre daha kompakt ama süit konforunu koruyan bir seçenektir. Banyosunda yağmurlamalı duş bulunur (King Suit'teki oda içi jakuzi bu odada yer almaz)."],
+  "extra":["Şık Oturma Köşesi","Balkon","Yağmurlamalı Duş"]},
+ {"slug":"superior","folder":"superior","name":"Superior Oda","id":6,"cap":2,"capt":"2 Misafir","bed":"Çift Kişilik Yatak","tag":"Manzaralı Oda",
+  "desc":["Superior oda, konforlu ve aydınlık atmosferiyle dinlendirici bir konaklama sunar. En öne çıkan özelliği <strong>Fransız balkonu ve göl/bahçe manzarası</strong>; sabah perdeleri araladığınızda doğanın içinde uyanırsınız.",
+          "Süit düzeni olmadan konforlu bir konaklama arayanlar için idealdir. Banyosunda modern yağmurlamalı duş bulunur. King ve Junior Suit'ten farkı: oturma salonu/köşesi yerine sade ve şık bir oda düzeni sunar."],
+  "extra":["Fransız Balkon","Göl / Bahçe Manzarası","Yağmurlamalı Duş"]},
+ {"slug":"aile","folder":"family","name":"Aile Odası","id":7,"cap":4,"capt":"4 Misafir","bed":"Bağlantılı 2 Oda","tag":"Aile",
+  "desc":["Aile Odası, <strong>birbirine bağlanan iki ayrı odadan</strong> oluşur ve dört misafir için tasarlanmıştır. Bağlantılı yapısı sayesinde hem bir aradalığı hem de mahremiyeti aynı anda yaşarsınız; ebeveynler ve çocuklar için ayrı alanlar sunar.",
+          "İki banyosu, orman manzaralı balkonu ve ferah düzeniyle çocuklu aileler ve birlikte seyahat eden gruplar için en uygun seçenektir. Diğer odalardan farkı: tek oda değil, bağlantılı iki oda ve iki banyo."],
+  "extra":["Bağlantılı 2 Oda","2 Ayrı Banyo","Orman Manzaralı Balkon"]},
+ {"slug":"triple","folder":"triple","name":"Triple Oda","id":8,"cap":3,"capt":"3 Misafir","bed":"Üç Kişilik Düzen","tag":"Oda",
+  "desc":["Triple oda, üç misafir için tek mekânda ferah ve konforlu bir düzen sunar. <strong>Bahçe manzaralı balkonu</strong> ve oturma köşesiyle, arkadaş grupları ve üç kişilik aileler için pratik ve keyifli bir seçenektir.",
+          "Aile Odası'ndan farkı: bağlantılı iki oda değil, üç yatak düzenine sahip tek geniş odadır. Konforlu, aydınlık ve doğayla iç içe."],
+  "extra":["Üç Kişilik Ferah Düzen","Bahçe Manzaralı Balkon","Oturma Alanı"]},
 ]
 GA = '''<link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://connect.facebook.net" crossorigin>
 <link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://www.facebook.com">
@@ -135,7 +136,7 @@ def build(r):
     ld = {
       "@context":"https://schema.org","@type":"HotelRoom","name":r["name"],
       "url":f'{SITE}/odalar/{r["slug"]}/',
-      "description":r["desc"][0],
+      "description":_strip(r["desc"][0]),
       "occupancy":{"@type":"QuantitativeValue","minValue":1,"maxValue":r["cap"]},
       "bed":{"@type":"BedDetails","typeOfBed":r["bed"]},
       "amenityFeature":[{"@type":"LocationFeatureSpecification","name":a,"value":True} for a in am],
@@ -147,7 +148,7 @@ def build(r):
         {"@type":"ListItem","position":2,"name":"Odalar","item":f"{SITE}/#odalar"},
         {"@type":"ListItem","position":3,"name":r["name"]}]}
     title = f'{r["name"]} | DİDİ Otel Sapanca'
-    desc_meta = f'{r["name"]} — DİDİ Otel Sapanca. {r["desc"][0][:120]}'
+    desc_meta = f'{r["name"]} — DİDİ Otel Sapanca. {_strip(r["desc"][0])[:120]}'
     page = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -169,7 +170,7 @@ def build(r):
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb_ld,ensure_ascii=False)}</script>
-<link rel="stylesheet" href="/css/site.css?v=8">
+<link rel="stylesheet" href="/css/site.css?v=9">
 </head>
 <body>
 <div class="prog" id="prog" style="display:none"></div>
