@@ -62,6 +62,44 @@ src="https://www.facebook.com/tr?id=1475183377973476&ev=PageView&noscript=1"
 BASE_AM = ["Klima","LCD TV + Uydu","Ücretsiz WiFi","Minibar","Su Isıtıcısı","Saç Kurutma Makinesi","Duşakabin","Banyo Malzemeleri"]
 CHECK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>'
 
+# ── özellik/donanım ikonları (SVG, stroke=currentColor) ──
+_IC = {
+ "jakuzi":'<path d="M4 12h16v4a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6.5A2.5 2.5 0 0 1 8.5 4A2.5 2.5 0 0 1 11 6.5"/><path d="M3 16h18"/><path d="M8 20l-1 1.5M16 20l1 1.5"/>',
+ "sofa":'<path d="M4 11V8.5A2.5 2.5 0 0 1 6.5 6h11A2.5 2.5 0 0 1 20 8.5V11"/><path d="M3 12.5A2.5 2.5 0 0 1 5.5 10h13a2.5 2.5 0 0 1 2.5 2.5V17H3z"/><path d="M6 17v2M18 17v2"/>',
+ "door":'<rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/>',
+ "view":'<path d="m3 17 4-6 4 5 3-4 7 6"/><circle cx="7.5" cy="6.5" r="2"/>',
+ "shower":'<path d="M4 4h5a4 4 0 0 1 4 4"/><circle cx="17" cy="5.5" r="2.5"/><path d="M13 12v.5M16 12v.5M19 12v.5M14 15.5v.5M17 15.5v.5M15 19v.5M18 19v.5"/>',
+ "link":'<path d="M9 12h6"/><path d="M8 8H6.5a3.5 3.5 0 0 0 0 7H8M16 8h1.5a3.5 3.5 0 0 1 0 7H16"/>',
+ "bath":'<path d="M4 12h16v4a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6.5A2.5 2.5 0 0 1 8.5 4A2.5 2.5 0 0 1 11 6.5"/><path d="M3 16h18"/>',
+ "climate":'<path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h9a3 3 0 1 1-3 3"/>',
+ "tv":'<rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/>',
+ "wifi":'<path d="M5 12.55a11 11 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0M2 8.82a15 15 0 0 1 20 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/>',
+ "fridge":'<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M6 10h12M10 6v.5M10 14v.5"/>',
+ "kettle":'<path d="M5 11h11l.8 7a2 2 0 0 1-2 2.2H6.2A2 2 0 0 1 4.2 18z"/><path d="M16 12.5h3.3l-1-4.5H15"/><path d="M9 7.5c0-1.2 1-1.2 1-2.2"/>',
+ "dryer":'<path d="M3 8.5A4.5 4.5 0 0 1 7.5 4h5l5.5 2.2v3.6L12.5 12h-5A4.5 4.5 0 0 1 3 8.5z"/><path d="M10 12v4.5A2.5 2.5 0 0 0 12.5 19"/><circle cx="7.5" cy="8.2" r="1"/>',
+ "soap":'<rect x="8" y="9" width="8" height="12" rx="2"/><path d="M10 9V6.5a2 2 0 0 1 4 0V9M11 4h2"/>',
+ "bed":'<path d="M2 8v11M22 13v6M2 14h20v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4"/><path d="M6 10V8.5A1.5 1.5 0 0 1 7.5 7h3V11"/>',
+ "users":'<circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16.5 5.2a3.2 3.2 0 0 1 0 5.6M21.5 20a6.5 6.5 0 0 0-4.5-6.2"/>',
+ "star":'<path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19l1-5.8L3.5 9.2l5.9-.9z"/>',
+ "check":'<path d="M20 6 9 17l-5-5"/>',
+}
+def _svg(k, w="1.7"):
+    return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{w}" stroke-linecap="round" stroke-linejoin="round">{_IC.get(k,_IC["check"])}</svg>'
+# anahtar kelime -> ikon (öncelik sırası)
+_MAP = [("jakuzi","jakuzi"),("küvet","jakuzi"),("bağlant","link"),
+        ("oturma","sofa"),("salon","sofa"),("köşe","sofa"),("ferah","sofa"),("düzen","sofa"),
+        ("fransız","door"),("balkon","door"),("manzara","view"),("göl","view"),("orman","view"),
+        ("duş","shower"),("duşakabin","shower"),("banyo malzeme","soap"),("malzeme","soap"),("banyo","bath"),
+        ("klima","climate"),("tv","tv"),("wifi","wifi"),("minibar","fridge"),
+        ("ısıt","kettle"),("su ","kettle"),("saç","dryer"),("kurutma","dryer"),
+        ("yatak","bed"),("king","bed"),("kişi","users"),("misafir","users")]
+def feat_icon(name):
+    n = name.lower()
+    for kw, ic in _MAP:
+        if kw in n:
+            return _svg(ic)
+    return _svg("check", "2")
+
 def imgs_for(folder):
     base = f"{ROOT}/assets/web/rooms/{folder}"
     nums = sorted({re.match(r'(\d+)',os.path.basename(f)).group(1)
@@ -124,7 +162,9 @@ def build(r):
     nums = imgs_for(r["folder"])
     hero = picture(r["folder"], nums[0], "100vw", alt=r["name"], lazy=False, w=1280, h=960)
     am = BASE_AM + r.get("extra",[])
-    amli = "".join(f'<li>{CHECK_SVG}{a}</li>' for a in am)
+    amgrid = "".join(f'<div class="am-it">{feat_icon(a)}<span>{a}</span></div>' for a in am)
+    hl = "".join(f'<div class="rhl-card"><div class="rhl-ic">{feat_icon(e)}</div><div class="rhl-t">{e}</div></div>'
+                 for e in r.get("extra",[]))
     gal = "".join(f'<a data-lb="/assets/web/rooms/{r["folder"]}/{n}.jpg">'
                   + picture(r["folder"], n, "(max-width:560px) 100vw,(max-width:960px) 50vw,33vw", alt=f'{r["name"]} - {i+1}')
                   + '</a>' for i,n in enumerate(nums))
@@ -170,7 +210,7 @@ def build(r):
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb_ld,ensure_ascii=False)}</script>
-<link rel="stylesheet" href="/css/site.css?v=10">
+<link rel="stylesheet" href="/css/site.css?v=11">
 </head>
 <body>
 <div class="prog" id="prog" style="display:none"></div>
@@ -179,21 +219,33 @@ def build(r):
 {hero}
 <div class="rhero-c">
 <div class="crumb"><a href="/">Anasayfa</a> · <a href="/#odalar">Odalar</a> · {r["name"]}</div>
+<div class="rtag">{_svg("star")}{r["tag"]}</div>
 <h1 class="thin">{r["name"]}</h1>
-<div class="rmeta-row"><span>{r["capt"]}</span><span>{r["bed"]}</span><span>{r["tag"]}</span></div>
+<div class="rmeta-row"><span>{_svg("users")}{r["capt"]}</span><span>{_svg("bed")}{r["bed"]}</span></div>
 </div>
 </header>
 
-<section class="sec"><div class="wrap rdetail">
+<section class="sec rhl-sec"><div class="wrap">
+<div class="rev" style="text-align:center;margin-bottom:38px"><div class="kick" style="justify-content:center">Öne Çıkanlar</div><h2 class="dh">Bu odayı <b>özel</b> kılan detaylar</h2></div>
+<div class="rhl rev">{hl}</div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap rdetail">
 <div class="rdesc rev">
 <div class="kick">Oda Detayı</div>
 {desc}
+<div class="am-title">Oda Donanımı</div>
+<div class="amgrid">{amgrid}</div>
 </div>
 <aside class="rside rev">
-<h3>Oda Donanımı</h3>
-<ul class="amlist">{amli}</ul>
-<a href="https://wa.me/905331350888?text={quote('Merhaba, DİDİ Otel Sapanca '+r["name"]+' için rezervasyon yapmak istiyorum.')}" class="btn btn-fill">Bu Odayı Seç</a>
-<div class="note">Güncel fiyat ve müsaitlik için</div>
+<div class="rside-facts">
+<div class="rf"><span class="rf-ic">{_svg("users")}</span><div><div class="rf-l">Kapasite</div><div class="rf-v">{r["capt"]}</div></div></div>
+<div class="rf"><span class="rf-ic">{_svg("bed")}</span><div><div class="rf-l">Yatak Düzeni</div><div class="rf-v">{r["bed"]}</div></div></div>
+<div class="rf"><span class="rf-ic">{feat_icon(r["extra"][0])}</span><div><div class="rf-l">Öne Çıkan</div><div class="rf-v">{r["extra"][0]}</div></div></div>
+</div>
+<div class="rside-badge">{_svg("star")}Aracısız en uygun fiyat garantisi</div>
+<a href="https://wa.me/905331350888?text={quote('Merhaba, DİDİ Otel Sapanca '+r["name"]+' için rezervasyon yapmak istiyorum.')}" class="btn btn-fill" style="width:100%;justify-content:center">Bu Odayı Seç</a>
+<div class="note">Güncel fiyat ve müsaitlik için WhatsApp hattımızdan yazın.</div>
 </aside>
 </div></section>
 

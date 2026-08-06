@@ -500,3 +500,51 @@ transition:transform .3s var(--ease2);box-shadow:0 2px 4px rgba(0,0,0,.22)}
 .bfast:not(.on) .ic{background:var(--line)}
 @media(max-width:600px){.resv-amen{grid-template-columns:repeat(4,1fr);gap:6px}.amen-chip{padding:11px 4px;font-size:10px}.amen-chip svg{width:20px;height:20px}
 .ropt-thumb{width:56px;height:56px}.ropt-gal img{height:54px}}
+
+/* ── oda detay: lüks + animasyonlu ── */
+.rtag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+padding:7px 15px;border-radius:100px;margin-bottom:16px}
+.rtag svg{width:14px;height:14px;color:var(--sand2)}
+.rmeta-row span{display:inline-flex;align-items:center;gap:7px}
+.rmeta-row span svg{width:17px;height:17px;opacity:.92}
+/* Öne çıkanlar */
+.rhl-sec{background:linear-gradient(180deg,var(--bone),var(--paper))}
+.rhl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rhl-card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px 20px;text-align:center;overflow:hidden;
+transition:box-shadow .5s var(--ease),border-color .5s var(--ease)}
+.rhl-card::before{content:"";position:absolute;inset:0;background:radial-gradient(130% 90% at 50% 0,rgba(46,74,60,.07),transparent 62%);opacity:0;transition:opacity .5s}
+.rhl-card:hover{box-shadow:0 24px 54px rgba(26,25,22,.11);border-color:var(--sand)}
+.rhl-card:hover::before{opacity:1}
+.rhl-ic{position:relative;width:58px;height:58px;margin:0 auto 16px;border-radius:15px;background:var(--bone);display:grid;place-items:center;transition:.55s var(--ease2)}
+.rhl-card:hover .rhl-ic{background:var(--green);transform:scale(1.07) rotate(-3deg)}
+.rhl-ic svg{width:27px;height:27px;color:var(--green);transition:color .55s}
+.rhl-card:hover .rhl-ic svg{color:#fff}
+.rhl-t{position:relative;font-size:15px;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+/* ikonlu donanım ızgarası */
+.am-title{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin:36px 0 16px}
+.amgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.am-it{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid var(--line2);font-size:15px;color:var(--ink2)}
+.am-it svg{width:19px;height:19px;color:var(--green);flex-shrink:0}
+/* sidebar bilgi + rozet */
+.rside-facts{display:flex;flex-direction:column;margin-bottom:20px}
+.rf{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid var(--line2)}
+.rf:last-child{border-bottom:0}
+.rf-ic{width:40px;height:40px;border-radius:11px;background:var(--bone);display:grid;place-items:center;flex-shrink:0}
+.rf-ic svg{width:19px;height:19px;color:var(--green)}
+.rf-l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.rf-v{font-size:15px;font-weight:500;margin-top:2px}
+.rside-badge{display:flex;align-items:center;gap:9px;background:rgba(46,74,60,.07);border-radius:11px;padding:12px 14px;margin-bottom:16px;font-size:13px;color:var(--green2);font-weight:500}
+.rside-badge svg{width:17px;height:17px;color:var(--green);flex-shrink:0}
+@media(max-width:960px){.rhl{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.rhl{grid-template-columns:1fr 1fr;gap:12px}.rhl-card{padding:22px 14px}.rhl-ic{width:50px;height:50px}.amgrid{grid-template-columns:1fr}}
+
+/* Öne çıkanlar: auto-fit + stagger giriş (hover ile çakışmasız) */
+.rhl{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.rhl.rev{opacity:1;transform:none}
+.rhl-card{opacity:0;transform:translateY(26px)}
+.rhl.in .rhl-card{animation:rhlIn .7s var(--ease2) both}
+.rhl.in .rhl-card:nth-child(1){animation-delay:.05s}.rhl.in .rhl-card:nth-child(2){animation-delay:.13s}
+.rhl.in .rhl-card:nth-child(3){animation-delay:.21s}.rhl.in .rhl-card:nth-child(4){animation-delay:.29s}
+@keyframes rhlIn{to{opacity:1;transform:none}}
+@media(max-width:600px){.rhl{grid-template-columns:1fr 1fr}}
