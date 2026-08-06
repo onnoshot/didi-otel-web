@@ -144,6 +144,23 @@ display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:8px;padding:14px;align-i
 .room-price{font-size:15px;color:var(--ink);margin-bottom:24px}
 .room-price b{font-weight:500}
 .room-cta{display:flex;gap:12px;flex-wrap:wrap}
+/* trust / reviews */
+.trust{background:var(--paper)}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);margin-top:54px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.trust-card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .35s var(--ease)}
+.trust-card:hover{background:rgba(46,74,60,.05)}
+.trust-p{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.trust-n{font-size:clamp(36px,4vw,52px);font-weight:200;letter-spacing:-.03em;color:var(--ink);margin-top:14px}
+.trust-stars{display:flex;gap:3px;justify-content:center;margin-top:10px}
+.star-ic{width:15px;height:15px;fill:var(--sand)}
+.star-ic.o{fill:none;stroke:var(--line);stroke-width:1.5}
+.trust-l{font-size:13px;color:var(--faint);margin-top:10px}
+.trust-card-cta{justify-content:center}
+.trust-gicon{margin-top:14px}
+.trust-l-cta{color:var(--green);font-weight:600;font-size:14px;margin-top:16px;line-height:1.5}
+.trust-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:46px}
+.chip{font-size:13.5px;font-weight:500;color:var(--ink2);border:1px solid var(--line);border-radius:100px;padding:9px 20px;background:var(--bone)}
+@media(max-width:780px){.trust-row{grid-template-columns:1fr}.trust-card{border-right:0}}
 /* experiences */
 .exp{background:var(--paper)}
 .exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,1.6vw,22px);margin-top:54px}
