@@ -474,6 +474,26 @@ document.getElementById('lbPrev').addEventListener('click',()=>go(-1));
 document.getElementById('lbNext').addEventListener('click',()=>go(1));
 lb.addEventListener('click',e=>{if(e.target===lb)close()});
 addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1)});
+// ── ZİYARETÇİ KANALI (rezervasyon kaynağı: Instagram/Google/Doğrudan...) ──
+function deriveChannel(){
+  try{
+    var p=new URLSearchParams(location.search);
+    var us=(p.get('utm_source')||'').toLowerCase();
+    var m={instagram:'Instagram',ig:'Instagram',facebook:'Facebook',fb:'Facebook',meta:'Facebook',google:'Google',
+      youtube:'YouTube',yt:'YouTube',tiktok:'TikTok',pinterest:'Pinterest',twitter:'X',x:'X',linkedin:'LinkedIn',
+      whatsapp:'WhatsApp',wa:'WhatsApp',email:'E-posta',newsletter:'E-posta',mail:'E-posta'};
+    if(us)return m[us]||(us.charAt(0).toUpperCase()+us.slice(1));
+    var ref=document.referrer||'',h='';try{h=new URL(ref).hostname.replace(/^www\./,'').toLowerCase();}catch(e){}
+    if(!ref||h===location.hostname.replace(/^www\./,''))return 'Doğrudan';
+    var hm=[['instagram','Instagram'],['google','Google'],['bing','Bing'],['facebook','Facebook'],['fb.','Facebook'],
+      ['youtube','YouTube'],['t.co','X'],['twitter','X'],['x.com','X'],['tiktok','TikTok'],['pinterest','Pinterest'],
+      ['linkedin','LinkedIn'],['whatsapp','WhatsApp'],['wa.me','WhatsApp'],['yandex','Yandex'],['duckduckgo','DuckDuckGo']];
+    for(var i=0;i<hm.length;i++)if(h.indexOf(hm[i][0])>=0)return hm[i][1];
+    return 'Yönlendirme';
+  }catch(e){return 'Doğrudan';}
+}
+var DIDI_CHANNEL=(function(){try{var s=sessionStorage.getItem('didi_ch');if(s)return s;var c=deriveChannel();sessionStorage.setItem('didi_ch',c);return c;}catch(e){return deriveChannel();}})();
+
 // ── REZERVASYON WIZARD ──
 (function(){
   const modal=document.getElementById('resvModal');if(!modal)return;
@@ -519,7 +539,8 @@ addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key
     // Rezervasyon niyetini panele kaydet (WhatsApp'a gitmeden de takip edilebilsin)
     try{fetch('/api/reservation/',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},
       body:JSON.stringify({name:name,phone:phone,room:st.room,checkin:rvIn.value,checkout:rvOut.value,
-        nights:nights(),adults:st.ad,children:st.ch,breakfast:st.bfast,source:'website-wizard'})}).catch(function(){});}catch(e){}
+        nights:nights(),adults:st.ad,children:st.ch,breakfast:st.bfast,source:'website-wizard',
+        channel:DIDI_CHANNEL,referrer:(document.referrer||''),utm:((new URLSearchParams(location.search)).get('utm_source')||'')})}).catch(function(){});}catch(e){}
     const msg='Merhaba, DİDİ Otel Sapanca için rezervasyon yapmak istiyorum.\n\n'+
       'Ad: '+name+(phone?('\nTelefon: '+phone):'')+'\nGiriş: '+fmt(rvIn.value)+'\nÇıkış: '+fmt(rvOut.value)+' ('+nights()+' gece)\n'+
       'Oda: '+(st.room||'-')+'\nMisafir: '+g+'\nKahvaltı: '+(st.bfast?'Dahil':'İstenmedi')+'\n\nAracısız en uygun fiyat bilgisi rica ederim.';
