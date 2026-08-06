@@ -511,7 +511,7 @@ addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key
     const phone=((document.getElementById('rvPhone')||{}).value||'').trim();
     const g=st.ad+' yetişkin'+(st.ch>0?(' + '+st.ch+' çocuk'):'');
     // Rezervasyon niyetini panele kaydet (WhatsApp'a gitmeden de takip edilebilsin)
-    try{fetch('/api/reservation',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},
+    try{fetch('/api/reservation/',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},
       body:JSON.stringify({name:name,phone:phone,room:st.room,checkin:rvIn.value,checkout:rvOut.value,
         nights:nights(),adults:st.ad,children:st.ch,breakfast:st.bfast,source:'website-wizard'})}).catch(function(){});}catch(e){}
     const msg='Merhaba, DİDİ Otel Sapanca için rezervasyon yapmak istiyorum.\n\n'+
