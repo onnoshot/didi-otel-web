@@ -6,7 +6,7 @@ GEO/AEO uyumlu (answer-first, soru H2, tablo, iç linkler). Idempotent.
 import os, json, html
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-SITE = "https://sapancadidiotel.com"
+SITE = "https://www.sapancadidiotel.com"
 IMG = "/assets/web/editorial"
 
 GA = '''<link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://connect.facebook.net" crossorigin>
@@ -44,18 +44,18 @@ NAV = '''<nav class="nav scr-force" id="nav">
 </div>
 <div class="nav-right">
 <a href="tel:+905331350888" class="btn btn-line">0533 135 08 88</a>
-<a href="https://sapancadidiotel.com/reservation/book" class="btn btn-fill">Rezervasyon</a>
+<a href="https://wa.me/905331350888?text=Merhaba%2C%20D%C4%B0D%C4%B0%20Otel%20Sapanca%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." class="btn btn-fill">Rezervasyon</a>
 <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
 </div>
 </nav>
 <div class="mob" id="mob">
 <a href="/#odalar">Odalar</a><a href="/#mare">Mare Gastro</a><a href="/#konum">Konum</a><a href="/blog/">Blog</a><a href="/#iletisim">İletişim</a>
-<a href="https://sapancadidiotel.com/reservation/book" style="color:var(--green)">Rezervasyon Yap →</a>
+<a href="https://wa.me/905331350888?text=Merhaba%2C%20D%C4%B0D%C4%B0%20Otel%20Sapanca%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." style="color:var(--green)">Rezervasyon Yap →</a>
 </div>'''
 
 FOOT = '''<footer class="foot"><div class="wrap">
 <div class="foot-grid">
-<div><img src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><p>Kırkpınar Sapanca'da göl ve dağ manzaralı butik konaklama. Konforlu ve unutulmaz bir deneyim için doğru adres.</p></div>
+<div><img src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><p>Kırkpınar Sapanca'da göl ve orman arasında butik bir konaklama. Sapanca'nın tek klorsuz havuzu ve Mare Gastro restoranıyla.</p></div>
 <div><h5>Sayfalar</h5><ul><li><a href="/#odalar">Odalar</a></li><li><a href="/#mare">Mare Gastro</a></li><li><a href="/#konum">Konum</a></li><li><a href="/blog/">Blog</a></li><li><a href="/#galeri">Galeri</a></li></ul></div>
 <div><h5>İletişim</h5><ul><li><a href="tel:+902645921212">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=K%C4%B1rkp%C4%B1nar+Sapanca%2C+Sakarya" target="_blank" rel="noopener">Yol Tarifi</a></li></ul></div>
 </div>
@@ -74,9 +74,9 @@ document.querySelectorAll('.rev').forEach(el=>io.observe(el));
 </script>'''
 
 CTA = ('<div class="art-cta"><h3>Sapanca\'da doğanın içinde bir kaçış</h3>'
- '<p>DİDİ Otel Sapanca — Kırkpınar\'da göl ve dağ manzaralı butik konaklama.</p>'
+ '<p>DİDİ Otel Sapanca — Kırkpınar\'da göl ile orman arasında butik bir konaklama.</p>'
  '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">'
- '<a href="https://sapancadidiotel.com/reservation/book" class="btn btn-fill">Müsaitliği Gör</a>'
+ '<a href="https://wa.me/905331350888?text=Merhaba%2C%20D%C4%B0D%C4%B0%20Otel%20Sapanca%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum." class="btn btn-fill">Müsaitliği Gör</a>'
  '<a href="/#odalar" class="btn btn-line" style="border-color:rgba(255,255,255,.4);color:#fff">Odaları İncele</a></div></div>')
 
 # ── POSTS ──
