@@ -1,0 +1,159 @@
+/* Odalar & Suitler HUB — app-hissiyatlı, mobil-öncelikli (site.css token'larıyla) */
+.hub-rooms .wrap,.match-sec .wrap,.amen-sec .wrap{max-width:var(--maxw,1340px)}
+
+/* ── HERO ── */
+.hhero{position:relative;min-height:82svh;display:flex;align-items:flex-end;overflow:hidden;background:#12140f}
+.hhero-bg{position:absolute;inset:0;z-index:0}
+.hhero-bg picture,.hhero-bg img{width:100%;height:100%;object-fit:cover}
+.hhero::after{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(18,20,15,.5) 0%,rgba(18,20,15,.12) 34%,rgba(18,20,15,.4) 62%,rgba(18,20,15,.9) 100%)}
+.hhero-c{position:relative;z-index:2;color:#fff;width:100%;max-width:var(--maxw,1340px);margin:0 auto;
+  padding:0 clamp(18px,4vw,52px) clamp(40px,7vh,80px);text-shadow:0 2px 30px rgba(15,18,12,.5)}
+.hhero .crumb{font-size:12px;letter-spacing:.04em;opacity:.85;margin-bottom:16px}
+.hhero .crumb a{color:#fff;opacity:.8}
+.hkick{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--sand2,#C9B089);
+  opacity:0;animation:hsoft .9s var(--ease2) .25s forwards}
+.hh1{font-size:clamp(44px,10vw,116px);font-weight:200;line-height:.9;letter-spacing:-.045em;margin-top:12px}
+.hh1 span{display:block;opacity:0;transform:translateY(40px);clip-path:inset(0 0 100% 0);
+  animation:hline 1.3s cubic-bezier(.16,1,.3,1) forwards}
+.hh1 span:nth-child(1){animation-delay:.4s}.hh1 span:nth-child(2){animation-delay:.58s}
+.hsub{font-size:clamp(14px,1.6vw,17px);font-weight:400;line-height:1.6;max-width:52ch;margin-top:22px;
+  color:rgba(255,255,255,.92);opacity:0;animation:hsoft 1s var(--ease2) 1s forwards}
+.hstats{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;opacity:0;animation:hsoft 1s var(--ease2) 1.2s forwards}
+.hstats span{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;
+  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(8px);
+  padding:9px 15px;border-radius:100px;min-height:38px}
+.hstats svg{width:16px;height:16px;color:var(--sand2,#C9B089)}
+@keyframes hline{0%{opacity:0;transform:translateY(40px);clip-path:inset(0 0 100% 0)}55%{opacity:1}100%{opacity:1;transform:none;clip-path:inset(0 0 -6% 0)}}
+@keyframes hsoft{0%{opacity:0;transform:translateY(14px);filter:blur(6px)}100%{opacity:1;transform:none;filter:blur(0)}}
+.hscroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:3;opacity:0;animation:hsoft 1s var(--ease) 1.5s forwards}
+.hscroll .d{display:block;width:1px;height:40px;background:linear-gradient(#fff,transparent);animation:hdrop 2s var(--ease) infinite}
+@keyframes hdrop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ── FİLTRE ÇİPLERİ ── */
+.fbar{display:flex;gap:9px;overflow-x:auto;padding:6px 2px 12px;margin-bottom:26px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.fbar::-webkit-scrollbar{display:none}
+.fchip{flex:0 0 auto;min-height:42px;padding:10px 18px;border-radius:100px;font-family:var(--sf);font-size:13.5px;font-weight:500;
+  color:var(--ink2);background:var(--paper);border:1px solid var(--line);cursor:pointer;transition:.3s var(--ease);white-space:nowrap}
+.fchip:hover{border-color:var(--green)}
+.fchip.on{background:var(--green);color:#fff;border-color:var(--green)}
+
+/* ── ODA KARTLARI ── */
+.hgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(16px,2.4vw,26px)}
+.hcard{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .5s var(--ease2),box-shadow .5s var(--ease),border-color .5s}
+.hcard:hover{transform:translateY(-6px);box-shadow:0 26px 56px rgba(26,25,22,.13);border-color:var(--sand)}
+.hcard-img{position:relative;display:block;aspect-ratio:4/3;overflow:hidden}
+.hcard-img picture,.hcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease2)}
+.hcard:hover .hcard-img img{transform:scale(1.05)}
+.hcard-badge{position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:600;letter-spacing:.04em;color:#fff;background:rgba(26,25,22,.55);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:100px}
+.hcard-badge svg{width:13px;height:13px;color:var(--sand2,#C9B089)}
+.hcard-b{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.hcard-b h3{font-size:20px;font-weight:400;letter-spacing:-.02em;margin-bottom:10px}
+.hcard-meta{display:flex;gap:16px;font-size:13px;color:var(--ink2);margin-bottom:14px}
+.hcard-meta span{display:inline-flex;align-items:center;gap:7px}
+.hcard-meta svg{width:16px;height:16px;color:var(--green)}
+.hcard-feats{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.hcf{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--green2);background:rgba(46,74,60,.08);
+  padding:6px 11px;border-radius:100px}
+.hcf svg{width:14px;height:14px}
+.hcard-cta{display:flex;gap:9px;margin-top:auto}
+.hcard-cta .btn{flex:1;justify-content:center;min-height:44px}
+.hcard-cta .btn-line{border-color:var(--line);color:var(--ink)}
+.hempty{text-align:center;color:var(--faint);padding:40px 0;font-size:14px}
+
+/* ── HANGİ ODA (persona) ── */
+.match-sec{background:linear-gradient(180deg,var(--bone),var(--paper))}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.mcard{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 22px;display:flex;flex-direction:column;
+  transition:transform .5s var(--ease2),box-shadow .5s,border-color .5s}
+.mcard:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(26,25,22,.1);border-color:var(--sand)}
+.mcard-ic{width:52px;height:52px;border-radius:14px;background:var(--bone);display:grid;place-items:center;margin-bottom:16px;transition:.5s var(--ease2)}
+.mcard:hover .mcard-ic{background:var(--green)}
+.mcard-ic svg{width:24px;height:24px;color:var(--green);transition:color .5s}
+.mcard:hover .mcard-ic svg{color:#fff}
+.mcard-t{font-size:16px;font-weight:500;margin-bottom:7px}
+.mcard-d{font-size:13.5px;color:var(--ink2);line-height:1.55;flex:1}
+.mcard-go{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--green);margin-top:16px}
+.mcard-go svg{width:15px;height:15px}
+
+/* ── HER ODADA DAHİL ── */
+.hamen{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px 22px}
+.ham-it{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line2);font-size:14.5px;color:var(--ink2)}
+.ham-it svg{width:20px;height:20px;color:var(--green);flex-shrink:0}
+
+/* ── TRUST ── */
+.trust-sec{background:linear-gradient(180deg,var(--paper),var(--bone))}
+.tcard{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:clamp(34px,5vw,56px);text-align:center;
+  max-width:760px;margin:0 auto;box-shadow:0 20px 50px rgba(26,25,22,.06)}
+.tstars{display:flex;justify-content:center;gap:3px;margin-bottom:18px}
+.tstars svg{width:22px;height:22px;color:var(--sand);fill:var(--sand)}
+.tchips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px}
+.tchip{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;color:var(--green2);
+  background:rgba(46,74,60,.08);padding:9px 15px;border-radius:100px}
+.tchip svg{width:15px;height:15px;color:var(--green)}
+
+/* ── SSS ── */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:18px 20px;font-size:15.5px;font-weight:500;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary svg{width:18px;height:18px;color:var(--green);flex-shrink:0;transition:transform .4s var(--ease2)}
+.faq-item[open] summary svg{transform:rotate(90deg)}
+.faq-item p{padding:0 20px 20px;font-size:14px;color:var(--ink2);line-height:1.65;margin:0}
+
+/* ── CTA ── */
+.cta-sec{background:var(--green);color:#fff}
+.cta-sec .kick{color:var(--sand2,#C9B089)}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btns .btn-line{border-color:rgba(255,255,255,.5);color:#fff}
+.cta-btns .btn-line:hover{background:rgba(255,255,255,.14)}
+.cta-btns .btn-fill{background:#fff;color:var(--green)}
+.cta-btns .btn-fill:hover{background:var(--bone)}
+
+/* ── YAPIŞKAN MOBİL REZERVASYON ── */
+.resbar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+  background:var(--glass,rgba(251,249,244,.82));backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
+  border-top:1px solid var(--line);padding:10px clamp(14px,4vw,22px) calc(10px + env(safe-area-inset-bottom))}
+.resbar-in{display:flex;align-items:center;gap:14px;max-width:var(--maxw,1340px);margin:0 auto}
+.resbar-t{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+.resbar-t b{font-size:14px;font-weight:600}
+.resbar-t span{font-size:11.5px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.resbar .btn{margin-left:auto;min-height:46px;padding:0 22px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){.hgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .hhero{min-height:76svh}
+  .hgrid{grid-template-columns:1fr}
+  .hcard-cta{flex-direction:row}
+  .resbar{display:block}
+  body{padding-bottom:74px}
+  .wa{bottom:88px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hkick,.hh1 span,.hsub,.hstats,.hscroll{animation:none;opacity:1;transform:none;clip-path:none}
+  .hcard,.mcard{transition:none}
+  .hscroll{display:none}
+}
+
+/* ── dil seçici (langsw) ── */
+.langsw{position:relative;display:flex;align-items:center}
+.langsw-btn{display:flex;align-items:center;gap:6px;background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;font-family:var(--sf);font-size:12.5px;letter-spacing:.02em;padding:8px 12px;border-radius:100px;cursor:pointer;transition:background .3s var(--ease),border-color .3s var(--ease);min-height:38px}
+.nav.scr .langsw-btn{border-color:var(--line);color:var(--ink)}
+.langsw-btn:hover{background:rgba(255,255,255,.14)}
+.nav.scr .langsw-btn:hover{background:var(--bone)}
+.langsw-btn svg{width:12px;height:12px;opacity:.7;transition:transform .3s var(--ease)}
+.langsw.open .langsw-btn svg{transform:rotate(180deg)}
+.langsw-menu{position:absolute;top:calc(100% + 10px);right:0;min-width:170px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .28s var(--ease);z-index:220;box-shadow:0 20px 50px rgba(26,25,22,.16)}
+.langsw.open .langsw-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.langsw-menu a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:9px;color:var(--ink);text-decoration:none;font-size:13.5px;transition:background .2s;min-height:40px}
+.langsw-menu a:hover{background:var(--bone)}
+.langsw-menu a.on{color:var(--green);font-weight:500}
+[dir=rtl] .langsw-menu{right:auto;left:0}
+.mob-langs{display:flex;flex-wrap:wrap;gap:8px;padding:18px 34px 4px;border-top:1px solid var(--line2)}
+.mob-langs a{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--ink2);text-decoration:none;padding:8px 13px;border:1px solid var(--line);border-radius:100px;min-height:40px}
+.mob-langs a.on{color:var(--green);border-color:var(--green)}
