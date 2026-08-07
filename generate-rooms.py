@@ -176,7 +176,7 @@ def nav_html(lang, slug):
     return f'''<nav class="nav" id="nav">
 <a href="{home_url(lang)}" class="nav-logo" aria-label="DİDİ Otel Sapanca"><img class="logo-w" src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><img class="logo-n" src="/assets/brand/adidilogo-navy.png" alt="" aria-hidden="true"></a>
 <div class="nav-links">
-<a href="{home_url(lang)}#odalar">{d["nav_odalar"]}</a><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a><a href="{home_url(lang)}#mare">Mare Gastro</a><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a><a href="{home_url(lang)}#iletisim">{d["nav_iletisim"]}</a>
+<a href="{home_url(lang)}odalar/">{d["nav_odalar"]}</a><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a><a href="{home_url(lang)}#mare">Mare Gastro</a><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a><a href="{home_url(lang)}#iletisim">{d["nav_iletisim"]}</a>
 </div>
 <div class="nav-right">{langsw(lang, slug)}
 <a href="tel:+905331350888" class="btn btn-line" dir="ltr">0533 135 08 88</a>
@@ -185,7 +185,7 @@ def nav_html(lang, slug):
 </div>
 </nav>
 <div class="mob" id="mob">{mob_langs(lang, slug)}
-<a href="{home_url(lang)}#odalar">{d["nav_odalar"]}</a><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a><a href="{home_url(lang)}#mare">Mare Gastro</a><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a><a href="{home_url(lang)}#iletisim">{d["nav_iletisim"]}</a>
+<a href="{home_url(lang)}odalar/">{d["nav_odalar"]}</a><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a><a href="{home_url(lang)}#mare">Mare Gastro</a><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a><a href="{home_url(lang)}#iletisim">{d["nav_iletisim"]}</a>
 <a href="https://wa.me/905331350888?text={wa_text}" style="color:var(--green)">{d["mob_rez_yap"]}</a>
 </div>'''
 
@@ -194,7 +194,7 @@ def foot_html(lang):
     return f'''<footer class="foot"><div class="wrap">
 <div class="foot-grid">
 <div><img src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><p>{d["foot_desc"]}</p></div>
-<div><h5>{d["foot_sayfalar"]}</h5><ul><li><a href="{home_url(lang)}#odalar">{d["nav_odalar"]}</a></li><li><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a></li><li><a href="{home_url(lang)}#mare">Mare Gastro</a></li><li><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a></li><li><a href="{home_url(lang)}#galeri">{d["gal_kick"]}</a></li></ul></div>
+<div><h5>{d["foot_sayfalar"]}</h5><ul><li><a href="{home_url(lang)}odalar/">{d["nav_odalar"]}</a></li><li><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a></li><li><a href="{home_url(lang)}#mare">Mare Gastro</a></li><li><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a></li><li><a href="{home_url(lang)}#galeri">{d["gal_kick"]}</a></li></ul></div>
 <div><h5>{d["nav_iletisim"]}</h5><ul><li><a href="tel:+902645921212" dir="ltr">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=K%C4%B1rkp%C4%B1nar+Sapanca%2C+Sakarya" target="_blank" rel="noopener">{d["foot_yol_tarifi"]}</a></li></ul></div>
 </div>
 <div class="foot-credits"><span>{d["foot_credit1"]}</span><span>{d["foot_credit2"]}</span></div>
@@ -260,7 +260,7 @@ def build(meta, lang):
       "inLanguage": lang}
     crumb_ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": d["room_breadcrumb_anasayfa"], "item": home_url(lang)},
-        {"@type": "ListItem", "position": 2, "name": d["nav_odalar"], "item": home_url(lang) + "#odalar"},
+        {"@type": "ListItem", "position": 2, "name": d["nav_odalar"], "item": home_url(lang) + "odalar/"},
         {"@type": "ListItem", "position": 3, "name": r["name"]}]}
 
     title = f'{r["name"]} | DİDİ Otel Sapanca'
@@ -297,7 +297,7 @@ def build(meta, lang):
 <header class="rhero">
 {hero}
 <div class="rhero-c">
-<div class="crumb"><a href="{home_url(lang)}">{d["room_breadcrumb_anasayfa"]}</a> · <a href="{home_url(lang)}#odalar">{d["nav_odalar"]}</a> · {r["name"]}</div>
+<div class="crumb"><a href="{home_url(lang)}">{d["room_breadcrumb_anasayfa"]}</a> · <a href="{home_url(lang)}odalar/">{d["nav_odalar"]}</a> · {r["name"]}</div>
 <div class="rtag">{_svg("star")}{r["tag"]}</div>
 <h1 class="thin">{r["name"]}</h1>
 <div class="rmeta-row"><span>{_svg("users")}{r["capt"]}</span><span>{_svg("bed")}{r["bed"]}</span></div>
