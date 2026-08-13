@@ -71,6 +71,29 @@ if(burger){burger.addEventListener('click',()=>{burger.classList.toggle('x');mob
 mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('x');mob.classList.remove('open');document.body.style.overflow=''}));}
 const io=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -7% 0px'});
 document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+document.querySelectorAll('.itin-tabs').forEach(tabs=>{
+const wrap=tabs.closest('.itin-wrap');if(!wrap)return;
+tabs.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+tabs.querySelectorAll('button').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
+const k=btn.dataset.tab;wrap.querySelectorAll('.itin-panel').forEach(p=>p.classList.toggle('on',p.dataset.tab===k));
+}));
+});
+const cio=new IntersectionObserver((es,o)=>es.forEach(e=>{
+if(!e.isIntersecting)return;
+const el=e.target,raw=el.dataset.count,end=parseFloat(raw.replace(',','.')),dec=(raw.split(/[.,]/)[1]||'').length,dur=1100,t0=performance.now();
+const step=t=>{const p=Math.min(1,(t-t0)/dur),v=end*(1-Math.pow(1-p,3));el.textContent=v.toFixed(dec).replace('.',',');if(p<1)requestAnimationFrame(step);else el.textContent=raw;};
+requestAnimationFrame(step);o.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('.stat-num[data-count]').forEach(el=>cio.observe(el));
+document.querySelectorAll('.spot-check').forEach(list=>{
+const key='didi-check-'+(list.dataset.key||'x'),boxes=[...list.querySelectorAll('input[type=checkbox]')];
+let saved=[];try{saved=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}
+boxes.forEach((b,i)=>{if(saved.includes(i))b.checked=true});
+const holder=list.parentElement.querySelector('.spot-progress'),bar=holder&&holder.querySelector('b'),track=holder&&holder.querySelector('.track i');
+const upd=()=>{const n=boxes.filter(b=>b.checked).length;if(bar)bar.textContent=n+'/'+boxes.length;if(track)track.style.width=(n/boxes.length*100)+'%';
+try{localStorage.setItem(key,JSON.stringify(boxes.map((b,i)=>b.checked?i:null).filter(x=>x!==null)))}catch(e){}};
+boxes.forEach(b=>b.addEventListener('change',upd));upd();
+});
 </script>'''
 
 CTA = ('<div class="art-cta"><h3>Sapanca\'da doğanın içinde bir kaçış</h3>'
@@ -417,6 +440,186 @@ POSTS = [
         ("En çok hangi konular övülüyor?","Temizlik, personel ilgisi, göle yakın sakin konum ve zengin kahvaltı öne çıkan konulardır."),
         ("Odalarda gürültü oluyor mu?","Bazı misafirler ana cadde trafiğinden söz etmiştir; bahçeye veya havuza bakan odalar daha sessizdir, rezervasyonda talep edilebilir."),
         ("Güncel yorumları nereden okuyabilirim?","TripAdvisor ve Google Haritalar üzerindeki DİDİ Otel Sapanca sayfalarından güncel yorumlara ulaşabilirsiniz.")],
+},
+{
+ "slug":"sapanca-teleferik-rehberi","cat":"Teleferik","img":"ONN09422","date":"2026-08-13",
+ "title":"Sapanca Teleferik Rehberi: Fiyatlar, Saatler ve Kırkpınar'dan Kalkan Hat",
+ "desc":"Sapanca Teleferik güncel bilet fiyatları, çalışma saatleri, Kırkpınar-Mahmudiye hattı ve DİDİ Otel'e yakınlığı. Ziyaret öncesi bilmeniz gereken her şey.",
+ "lead":"Sapanca Teleferik, Kırkpınar'daki alt istasyondan Mahmudiye Mahallesi'ndeki üst istasyona 1,5 kilometrelik bir hatla göl ve orman manzarasını gökyüzünden izletir. Yolculuk yaklaşık 10 dakika sürer; güncel tam bilet gidiş-dönüş 450 TL, öğrenci bileti 300 TL'dir.",
+ "body":"""
+<h2>Sapanca Teleferik nedir, nereden nereye gidiyor?</h2>
+<p><strong>Sapanca Teleferik</strong>, Samanlı Dağları'nın eteğinde, göl seviyesinden ormanın içine yükselen 1,5 kilometrelik bir hattır. Alt istasyon <strong>Kırkpınar</strong>'da — DİDİ Otel'in de bulunduğu mahalledir — üst istasyon ise <strong>Mahmudiye Mahallesi</strong>'ndedir. Hatta 36 panoramik cam kabin hizmet verir, her kabin 8 kişi taşır ve sistem saatte yaklaşık 1500 yolcu kapasitesine sahiptir.</p>
+<div class="stat-row rev">
+<div class="stat-card"><span class="stat-num" data-count="1,5">0</span><span class="stat-label">km hat uzunluğu</span></div>
+<div class="stat-card"><span class="stat-num" data-count="10">0</span><span class="stat-label">dakika yolculuk</span></div>
+<div class="stat-card"><span class="stat-num" data-count="36">0</span><span class="stat-label">panoramik kabin</span></div>
+<div class="stat-card"><span class="stat-num" data-count="450">0</span><span class="stat-label">TL tam bilet (gidiş-dönüş)</span></div>
+</div>
+<h2>Bilet fiyatları ve çalışma saatleri</h2>
+<p>Biletler yalnızca gişeden, alındığı gün için satılır; online satış bulunmuyor.</p>
+<table><thead><tr><th>Bilet / Bilgi</th><th>Detay</th></tr></thead><tbody>
+<tr><td>Tam bilet (gidiş-dönüş)</td><td>450 TL</td></tr>
+<tr><td>Öğrenci bileti (gidiş-dönüş)</td><td>300 TL</td></tr>
+<tr><td>0-6 yaş, gazi, 1. derece şehit yakını</td><td>Ücretsiz</td></tr>
+<tr><td>Çalışma saatleri</td><td>Her gün 11:00 – 20:00</td></tr>
+</tbody></table>
+<h2>Üst istasyonda neler var?</h2>
+<p>Mahmudiye Mahallesi'ndeki üst istasyon, orman içinde bir seyir terasıyla Sapanca Gölü'nü kuşbakışı izletir; hatıra fotoğrafı için tam sırasıdır. Çevresinde kafeterya, restoran ve ATV safari gibi aktiviteler de yer alır. Buradan devam ederek <a href="/blog/poyrazlar-golu-mahmudiye-gizli-koseler/">Mahmudiye'nin köy pazarlarını</a> da keşfedebilirsiniz.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="yaz">Yazın gidenler için</button><button data-tab="kis">Kışın gidenler için</button></div>
+<div class="itin-panel on" data-tab="yaz"><p>Yaz aylarında hat, yemyeşil ormanın üzerinden geçerken göl suyu güneşte parıldar; akşamüzeri saatlerde ışık en yumuşak halini alır ve fotoğraf için idealdir.</p></div>
+<div class="itin-panel" data-tab="kis"><p>Kış aylarında Samanlı Dağları'nın karlı zirveleri ve zaman zaman bulut denizinin üzerinde süzülme hissi öne çıkar; sert rüzgar ve hava koşullarına bağlı sefer iptalleri olabileceğinden gitmeden önce hava durumunu kontrol etmek faydalıdır.</p></div>
+</div>
+<h2>DİDİ Otel'den teleferiğe nasıl gidilir?</h2>
+<p>Teleferiğin alt istasyonu, <a href="/#konum">DİDİ Otel Sapanca</a>'nın da bulunduğu Kırkpınar mahallesinde yer alır. Bu da onu, otelde konaklayan misafirler için en kolay ulaşılan Sapanca aktivitelerinden biri yapar. Gün içinde teleferik turunun ardından akşamı bahçedeki <a href="/#mare">Mare Gastro</a>'da göl havasında bir yemekle tamamlayabilirsiniz.</p>
+<h3>Ziyaret ipuçları</h3>
+<ul>
+<li>En sakin saatler hafta içi sabah ve öğleden sonranın ilk saatleridir; hafta sonları gişe önünde kısa bir bekleme olabilir.</li>
+<li>Yükseklikte rüzgar hissedilebilir; ince bir mont almanızı öneririz.</li>
+<li>Fotoğraf çekmek isteyenler kabinde pencereye yakın oturmayı tercih edebilir.</li>
+</ul>
+""",
+ "faq":[("Sapanca Teleferik nereden kalkıyor?","Alt istasyon Kırkpınar'dadır — DİDİ Otel Sapanca'nın da bulunduğu mahalle. Üst istasyon ise Mahmudiye Mahallesi'ndedir."),
+        ("Sapanca Teleferik bilet fiyatı ne kadar?","Tam bilet gidiş-dönüş 450 TL, öğrenci bileti 300 TL'dir. 0-6 yaş, gazi ve 1. derece şehit yakınları ücretsiz biner."),
+        ("Teleferik yolculuğu kaç dakika sürüyor?","Hat 1,5 kilometre uzunluğundadır ve yolculuk ortalama 10 dakika sürer."),
+        ("Sapanca Teleferik hangi saatlerde çalışıyor?","Haftanın her günü 11:00 ile 20:00 arasında hizmet verir.")],
+},
+{
+ "slug":"tarakli-geyve-gunubirlik-tur","cat":"Günübirlik","img":"ONN09440","date":"2026-08-14",
+ "title":"Taraklı ve Geyve: Sapanca'dan Günübirlik Tarihi Kasaba Turu",
+ "desc":"Sapanca'ya 45 dakika mesafedeki Taraklı'nın 700 yıllık çınarları, Osmanlı konakları ve Geyve'nin kiraz bahçeleri; günübirlik tarihi kasaba turu rehberi.",
+ "lead":"Sapanca'ya araçla yaklaşık 45 dakika mesafedeki Taraklı, üç katlı Osmanlı konakları ve 700 yıllık çınar ağaçlarıyla zamanda geriye bir yolculuk sunar. Aynı günde Geyve'ye uğrayarak günübirlik bir tarih ve doğa rotası tamamlanabilir.",
+ "body":"""
+<h2>Taraklı nerede, Sapanca'ya ne kadar uzak?</h2>
+<p><strong>Taraklı</strong>, Sapanca'ya karayoluyla yaklaşık <strong>45 dakika</strong> mesafededir. Sakarya'nın en iyi korunmuş tarihi kasabalarından biri olan Taraklı'da, 120 tescilli konağın yer aldığı bölge SİT alanı ilan edilmiştir.</p>
+<h2>Taraklı'da görülmesi gerekenler</h2>
+<p>Dar taş sokaklarda yürürken karşınıza çıkan üç katlı ahşap-kerpiç konaklar, Osmanlı şehir dokusunun günümüze kalan en canlı örneklerindendir. Kasabanın simgesi haline gelen 700 yıllık çınar ağaçları, meydanlarda gölge sağlar. Gezinin sonunda Taraklı'ya özgü <strong>uhut tatlısını</strong> denemeden dönmeyin.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="tarakli">Taraklı'da</button><button data-tab="geyve">Geyve'de</button></div>
+<div class="itin-panel on" data-tab="tarakli"><p>Tescilli konaklar arasında yürüyüş, küçük el sanatları dükkanları, yöresel uhut tatlısı ve çınar ağaçlarının gölgesinde bir çay molası — Taraklı'nın klasik günübirlik programıdır.</p></div>
+<div class="itin-panel" data-tab="geyve"><p>Taraklı'ya yaklaşık 15 dakika mesafedeki Geyve, özellikle ilkbahar ve yaz aylarında kiraz bahçeleriyle bilinir; Sakarya Nehri kıyısında kısa bir yürüyüş rotayı tamamlar.</p></div>
+</div>
+<h2>Günübirlik rota nasıl planlanır?</h2>
+<table><thead><tr><th>Güzergah</th><th>Süre</th></tr></thead><tbody>
+<tr><td>DİDİ Otel → Taraklı</td><td>~45 dk</td></tr>
+<tr><td>Taraklı → Geyve</td><td>~15 dk</td></tr>
+<tr><td>Geyve → DİDİ Otel (dönüş)</td><td>~35-45 dk</td></tr>
+</tbody></table>
+<p>Sabah erken bir kahvaltıyla yola çıkmak, her iki kasabayı da rahat bir tempoda gezip akşam üzeri Sapanca'ya dönmek için yeterli zamanı sağlar.</p>
+<h2>Ne zaman gidilmeli?</h2>
+<p>Geyve'nin kiraz bahçeleri için <strong>Nisan-Haziran</strong> arası, Taraklı'nın çınar ağaçlarının en gösterişli renklerini görmek için ise <strong>sonbahar</strong> ayları önerilir.</p>
+<p>Erken çıkış için <a href="/#odalar">DİDİ Otel'de</a> zengin bir serpme kahvaltı yapıp yola çıkabilir, akşam dönüşünüzde <a href="/#mare">Mare Gastro</a>'da güne veda edebilirsiniz.</p>
+""",
+ "faq":[("Taraklı, Sapanca'ya kaç km / kaç dakika uzaklıkta?","Taraklı, Sapanca'ya karayoluyla yaklaşık 45 dakika mesafededir."),
+        ("Taraklı'da ne yenir?","Kasabaya özgü uhut tatlısı ve yöresel ev yemekleri denenmesi gereken lezzetlerdir."),
+        ("Geyve, Sapanca'ya uzak mı?","Geyve, Sapanca'ya yaklaşık 32-34 km ve 35-45 dakika mesafededir; Taraklı'ya ise yaklaşık 15 dakikadır."),
+        ("Taraklı ve Geyve bir günde gezilir mi?","Evet, sabah erken bir çıkışla her iki kasaba da günübirlik olarak rahatça gezilebilir.")],
+},
+{
+ "slug":"poyrazlar-golu-mahmudiye-gizli-koseler","cat":"Doğa","img":"ONN09442","date":"2026-08-15",
+ "title":"Poyrazlar Gölü ve Mahmudiye: Sapanca'nın Gizli Kalmış Doğa Köşeleri",
+ "desc":"Sapanca'ya yaklaşık 15 dakika mesafedeki Poyrazlar Gölü Tabiat Parkı ve Mahmudiye Mahallesi; kamp, ATV, tekne turu ve yöresel ürünlerle keşfedilecek sakin rotalar.",
+ "lead":"Sapanca'nın en bilinen duraklarının biraz dışına çıkmak isteyenler için Poyrazlar Gölü ve Mahmudiye Mahallesi, kalabalıktan uzak, doğayla baş başa iki adres sunar. Poyrazlar Gölü Tabiat Parkı'nda kamp ve su aktiviteleri, Mahmudiye'de ise köy pazarları ve teleferik manzarası bir arada yaşanır.",
+ "body":"""
+<h2>Poyrazlar Gölü Tabiat Parkı</h2>
+<p>2011 yılında tabiat parkı olarak tescillenen <strong>Poyrazlar Gölü</strong>, Adapazarı sınırları içinde, Sapanca'ya yaklaşık <strong>15 dakika</strong> mesafededir. Gölü ve ormanı bir arada sunan park, çadır ve karavan kampı için elverişli alanlarıyla özellikle Adapazarı ve İzmit'ten gelenlerin gözde mesire yeridir. Restoran ve büfe imkanlarının yanında kamp ateşi ve mangal serbesttir.</p>
+<h2>Poyrazlar'da neler yapılır?</h2>
+<p>Aşağıdaki listeden gezerken denemek istediklerinizi işaretleyin — ilerlemeniz tarayıcınızda kaydedilir.</p>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/7</b></div>
+<div class="spot-check" data-key="poyrazlar">
+<label><input type="checkbox"><span><b>Göl kıyısında kamp ateşi</b><span>Çadır veya karavanınızı kurup yıldızlar altında bir gece geçirin.</span></span></label>
+<label><input type="checkbox"><span><b>ATV safari turu</b><span>Ormanlık patikalarda rehberli ATV turlarına katılın.</span></span></label>
+<label><input type="checkbox"><span><b>Tekne ile göl turu</b><span>Suyun üzerinden gölü ve çevresini farklı bir açıdan görün.</span></span></label>
+<label><input type="checkbox"><span><b>At sırtında göl çevresi</b><span>At binme alanında kısa bir tur yapın.</span></span></label>
+<label><input type="checkbox"><span><b>Olta balıkçılığı</b><span>Sakin bir öğleden sonra için olta atın.</span></span></label>
+<label><input type="checkbox"><span><b>Kuş gözlemi</b><span>Park sınırlarında 150'den fazla kuş türü yaşıyor.</span></span></label>
+<label><input type="checkbox"><span><b>Piknik alanında mola</b><span>Gölge veren ağaçların altında bir piknik molası verin.</span></span></label>
+</div>
+<h2>Mahmudiye Mahallesi: köy pazarları ve teleferik manzarası</h2>
+<p><strong>Mahmudiye</strong>, hem sakin bir köy dokusu hem de <a href="/blog/sapanca-teleferik-rehberi/">Sapanca Teleferik</a>'in üst istasyonuna ev sahipliği yapmasıyla dikkat çeker. Köyde kurulan küçük pazarlarda tarhana, köy peyniri, ceviz reçeli ve doğal zeytinyağı gibi ev yapımı ürünler bulunur.</p>
+<h3>Mesafe özeti</h3>
+<table><thead><tr><th>Nereden nereye</th><th>Süre</th></tr></thead><tbody>
+<tr><td>DİDİ Otel → Poyrazlar Gölü</td><td>~15 dk</td></tr>
+<tr><td>DİDİ Otel (Kırkpınar) → Mahmudiye</td><td>Teleferikle ~10 dk</td></tr>
+</tbody></table>
+<p>Gün boyu doğada geçirdiğiniz zamanın ardından <a href="/#odalar">DİDİ Otel'in</a> havuzunda dinlenip akşamı <a href="/#mare">Mare Gastro</a>'da tamamlayabilirsiniz.</p>
+""",
+ "faq":[("Poyrazlar Gölü nerede?","Adapazarı sınırları içinde, Sapanca'ya yaklaşık 15 dakika mesafededir."),
+        ("Poyrazlar Gölü'nde kamp yapılabilir mi?","Evet, park içinde belirlenmiş alanlarda çadır ve karavan kampı yapılabilir."),
+        ("Mahmudiye'de ne satın alınır?","Tarhana, köy peyniri, ceviz reçeli ve doğal zeytinyağı gibi ev yapımı ürünler bulunur."),
+        ("Mahmudiye'ye nasıl gidilir?","Karayoluyla ya da Kırkpınar'dan kalkan Sapanca Teleferik ile ulaşılabilir.")],
+},
+{
+ "slug":"sapancada-fotograf-gun-batimi-noktalari","cat":"Fotoğraf","img":"havuz-loca","date":"2026-08-16",
+ "title":"Sapanca'da Fotoğraf ve Gün Batımı İçin En Güzel Noktalar",
+ "desc":"Sapanca'da fotoğraf çekmek için en güzel noktalar; Uzunkum Parkı gün batımı, teleferik seyir terası, Maşukiye şelalesi ve DİDİ Otel bahçesi.",
+ "lead":"Sapanca'yı kareye sığdırmak isteyenler için ilçenin en fotojenik noktaları göl kıyısından dağ zirvelerine kadar uzanır. İşte gün doğumundan gün batımına, Sapanca'da fotoğraf için en güzel köşeler.",
+ "body":"""
+<div class="spot-cards rev">
+<div class="spot-card"><span class="tag">Gün batımı</span><h4>Uzunkum Parkı</h4><p>Göl kıyısındaki iskele ve ağaçlar, gün batımında altın rengine bürünür; Sapanca'nın en klasik karesidir.</p></div>
+<div class="spot-card"><span class="tag">Kuşbakışı</span><h4>Teleferik seyir terası</h4><p>Mahmudiye'deki üst istasyonun terasından, tüm göl ve ormanın kuşbakışı görüntüsü çekilir.</p></div>
+<div class="spot-card"><span class="tag">İlkbahar sabahı</span><h4>Maşukiye şelalesi</h4><p>Karların erimesiyle en coşkulu debisine ulaşan şelale, sabah ışığında uzun pozlama için idealdir.</p></div>
+<div class="spot-card"><span class="tag">Kış / bulut denizi</span><h4>Kartepe zirvesi</h4><p>Kış aylarında bulutların üzerinde kalan zirve, dramatik manzara fotoğrafları için öne çıkar.</p></div>
+<div class="spot-card"><span class="tag">Sabah / kuş gözlem</span><h4>Poyrazlar Gölü kıyısı</h4><p>Sisli sabahlarda göl yüzeyi ve kuş sürüleri, doğa fotoğrafçıları için sakin bir kare sunar.</p></div>
+<div class="spot-card"><span class="tag">Altın saat</span><h4>DİDİ Otel bahçe ve havuz</h4><p>Begonvillerle çevrili bahçe ve havuz, akşamüzeri ışığında oteldeyken bile fotoğraf çekmenizi sağlar.</p></div>
+</div>
+<h2>Gün batımı için en iyi nokta: Uzunkum Parkı</h2>
+<p>Sapanca Gölü kıyısındaki <strong>Uzunkum Parkı</strong>, güneşin gölün üzerine batışını izlemek için ilçenin en sevilen noktasıdır. Iskele, sandalyeler ve ağaçların silueti kareye derinlik katar.</p>
+<h2>Kuşbakışı kareler için: teleferik seyir terası</h2>
+<p><a href="/blog/sapanca-teleferik-rehberi/">Sapanca Teleferik</a> ile çıkılan Mahmudiye'deki seyir terası, gölü ve Kırkpınar'ı tepeden gösteren nadir bir açı sunar; öğleden sonra ışığı en net görüntüyü verir.</p>
+<h3>En iyi çekim saatleri</h3>
+<table><thead><tr><th>Nokta</th><th>Önerilen saat</th></tr></thead><tbody>
+<tr><td>Uzunkum Parkı</td><td>Gün batımına ~1 saat kala</td></tr>
+<tr><td>Teleferik seyir terası</td><td>Öğleden sonra, berrak havada</td></tr>
+<tr><td>Maşukiye şelalesi</td><td>Sabah erken, ilkbahar</td></tr>
+<tr><td>DİDİ Otel bahçe/havuz</td><td>Akşamüzeri altın saat</td></tr>
+</tbody></table>
+<p>Kareleri toplamaya otelden başlamak isterseniz, <a href="/#odalar">bahçe ve havuz alanı</a> günün her saatinde objektife hazırdır; akşam da <a href="/#mare">Mare Gastro</a>'nun ışıklı terası kendine has bir atmosfer sunar.</p>
+""",
+ "faq":[("Sapanca'da gün batımı nereden izlenir?","Göl kıyısındaki Uzunkum Parkı, gün batımını izlemek için ilçenin en bilinen noktasıdır."),
+        ("Kuşbakışı Sapanca fotoğrafı nereden çekilir?","Sapanca Teleferik'in Mahmudiye'deki üst istasyonundaki seyir terasından çekilebilir."),
+        ("Sapanca'da en fotojenik doğa noktası hangisi?","Göl kıyısının yanı sıra Maşukiye şelalesi ve kış aylarında Kartepe zirvesi öne çıkar."),
+        ("Otel içinde fotoğraf çekilecek bir alan var mı?","Evet, DİDİ Otel'in begonvillerle çevrili bahçesi ve havuzu, özellikle akşamüzeri ışığında fotojeniktir.")],
+},
+{
+ "slug":"sapancada-1-gunluk-2-gunluk-gezi-plani","cat":"Gezi Planı","img":"ONN09464","date":"2026-08-17",
+ "title":"Sapanca'da 1 Günlük ve 2 Günlük Gezi Planı: Saat Saat Rota",
+ "desc":"Sapanca'da bir gün ve iki gün için saat saat gezi planı; göl kıyısı, Sapanca Teleferik, Maşukiye, Poyrazlar Gölü ve DİDİ Otel'de konaklama önerileriyle hazır rota.",
+ "lead":"Sapanca'da vaktiniz ister bir gün ister bir hafta sonu olsun, doğru sırayla planlanmış bir rota her durağı gezinin tadını kaçırmadan görmenizi sağlar. İşte DİDİ Otel'den başlayan, saat saat hazırlanmış 1 günlük ve 2 günlük Sapanca gezi planı.",
+ "body":"""
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="g1">1 Gün</button><button data-tab="g2">2 Gün</button></div>
+<div class="itin-panel on" data-tab="g1">
+<div class="timeline">
+<div class="tl-step"><div class="tl-time">09:00</div><h4>DİDİ Otel'de serpme kahvaltı</h4><p>Güne göl manzarasına karşı zengin bir kahvaltıyla başlayın.</p></div>
+<div class="tl-step"><div class="tl-time">10:30</div><h4>Sapanca Gölü kıyısı ve Uzunkum Parkı</h4><p>Göl kıyısında kısa bir yürüyüş yapın, isterseniz bisiklet kiralayın.</p></div>
+<div class="tl-step"><div class="tl-time">12:00</div><h4>Maşukiye'de şelale ve alabalık molası</h4><p>Şelaleyi görüp dere kenarındaki bir alabalık tesisinde öğle yemeği yiyin.</p></div>
+<div class="tl-step"><div class="tl-time">14:30</div><h4><a href="/blog/sapanca-teleferik-rehberi/">Sapanca Teleferik</a> ile Mahmudiye'ye çıkış</h4><p>Kırkpınar'dan biner, seyir terasında göl manzarasının tadını çıkarırsınız.</p></div>
+<div class="tl-step"><div class="tl-time">16:30</div><h4>Otelde havuz kenarında dinlenme</h4><p>DİDİ Otel'in havuzunda ve bahçesinde güne mola verin.</p></div>
+<div class="tl-step"><div class="tl-time">19:30</div><h4><a href="/#mare">Mare Gastro</a>'da akşam yemeği</h4><p>Bahçede, göl havasında bir akşam yemeğiyle günü tamamlayın.</p></div>
+</div>
+</div>
+<div class="itin-panel" data-tab="g2">
+<h4 style="margin:0 0 10px;font-weight:600">1. Gün</h4>
+<p style="margin-bottom:22px">Yukarıdaki 1 günlük programın aynısını takip edebilir, akşam erken bir saatte otele dönebilirsiniz.</p>
+<h4 style="margin:0 0 10px;font-weight:600">2. Gün</h4>
+<div class="timeline">
+<div class="tl-step"><div class="tl-time">09:30</div><h4>Kahvaltı sonrası <a href="/blog/poyrazlar-golu-mahmudiye-gizli-koseler/">Poyrazlar Gölü</a></h4><p>Kamp alanında yürüyüş, tekne turu ya da olta balıkçılığı deneyin.</p></div>
+<div class="tl-step"><div class="tl-time">13:00</div><h4>Öğle molası ve dönüş</h4><p>Poyrazlar'da hafif bir öğle yemeğinin ardından Sapanca'ya dönün.</p></div>
+<div class="tl-step"><div class="tl-time">14:30</div><h4>İsteğe bağlı: <a href="/blog/tarakli-geyve-gunubirlik-tur/">Taraklı ve Geyve</a> turu</h4><p>Zaman ve enerji uygunsa günübirlik tarihi kasaba turuna çıkabilirsiniz.</p></div>
+<div class="tl-step"><div class="tl-time">19:00</div><h4>Otele dönüş, Mare Gastro'da veda yemeği</h4><p>İki günlük rotayı bahçede göl havasında bir akşam yemeğiyle kapatın.</p></div>
+</div>
+</div>
+</div>
+<h2>Nerede kalmalı?</h2>
+<p>Her iki rota da <a href="/#odalar">DİDİ Otel Sapanca</a>'yı merkez alır: Kırkpınar'daki konumu göl kıyısına, Maşukiye'ye, teleferiğe ve Poyrazlar Gölü'ne kısa mesafededir. İki kişilik <a href="/odalar/king-suit/">King Suit</a>'ten dört kişilik <a href="/odalar/aile/">Aile Odası</a>'na kadar farklı ihtiyaçlara uygun seçenekler bulunur.</p>
+<h2>İpucu</h2>
+<p>Yoğun hafta sonlarında teleferik gişesinde kısa bir bekleme olabileceğinden, günü göl kıyısı ve Maşukiye ile başlayıp teleferiği öğleden sonraya bırakmak rotanın akışını daha rahat tutar.</p>
+""",
+ "faq":[("Sapanca'da 1 günde neler gezilir?","Göl kıyısı ve Uzunkum Parkı, Maşukiye şelalesi ve Sapanca Teleferik, bir günde rahatça gezilebilecek üç ana duraktır."),
+        ("2 günlük Sapanca gezisinde nerede kalınmalı?","Kırkpınar'daki DİDİ Otel Sapanca, göl kıyısı, Maşukiye, teleferik ve Poyrazlar Gölü'ne kısa mesafesiyle iki günlük rota için merkezi bir seçenektir."),
+        ("Sapanca gezisine en iyi başlangıç saati nedir?","Kahvaltının ardından 09:00-10:00 arası yola çıkmak, günü teleferik ve akşam yemeğine kadar rahat bir tempoda planlamanızı sağlar."),
+        ("Rotaya ekleme yapılabilir mi?","Evet, 2. güne Poyrazlar Gölü'nün yanı sıra Taraklı ve Geyve günübirlik tarihi turu da eklenebilir.")],
 },
 ]
 
