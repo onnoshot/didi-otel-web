@@ -34,7 +34,14 @@ CAP_BY_SLUG = {"king-suit": 2, "junior-suit": 2, "superior": 2, "aile": 4, "trip
 BASE_AM_KEYS = ["amenity_klima", "amenity_tv_uydu", "amenity_wifi", "amenity_minibar",
                 "amenity_su_isitici", "amenity_sac_kurutma", "amenity_dusakabin", "amenity_banyo_malzeme"]
 
-GA = '''<link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+GA = '''<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N68CWMCH');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://connect.facebook.net" crossorigin>
 <link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://www.facebook.com">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8D22FPDET"></script>
@@ -292,6 +299,10 @@ def build(meta, lang):
 <link rel="stylesheet" href="/css/site.css?v=11">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N68CWMCH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="prog" id="prog" style="display:none"></div>
 {nav_html(lang, slug)}
 <header class="rhero">
