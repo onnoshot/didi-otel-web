@@ -24,7 +24,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-C8D22FPDET');
+  gtag('config', 'G-C8D22FPDET');gtag('config', 'AW-18186058629');
 </script>
 <!-- Meta Pixel Code -->
 <script>
