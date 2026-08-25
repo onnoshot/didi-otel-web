@@ -90,28 +90,80 @@ POSTS = [
 {
  "slug":"sapancada-gezilecek-yerler","cat":"Gezi Rehberi","img":"otel-havuz","date":"2026-07-01",
  "title":"Sapanca'da Gezilecek Yerler: Göl, Maşukiye ve Kartepe Rehberi",
- "desc":"Sapanca'da gezilecek yerler; Sapanca Gölü, Uzunkum Parkı, Maşukiye şelalesi, Kartepe ve Poyrazlar Gölü. Doğa içinde bir hafta sonu için eksiksiz rehber.",
- "lead":"Sapanca'da gezilecek yerlerin başında Sapanca Gölü, Uzunkum Parkı, Maşukiye şelalesi, Poyrazlar Gölü ve Kartepe gelir. İstanbul'a yaklaşık 1,5 saat mesafedeki Sapanca, göl kıyısı yürüyüşlerinden dağ manzaralı doğa rotalarına kadar dört mevsim keşfedilecek bir destinasyondur.",
+ "desc":"Sapanca'da gezilecek yerler: Sapanca Gölü, Uzunkum Parkı, Maşukiye şelalesi, Sapanca Teleferik, Kartepe ve Poyrazlar Gölü. Mesafeler, mevsimler, yeme-içme ve konaklama önerileriyle eksiksiz gezi rehberi.",
+ "lead":"Sapanca'da gezilecek yerlerin başında Sapanca Gölü ve Uzunkum Parkı, Maşukiye şelaleleri, Sapanca Teleferik, Kartepe ve Poyrazlar Gölü gelir. İstanbul'a yaklaşık 1,5 saat mesafedeki Sapanca, göl kıyısı yürüyüşlerinden dağ manzaralı doğa rotalarına kadar dört mevsim keşfedilecek bir destinasyondur. Aşağıda bu duraklara olan mesafeleri, hangi mevsimde ne yapılacağını ve gezinizi kuracağınız ideal merkezi bir arada bulacaksınız.</p><p>Tüm bu noktalara birkaç dakika mesafedeki göl kıyısı mahallesi <strong>Kırkpınar</strong>, gezinizi kurmak için en pratik başlangıç noktasıdır; <a href=\"/#konum\">DİDİ Otel Sapanca</a> tam da burada, göl ile orman arasında yer alır.",
  "body":"""
-<h2>Sapanca Gölü ve göl kıyısı</h2>
-<p>Bölgenin kalbi <strong>Sapanca Gölü</strong>'dür. Göl çevresi yaklaşık 16 kilometre uzunluğundadır ve bisiklet turu, yürüyüş, tekne ve kano için idealdir. Göl kıyısındaki <strong>Uzunkum Parkı</strong>, ilçenin en güzel manzaralarına sahip dinlenme alanlarından biridir; gün batımında göl kenarında yürüyüş yapmak Sapanca'nın klasik deneyimlerindendir.</p>
-<h2>Maşukiye ve şelaleler</h2>
-<p>Sapanca'ya yaklaşık 20 dakika mesafedeki <strong>Maşukiye</strong>, yemyeşil doğası, şelaleleri ve alabalık tesisleriyle ünlüdür. Şelalenin su debisi ilkbaharda, karların erimesiyle en yüksek seviyeye ulaşır. Maşukiye ayrıca göl manzarasına çıkan <strong>Sapanca Teleferik</strong> hattına da yakındır.</p>
-<h2>Kartepe Kayak Merkezi</h2>
-<p>Samanlı Dağları'nın zirvesindeki <strong>Kartepe Kayak Merkezi</strong>, Sapanca'dan yaklaşık 30 dakika uzaklıktadır. Kışın kayak ve telesiyej ile Sapanca Gölü manzarası, yazın ise serin bir yayla havası sunar.</p>
-<h2>Poyrazlar Gölü ve Mahmudiye</h2>
-<p>Sapanca Gölü'nün yanındaki <strong>Poyrazlar Gölü</strong>, sessiz ve sakin atmosferiyle su kuşlarını ve doğayı gözlemlemek isteyenler için idealdir. Osmanlı döneminden kalma tarihî yapılara ev sahipliği yapan <strong>Mahmudiye köyü</strong> ise doğayla iç içe huzurlu bir moladır.</p>
+<h2>Sapanca'da gezilecek yerler: kısa bakış</h2>
+<p>Sapanca, İstanbul ve Kocaeli'den kısa sürede ulaşılan bir doğa kaçamağıdır. İlçenin merkezinde <strong>Sapanca Gölü</strong>, çevresinde ise şelaleler, teleferik, dağ zirveleri ve saklı göller yer alır. Aşağıdaki başlıca durakların hepsi, gölün en sakin kıyısı olan <a href="/#konum">Kırkpınar'daki konumumuza</a> yarım saatlik bir sürüş mesafesindedir.</p>
+<div class="stat-row rev">
+<div class="stat-card"><span class="stat-num" data-count="1,5">0</span><span class="stat-label">saat İstanbul'dan</span></div>
+<div class="stat-card"><span class="stat-num" data-count="45">0</span><span class="stat-label">km² Sapanca Gölü</span></div>
+<div class="stat-card"><span class="stat-num" data-count="20">0</span><span class="stat-label">dakika Maşukiye'ye</span></div>
+<div class="stat-card"><span class="stat-num" data-count="4">0</span><span class="stat-label">mevsim keşif</span></div>
+</div>
+<h2>Sapanca Gölü ve Uzunkum Parkı</h2>
+<p>Bölgenin kalbi <strong>Sapanca Gölü</strong>'dür. Yaklaşık 45 km² yüzölçümüyle Türkiye'nin sevilen tatlı su göllerinden biridir ve kıyısı bisiklet turu, yürüyüş, tekne ve kano için idealdir. Göl kıyısındaki <strong>Uzunkum Parkı</strong>, ilçenin en güzel manzaralarına sahip dinlenme ve piknik alanlarından biridir; gün batımında göl kenarında yürüyüş yapmak Sapanca'nın klasik deneyimlerindendir.</p>
+<p>Gölde yapılabilecekler için <a href="/blog/sapanca-golu-aktiviteler/">Sapanca Gölü aktiviteleri</a> rehberimize, en güzel kareleri yakalamak için ise <a href="/blog/sapancada-fotograf-gun-batimi-noktalari/">fotoğraf ve gün batımı noktaları</a> yazımıza göz atabilirsiniz.</p>
+<h2>Maşukiye: şelaleler ve alabalık vadisi</h2>
+<p>Sapanca'ya yaklaşık <strong>20 dakika</strong> mesafedeki <strong>Maşukiye</strong>, yemyeşil doğası, şelaleleri ve dere kenarındaki alabalık tesisleriyle ünlüdür. Şelalelerin su debisi ilkbaharda, karların erimesiyle en yüksek seviyeye ulaşır; yaz aylarında ise serin dere kenarları öne çıkar. Rota önerileri için <a href="/blog/masukiye-kartepe-gezi/">Maşukiye ve Kartepe gezi rehberimize</a> bakabilirsiniz.</p>
+<h2>Sapanca Teleferik ile Mahmudiye'ye çıkış</h2>
+<p><strong>Sapanca Teleferik</strong>, göl seviyesinden ormanın içine yükselen yaklaşık 1,5 kilometrelik bir hattır. Alt istasyon, <a href="/#konum">DİDİ Otel'in de bulunduğu Kırkpınar Mahallesi'nde</a>; üst istasyon ise seyir teraslı <strong>Mahmudiye</strong>'dedir. Kabinlerden Sapanca Gölü'nü kuşbakışı izlemek, ilçenin en sevilen deneyimlerinden biridir. Güncel bilet, saat ve mevsim önerileri için <a href="/blog/sapanca-teleferik-rehberi/">Sapanca Teleferik rehberimizi</a> inceleyin. Otelimiz teleferiğin alt istasyonuyla aynı mahallede olduğu için bu geziye yürüyüş mesafesinde başlayabilirsiniz.</p>
+<h2>Kartepe: dört mevsim dağ keyfi</h2>
+<p>Samanlı Dağları'nın zirvesindeki <strong>Kartepe Kayak Merkezi</strong>, Sapanca'dan yaklaşık <strong>30 dakika</strong> uzaklıktadır. Kışın kayak ve telesiyej ile Sapanca Gölü manzarası, yazın ise serin bir yayla havası ve yürüyüş parkurları sunar. Hangi ayda gitmenin daha keyifli olacağını <a href="/blog/sapanca-hangi-mevsim-gidilir/">Sapanca hangi mevsim gidilir</a> yazımızda ayrıntılı anlattık.</p>
+<h2>Poyrazlar Gölü ve gizli köşeler</h2>
+<p>Kalabalıktan uzaklaşmak isteyenler için Sapanca'ya yaklaşık <strong>15 dakika</strong> mesafedeki <strong>Poyrazlar Gölü Tabiat Parkı</strong>, kamp, tekne turu, olta balıkçılığı ve kuş gözlemi için idealdir. Osmanlı dokusunu koruyan <strong>Mahmudiye</strong> köyünün pazarları da doğayla iç içe huzurlu bir moladır. Ayrıntılar için <a href="/blog/poyrazlar-golu-mahmudiye-gizli-koseler/">Poyrazlar Gölü ve gizli köşeler</a> rehberimize bakın.</p>
+<h2>Kırkpınar: gölün en sakin kıyısı</h2>
+<p>Yukarıdaki durakların tamamına en yakın nokta, gölün kuzey kıyısındaki <strong>Kırkpınar Mahallesi</strong>'dir. Sessiz, yeşil ve göl manzaralı bu mahalle, hem teleferiğin alt istasyonuna hem de göl kıyısına yürüme mesafesindedir. <a href="/#konum">DİDİ Otel Sapanca</a> tam burada; <a href="/blog/sapancada-havuzlu-otel/">Sapanca'nın tek klorsuz havuzu</a>, göl ve orman manzaralı <a href="/odalar/">oda tipleri</a> ve bahçedeki restoranıyla gezinizin merkezi olur.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="doga">Doğa severler</button><button data-tab="cift">Çiftler</button><button data-tab="aile">Aileler</button></div>
+<div class="itin-panel on" data-tab="doga"><p>Göl kıyısında sabah yürüyüşü, Maşukiye'de şelale ve alabalık molası, ardından <a href="/blog/sapanca-teleferik-rehberi/">teleferikle</a> Mahmudiye seyir terasına çıkış. Enerjiniz varsa ikinci gün Poyrazlar Gölü'nde tekne turu ekleyin. Konaklama için <a href="/blog/sapancada-havuzlu-otel/">havuzlu bir otel</a> seçmek, gün sonunda dinlenmenizi kolaylaştırır.</p></div>
+<div class="itin-panel" data-tab="cift"><p>Göl kenarında gün batımı yürüyüşü, teleferikte panoramik manzara ve akşam <a href="/#mare">Mare Gastro</a>'da göl havasında bir yemek. İki kişilik özel bir kaçamak için <a href="/blog/sapancada-romantik-hafta-sonu/">romantik hafta sonu</a> ve <a href="/blog/sapancada-balayi-ozel-gunler/">balayı</a> rehberlerimiz size ilham verir.</p></div>
+<div class="itin-panel" data-tab="aile"><p>Çocuklarla Uzunkum Parkı'nda piknik, Maşukiye'de alabalık, Poyrazlar'da kamp ve doğa yürüyüşü ideal bir kombinasyondur. Geniş aile odaları ve havuz için <a href="/blog/ailecek-sapanca-tatili/">ailecek Sapanca tatili</a> yazımıza göz atın.</p></div>
+</div>
+<h2>Sapanca'da nerede yemek yenir?</h2>
+<p>Gezi kadar keyifli bir başka konu da yeme-içmedir. Güne zengin bir serpme kahvaltıyla başlayıp akşamı göl havasında bir yemekle kapatmak, Sapanca'nın klasik ritmidir. Otel bahçesindeki <a href="/#mare"><strong>Mare Gastro</strong></a>, taze deniz ürünleri ve Akdeniz mutfağını zarif bir atmosferde sunar. Sabah kahvaltısından akşam yemeğine öneriler için <a href="/blog/sapancada-kahvalti-ve-yemek/">Sapanca'da kahvaltı ve yemek</a> rehberimize bakabilirsiniz.</p>
+<h2>Sapanca gezi kontrol listesi</h2>
+<p>Aşağıdaki listeden gezinizde yapmak istediklerinizi işaretleyin — seçimleriniz tarayıcınızda kaydedilir.</p>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/8</b></div>
+<div class="spot-check" data-key="gezilecek-yerler">
+<label><input type="checkbox"><span><b>Sapanca Gölü kıyısında yürüyüş</b><span>Uzunkum Parkı'nda göl kenarında bir tur atın.</span></span></label>
+<label><input type="checkbox"><span><b>Maşukiye'de şelale ve alabalık</b><span>Dere kenarındaki bir tesiste öğle yemeği yiyin.</span></span></label>
+<label><input type="checkbox"><span><b>Sapanca Teleferik yolculuğu</b><span>Kırkpınar'dan binip Mahmudiye seyir terasına çıkın.</span></span></label>
+<label><input type="checkbox"><span><b>Kartepe'de dağ havası</b><span>Kışın kayak, yazın yürüyüş parkurlarını deneyin.</span></span></label>
+<label><input type="checkbox"><span><b>Poyrazlar Gölü'nde doğa</b><span>Tekne turu, olta balıkçılığı ya da kuş gözlemi yapın.</span></span></label>
+<label><input type="checkbox"><span><b>Gün batımında fotoğraf</b><span>Göl kıyısında altın saat karelerini yakalayın.</span></span></label>
+<label><input type="checkbox"><span><b>Mare Gastro'da akşam yemeği</b><span>Bahçede göl havasında bir yemekle günü tamamlayın.</span></span></label>
+<label><input type="checkbox"><span><b>Klorsuz havuzda dinlenme</b><span>Gün sonunda otelin havuzunda bir mola verin.</span></span></label>
+</div>
 <h3>Yakın çevre mesafeleri</h3>
-<table><thead><tr><th>Yer</th><th>Sapanca'dan</th></tr></thead><tbody>
+<p>Aşağıdaki süreler, gölün kuzey kıyısındaki <a href="/#konum">Kırkpınar / DİDİ Otel</a> konumundan verilmiştir.</p>
+<table><thead><tr><th>Yer</th><th>Mesafe</th></tr></thead><tbody>
 <tr><td>Sapanca Gölü / Uzunkum Parkı</td><td>~5 km</td></tr>
+<tr><td>Sapanca Teleferik alt istasyonu</td><td>Aynı mahalle (yürüme mesafesi)</td></tr>
 <tr><td>Maşukiye (şelale, alabalık)</td><td>~20 dk</td></tr>
 <tr><td>Kartepe Kayak Merkezi</td><td>~30 dk</td></tr>
-<tr><td>Poyrazlar Gölü</td><td>~15 dk</td></tr></tbody></table>
-<p>Tüm bu noktalara kısa mesafede olan <a href="/#konum">DİDİ Otel Sapanca</a>, Kırkpınar'da göl ve dağ manzaralı konumuyla gezileriniz için ideal bir merkez olur.</p>
+<tr><td>Poyrazlar Gölü</td><td>~15 dk</td></tr>
+<tr><td>İstanbul</td><td>~1,5 saat</td></tr>
+<tr><td>Sabiha Gökçen Havalimanı</td><td>~1 saat</td></tr></tbody></table>
+<p>Sapanca'ya ulaşımın ayrıntıları için <a href="/blog/sapancaya-nasil-gidilir/">Sapanca'ya nasıl gidilir</a> yazımızı, gününüzü saat saat planlamak için <a href="/blog/sapancada-1-gunluk-2-gunluk-gezi-plani/">1 ve 2 günlük gezi planımızı</a> inceleyebilirsiniz.</p>
+<h2>Sapanca'da nerede kalınır?</h2>
+<p>Tüm bu noktalara kısa mesafede olan <a href="/#konum">DİDİ Otel Sapanca</a>, <a href="/#odalar">göl ve orman manzaralı odaları</a>, <a href="/blog/sapancada-havuzlu-otel/">Sapanca'nın tek klorsuz havuzu</a> ve <a href="/#mare">Mare Gastro</a> restoranıyla gezileriniz için ideal bir merkez olur. Misafir deneyimlerini <a href="/blog/didi-otel-sapanca-misafir-yorumlari/">misafir yorumları</a> sayfamızda, rezervasyon adımlarını ise <a href="/blog/didi-otel-nereden-rezervasyon-yapilir/">nereden rezervasyon yapılır</a> yazımızda bulabilirsiniz. Müsaitlik ve güncel fiyatlar için <a href="https://wa.me/905331350888?text=Merhaba%2C%20Sapanca%20gezisi%20i%C3%A7in%20D%C4%B0D%C4%B0%20Otel%27de%20konaklama%20yapmak%20istiyorum.">WhatsApp'tan</a> bize ulaşabilirsiniz.</p>
 """,
- "faq":[("Sapanca'da mutlaka görülmesi gereken yer neresidir?","Sapanca Gölü ve göl kıyısındaki Uzunkum Parkı, ilçenin simgesidir. Ayrıca 20 dakika mesafedeki Maşukiye şelaleleri ve 30 dakikadaki Kartepe öne çıkar."),
-        ("Sapanca'yı bir günde gezmek mümkün mü?","Göl kıyısı ve yakın çevre bir günde görülebilir; ancak Maşukiye ve Kartepe'yi de eklemek isteyenler için en az bir gece konaklama önerilir."),
-        ("Sapanca hangi şehre yakındır?","Sapanca, İstanbul'a yaklaşık 1,5 saat, Sakarya merkeze ise 15 kilometre mesafededir.")],
+ "extra_ld":{"@context":"https://schema.org","@type":"ItemList","name":"Sapanca'da gezilecek yerler","itemListElement":[
+   {"@type":"ListItem","position":1,"item":{"@type":"TouristAttraction","name":"Sapanca Gölü","description":"İstanbul'a yaklaşık 1,5 saat mesafede, yürüyüş, bisiklet ve tekne için ideal tatlı su gölü.","address":{"@type":"PostalAddress","addressLocality":"Sapanca","addressRegion":"Sakarya","addressCountry":"TR"}}},
+   {"@type":"ListItem","position":2,"item":{"@type":"TouristAttraction","name":"Uzunkum Parkı","description":"Sapanca Gölü kıyısında piknik ve gün batımı yürüyüşü için sevilen dinlenme alanı."}},
+   {"@type":"ListItem","position":3,"item":{"@type":"TouristAttraction","name":"Maşukiye","description":"Sapanca'ya 20 dakika mesafede şelaleleri ve alabalık tesisleriyle ünlü doğa vadisi."}},
+   {"@type":"ListItem","position":4,"item":{"@type":"TouristAttraction","name":"Sapanca Teleferik","description":"Kırkpınar'dan Mahmudiye seyir terasına göl manzaralı 1,5 km'lik teleferik hattı."}},
+   {"@type":"ListItem","position":5,"item":{"@type":"TouristAttraction","name":"Kartepe Kayak Merkezi","description":"Samanlı Dağları'nda kışın kayak, yazın yürüyüş sunan dağ merkezi; Sapanca'ya 30 dakika."}},
+   {"@type":"ListItem","position":6,"item":{"@type":"TouristAttraction","name":"Poyrazlar Gölü Tabiat Parkı","description":"Sapanca'ya 15 dakika mesafede kamp, tekne turu ve kuş gözlemi için sakin bir tabiat parkı."}}
+ ]},
+ "faq":[("Sapanca'da mutlaka görülmesi gereken yer neresidir?","Sapanca Gölü ve göl kıyısındaki Uzunkum Parkı ilçenin simgesidir. Ayrıca 20 dakika mesafedeki Maşukiye şelaleleri, Kırkpınar'dan kalkan Sapanca Teleferik ve 30 dakikadaki Kartepe öne çıkar."),
+        ("Sapanca'yı bir günde gezmek mümkün mü?","Göl kıyısı, teleferik ve Maşukiye bir günde rahatça görülebilir; Kartepe ve Poyrazlar Gölü'nü de eklemek isteyenler için en az bir gece konaklama önerilir. Saat saat plan için 1 ve 2 günlük gezi planımıza bakabilirsiniz."),
+        ("Sapanca hangi şehre yakındır?","Sapanca, İstanbul'a yaklaşık 1,5 saat, Sabiha Gökçen Havalimanı'na yaklaşık 1 saat, Sakarya merkeze ise 15 kilometre mesafededir."),
+        ("Sapanca gezisi için nerede kalmak avantajlıdır?","Gölün en sakin kıyısı olan Kırkpınar, göl kıyısına ve teleferiğin alt istasyonuna yürüme mesafesindedir. DİDİ Otel Sapanca bu mahallede yer alır ve tüm başlıca duraklara yarım saat içindedir."),
+        ("Sapanca çocuklu aileler için uygun mu?","Evet. Uzunkum Parkı'nda piknik, Maşukiye'de alabalık, Poyrazlar Gölü'nde doğa yürüyüşü ve otel havuzu çocuklu aileler için keyifli bir kombinasyon oluşturur."),
+        ("Sapanca hangi mevsimde gezilir?","Sapanca dört mevsim gezilebilir; ilkbaharda şelaleler gürler, yazın göl ve havuz, sonbaharda renkli orman, kışın ise Kartepe'de kar öne çıkar."),
+        ("Sapanca'da akşam nerede yemek yenir?","Otel bahçesindeki Mare Gastro, taze deniz ürünleri ve Akdeniz mutfağını göl havasında sunar; gün boyu gezdikten sonra akşam yemeği için pratik bir seçenektir.")],
 },
 {
  "slug":"istanbula-yakin-doga-kacamagi","cat":"Hafta Sonu","img":"havuz-restoran","date":"2026-07-02",
@@ -649,7 +701,9 @@ def build_post(p, others):
     rel_html = "".join(
       f'<a href="/blog/{o["slug"]}/" class="bcard"><div class="bcard-img">'+pic(o["img"],"33vw",alt=o["title"])+
       f'</div><div class="bcard-body"><div class="cat">{o["cat"]}</div><h3>{o["title"]}</h3></div></a>' for o in rel)
-    lds = "".join(f'<script type="application/ld+json">{json.dumps(x,ensure_ascii=False)}</script>' for x in [article_ld(p),crumb_ld(p),faq_ld(p)])
+    schemas = [article_ld(p),crumb_ld(p),faq_ld(p)]
+    if p.get("extra_ld"): schemas.append(p["extra_ld"])
+    lds = "".join(f'<script type="application/ld+json">{json.dumps(x,ensure_ascii=False)}</script>' for x in schemas)
     page = f'''<!DOCTYPE html>
 <html lang="tr">
 <head>
