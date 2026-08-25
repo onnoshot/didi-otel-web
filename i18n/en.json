@@ -216,5 +216,9 @@
   "amenity_banyo_malzeme": "Toiletries",
   "resv_headline": "Reserve Your Stay Now",
   "resv_trust": "No credit card needed · Instant reply on WhatsApp",
-  "resv_email_ph": "you@example.com"
+  "resv_email_ph": "you@example.com",
+  "resv_err_name": "Please enter your full name.",
+  "resv_err_phone": "Please enter your phone number.",
+  "resv_err_email": "Please enter a valid email address.",
+  "resv_err_room": "Please select a room to continue."
 }

@@ -216,5 +216,9 @@
   "amenity_banyo_malzeme": "Banyo Malzemeleri",
   "resv_headline": "Hemen Rezervasyon Yapın",
   "resv_trust": "Kredi kartı gerekmez · WhatsApp'tan anında yanıt",
-  "resv_email_ph": "ornek@eposta.com"
+  "resv_email_ph": "ornek@eposta.com",
+  "resv_err_name": "Adınızı ve soyadınızı girin.",
+  "resv_err_phone": "Telefon numaranızı girin.",
+  "resv_err_email": "Geçerli bir e-posta adresi girin.",
+  "resv_err_room": "Devam etmek için bir oda seçin."
 }

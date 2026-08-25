@@ -216,5 +216,9 @@
   "amenity_banyo_malzeme": "مستلزمات الحمام",
   "resv_headline": "احجز إقامتك الآن",
   "resv_trust": "لا حاجة لبطاقة ائتمان · رد فوري عبر واتساب",
-  "resv_email_ph": "example@email.com"
+  "resv_email_ph": "example@email.com",
+  "resv_err_name": "الرجاء إدخال الاسم الكامل.",
+  "resv_err_phone": "الرجاء إدخال رقم الهاتف.",
+  "resv_err_email": "الرجاء إدخال بريد إلكتروني صحيح.",
+  "resv_err_room": "الرجاء اختيار غرفة للمتابعة."
 }

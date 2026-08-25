@@ -171,9 +171,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div></div>
 <div class="resv-foot">
+<div class="resv-toast" id="resvToast" role="alert" aria-live="assertive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4"/><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 17h.01"/></svg><span id="resvToastMsg"></span></div>
 <button class="btn resv-back" id="rvBack" onclick="resvStep(-1)" style="display:none">← Geri</button>
 <button class="btn btn-fill" id="rvNext" onclick="resvStep(1)">Devam →</button>
 <button class="btn btn-wa" id="rvWa" onclick="resvSend()" style="display:none"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.8-1.4.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp'tan Onayla</button>
+</div>
+<div id="resvMsgs" hidden>
+<span data-k="name">Adınızı ve soyadınızı girin.</span>
+<span data-k="phone">Telefon numaranızı girin.</span>
+<span data-k="email">Geçerli bir e-posta adresi girin.</span>
+<span data-k="dates">Çıkış tarihi girişten sonra olmalı</span>
+<span data-k="room">Devam etmek için bir oda seçin.</span>
 </div>
 </div></div>
 
@@ -509,22 +517,31 @@ var DIDI_CHANNEL=(function(){try{var s=sessionStorage.getItem('didi_ch');if(s)re
     [...prog.children].forEach((s,i)=>s.classList.toggle('on',i<=st.step));
     back.style.display=st.step>0?'':'none';next.style.display=st.step<3?'':'none';wa.style.display=st.step===3?'':'none';
     if(st.step===3)buildSum();}
-  window.resvOpen=function(room){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';st.step=0;st.sent=false;wa.disabled=false;
+  const toastEl=document.getElementById('resvToast'),toastMsg=document.getElementById('resvToastMsg');
+  let toastT;
+  function RM(k){const e=document.querySelector('#resvMsgs [data-k="'+k+'"]');return e?e.textContent:'';}
+  function resvWarn(el,msg){toastMsg.textContent=msg;toastEl.classList.add('show');
+    clearTimeout(toastT);toastT=setTimeout(()=>toastEl.classList.remove('show'),3200);
+    if(el){if(typeof el.focus==='function')el.focus();
+      const target=(el.closest&&el.closest('.resv-field'))||el;
+      target.classList.remove('shake');void target.offsetWidth;target.classList.add('shake');
+      setTimeout(()=>target.classList.remove('shake'),420);}}
+  window.resvOpen=function(room){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';st.step=0;st.sent=false;wa.disabled=false;toastEl.classList.remove('show');
     if(room){st.room=room;document.querySelectorAll('#rvRooms .ropt').forEach(x=>x.classList.toggle('sel',x.getAttribute('data-room')===room));}
     render();};
-  window.resvClose=function(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';};
+  window.resvClose=function(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';toastEl.classList.remove('show');};
   window.resvStep=function(dir){if(dir>0){
-    if(st.step===0&&nights()<1){updNights();return;}
-    if(st.step===1&&!st.room){document.getElementById('rvRooms').animate([{transform:'translateX(-5px)'},{transform:'translateX(5px)'},{transform:'none'}],{duration:260});return;}}
+    if(st.step===0&&nights()<1){updNights();resvWarn(rvOut,RM('dates'));return;}
+    if(st.step===1&&!st.room){resvWarn(document.getElementById('rvRooms'),RM('room'));return;}}
     st.step=Math.max(0,Math.min(3,st.step+dir));render();};
   window.resvCount=function(type,d){if(type==='ad'){st.ad=Math.max(1,Math.min(6,st.ad+d));document.getElementById('rvAd').textContent=st.ad;}
     else{st.ch=Math.max(0,Math.min(5,st.ch+d));document.getElementById('rvCh').textContent=st.ch;}};
   window.resvSend=function(){if(st.sent)return;const name=(document.getElementById('rvName').value||'').trim();
-    if(!name){document.getElementById('rvName').focus();return;}
+    if(!name){resvWarn(document.getElementById('rvName'),RM('name'));return;}
     const phone=((document.getElementById('rvPhone')||{}).value||'').trim();
-    if(!phone){document.getElementById('rvPhone').focus();return;}
+    if(!phone){resvWarn(document.getElementById('rvPhone'),RM('phone'));return;}
     const email=((document.getElementById('rvEmail')||{}).value||'').trim();
-    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById('rvEmail').focus();return;}
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){resvWarn(document.getElementById('rvEmail'),RM('email'));return;}
     st.sent=true;wa.disabled=true;
     const g=st.ad+' yetişkin'+(st.ch>0?(' + '+st.ch+' çocuk'):'');
     // Rezervasyon niyetini panele kaydet (WhatsApp'a gitmeden de takip edilebilsin)

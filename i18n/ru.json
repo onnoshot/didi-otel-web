@@ -216,5 +216,9 @@
   "amenity_banyo_malzeme": "Туалетные принадлежности",
   "resv_headline": "Забронируйте прямо сейчас",
   "resv_trust": "Банковская карта не требуется · Мгновенный ответ в WhatsApp",
-  "resv_email_ph": "example@mail.com"
+  "resv_email_ph": "example@mail.com",
+  "resv_err_name": "Введите ваше имя и фамилию.",
+  "resv_err_phone": "Введите номер телефона.",
+  "resv_err_email": "Введите корректный адрес эл. почты.",
+  "resv_err_room": "Выберите номер, чтобы продолжить."
 }

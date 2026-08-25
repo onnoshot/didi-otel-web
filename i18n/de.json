@@ -216,5 +216,9 @@
   "amenity_banyo_malzeme": "Toilettenartikel",
   "resv_headline": "Jetzt Ihren Aufenthalt buchen",
   "resv_trust": "Keine Kreditkarte nötig · Sofortige Antwort per WhatsApp",
-  "resv_email_ph": "beispiel@email.com"
+  "resv_email_ph": "beispiel@email.com",
+  "resv_err_name": "Bitte geben Sie Ihren vollen Namen ein.",
+  "resv_err_phone": "Bitte geben Sie Ihre Telefonnummer ein.",
+  "resv_err_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+  "resv_err_room": "Bitte wählen Sie ein Zimmer aus, um fortzufahren."
 }
