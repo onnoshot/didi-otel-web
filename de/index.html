@@ -487,7 +487,7 @@ var DIDI_CHANNEL=(function(){try{var s=sessionStorage.getItem('didi_ch');if(s)re
   const rvIn=document.getElementById('rvIn'),rvOut=document.getElementById('rvOut'),rvNights=document.getElementById('rvNights');
   const next=document.getElementById('rvNext'),back=document.getElementById('rvBack'),wa=document.getElementById('rvWa');
   const titles=['Aufenthaltsdaten','Zimmertyp','Gästeangaben','Ihre Angaben'];
-  const st={step:0,room:'',ad:2,ch:0,bfast:true};
+  const st={step:0,room:'',ad:2,ch:0,bfast:true,sent:false};
   const iso=x=>x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');
   const fmt=d=>{if(!d)return'—';const p=d.split('-');return p[2]+'.'+p[1]+'.'+p[0];};
   const t=new Date(),tm=new Date();tm.setDate(tm.getDate()+1);
@@ -508,7 +508,7 @@ var DIDI_CHANNEL=(function(){try{var s=sessionStorage.getItem('didi_ch');if(s)re
     [...prog.children].forEach((s,i)=>s.classList.toggle('on',i<=st.step));
     back.style.display=st.step>0?'':'none';next.style.display=st.step<3?'':'none';wa.style.display=st.step===3?'':'none';
     if(st.step===3)buildSum();}
-  window.resvOpen=function(room){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';st.step=0;
+  window.resvOpen=function(room){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';st.step=0;st.sent=false;wa.disabled=false;
     if(room){st.room=room;document.querySelectorAll('#rvRooms .ropt').forEach(x=>x.classList.toggle('sel',x.getAttribute('data-room')===room));}
     render();};
   window.resvClose=function(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';};
@@ -518,8 +518,9 @@ var DIDI_CHANNEL=(function(){try{var s=sessionStorage.getItem('didi_ch');if(s)re
     st.step=Math.max(0,Math.min(3,st.step+dir));render();};
   window.resvCount=function(type,d){if(type==='ad'){st.ad=Math.max(1,Math.min(6,st.ad+d));document.getElementById('rvAd').textContent=st.ad;}
     else{st.ch=Math.max(0,Math.min(5,st.ch+d));document.getElementById('rvCh').textContent=st.ch;}};
-  window.resvSend=function(){const name=(document.getElementById('rvName').value||'').trim();
+  window.resvSend=function(){if(st.sent)return;const name=(document.getElementById('rvName').value||'').trim();
     if(!name){document.getElementById('rvName').focus();return;}
+    st.sent=true;wa.disabled=true;
     const phone=((document.getElementById('rvPhone')||{}).value||'').trim();
     const g=st.ad+' yetişkin'+(st.ch>0?(' + '+st.ch+' çocuk'):'');
     // Rezervasyon niyetini panele kaydet (WhatsApp'a gitmeden de takip edilebilsin)

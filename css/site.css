@@ -450,7 +450,7 @@ color:var(--ink);font-size:20px;cursor:pointer;display:grid;place-items:center;t
 .resv-foot .btn{flex:1;justify-content:center}
 .resv-back{background:transparent;border:1px solid var(--line);color:var(--ink)}
 .resv-back:hover{background:var(--bone)}
-.btn-wa{background:#25D366;color:#fff}.btn-wa:hover{background:#1eb658;transform:translateY(-2px)}
+.btn-wa{background:#25D366;color:#fff}.btn-wa:hover{background:#1eb658;transform:translateY(-2px)}.btn-wa:disabled{opacity:.55;cursor:not-allowed;transform:none}
 .btn-wa svg{width:18px;height:18px;fill:#fff}
 @media(max-width:600px){
 .resv-bar{margin-top:-30px}
