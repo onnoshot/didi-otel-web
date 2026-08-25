@@ -57,9 +57,10 @@ export default async function handler(req, res) {
     body = body || {};
 
     const name = s(body.name, 100);
+    const phone = s(body.phone, 32);
     const checkin = isDate(body.checkin) ? body.checkin : '';
     const checkout = isDate(body.checkout) ? body.checkout : '';
-    if (!name || !checkin || !checkout) {
+    if (!name || !phone || !isEmail(body.email) || !checkin || !checkout) {
       return res.status(400).json({ ok: false, error: 'eksik-alan' });
     }
 
@@ -67,8 +68,8 @@ export default async function handler(req, res) {
       id: 'r_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 8),
       brand: 'didi-otel',
       name,
-      phone: s(body.phone, 32),
-      email: isEmail(body.email) ? s(body.email, 120) : '',
+      phone,
+      email: s(body.email, 120),
       room: s(body.room, 60),
       checkin,
       checkout,

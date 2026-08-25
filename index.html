@@ -116,7 +116,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- REZERVASYON WIZARD -->
 <div class="resv-bar" id="rezervasyon"><div class="resv-card0 rev">
 <div class="resv-headline">
-<div class="resv-eyebrow">Aracısız · En Uygun Fiyat</div>
 <h3>Hemen Rezervasyon Yapın</h3>
 <div class="resv-perks">
 <span class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0l-8-8V3h9.6l8.4 8.4a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg><b>En iyi fiyat garantisi</b></span>
@@ -171,8 +170,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="resv-step">
 <h4>Bilgileriniz</h4><p class="hint">Adınızı yazın; WhatsApp'tan hızlıca teyit edelim.</p>
 <div class="resv-field" style="margin-bottom:12px"><label>Ad Soyad</label><input id="rvName" type="text" placeholder="Adınız Soyadınız"></div>
-<div class="resv-field" style="margin-bottom:12px"><label>Telefon <span style="opacity:.6;font-weight:400">(opsiyonel)</span></label><input id="rvPhone" type="tel" inputmode="tel" placeholder="05xx xxx xx xx"></div>
-<div class="resv-field" style="margin-bottom:16px"><label>E-posta <span style="opacity:.6;font-weight:400">(opsiyonel)</span></label><input id="rvEmail" type="email" inputmode="email" placeholder="ornek@eposta.com"></div>
+<div class="resv-field" style="margin-bottom:12px"><label>Telefon</label><input id="rvPhone" type="tel" inputmode="tel" placeholder="05xx xxx xx xx" required></div>
+<div class="resv-field" style="margin-bottom:16px"><label>E-posta</label><input id="rvEmail" type="email" inputmode="email" placeholder="ornek@eposta.com" required></div>
 <div class="resv-sum" id="rvSum" dir="ltr"></div>
 <div class="resv-guarantee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V5z"/><path d="m9 12 2 2 4-4"/></svg>En iyi fiyatı doğrudan bizden, aracısız alırsınız.</div>
 </div>
@@ -528,9 +527,11 @@ var DIDI_CHANNEL=(function(){try{var s=sessionStorage.getItem('didi_ch');if(s)re
     else{st.ch=Math.max(0,Math.min(5,st.ch+d));document.getElementById('rvCh').textContent=st.ch;}};
   window.resvSend=function(){if(st.sent)return;const name=(document.getElementById('rvName').value||'').trim();
     if(!name){document.getElementById('rvName').focus();return;}
-    st.sent=true;wa.disabled=true;
     const phone=((document.getElementById('rvPhone')||{}).value||'').trim();
+    if(!phone){document.getElementById('rvPhone').focus();return;}
     const email=((document.getElementById('rvEmail')||{}).value||'').trim();
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById('rvEmail').focus();return;}
+    st.sent=true;wa.disabled=true;
     const g=st.ad+' yetişkin'+(st.ch>0?(' + '+st.ch+' çocuk'):'');
     // Rezervasyon niyetini panele kaydet (WhatsApp'a gitmeden de takip edilebilsin)
     try{fetch('/api/reservation/',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},
