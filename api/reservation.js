@@ -2,7 +2,7 @@
 // Site rezervasyon sihirbazı buraya POST eder; kayıtlar UniqBee Ajans
 // Dashboard'unda (aynı Blob store) görünür. Ödeme/PII toplamaz; sadece
 // isim + opsiyonel telefon + tarih + oda + misafir bilgisi.
-import { put } from '@vercel/blob';
+import { put, list } from '@vercel/blob';
 
 const s = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 const isDate = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
@@ -11,6 +11,39 @@ const clampInt = (v, lo, hi) => {
   if (Number.isNaN(n)) return lo;
   return Math.max(lo, Math.min(hi, n));
 };
+
+const DEDUP_WINDOW_MS = 10 * 60 * 1000;
+
+// Ayni kisi/oda/tarih icin kisa sure icinde (cift tikla, retry, coklu sekme)
+// tekrar POST gelirse yeni kayit acmak yerine mevcut kaydi dondur.
+async function findRecentDuplicate(rec) {
+  try {
+    const now = Date.now();
+    const candidates = [];
+    let cursor;
+    do {
+      const page = await list({ prefix: 'didi/reservations/', limit: 1000, cursor });
+      for (const b of page.blobs) {
+        if (now - new Date(b.uploadedAt).getTime() <= DEDUP_WINDOW_MS) candidates.push(b);
+      }
+      cursor = page.hasMore ? page.cursor : undefined;
+    } while (cursor);
+
+    for (const b of candidates) {
+      try {
+        const r = await fetch(b.url + (b.url.includes('?') ? '&' : '?') + 'ts=' + now, { cache: 'no-store' });
+        if (!r.ok) continue;
+        const j = await r.json();
+        if (j.name === rec.name && j.phone === rec.phone && j.room === rec.room &&
+            j.checkin === rec.checkin && j.checkout === rec.checkout &&
+            j.adults === rec.adults && j.children === rec.children) {
+          return j;
+        }
+      } catch { /* bozuk kayit atla */ }
+    }
+  } catch { /* dedup basarisiz olursa normal akisa devam */ }
+  return null;
+}
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -54,6 +87,11 @@ export default async function handler(req, res) {
     if (!process.env.BLOB_READ_WRITE_TOKEN) {
       // Storage bağlı değilse sessizce kabul et (site akışı bozulmasın).
       return res.status(202).json({ ok: true, stored: false });
+    }
+
+    const dup = await findRecentDuplicate(rec);
+    if (dup) {
+      return res.status(200).json({ ok: true, stored: true, id: dup.id, dedup: true });
     }
 
     await put(`didi/reservations/${rec.id}.json`, JSON.stringify(rec), {
