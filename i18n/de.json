@@ -213,5 +213,8 @@
   "amenity_su_isitici": "Wasserkocher",
   "amenity_sac_kurutma": "Haartrockner",
   "amenity_dusakabin": "Duschkabine",
-  "amenity_banyo_malzeme": "Toilettenartikel"
+  "amenity_banyo_malzeme": "Toilettenartikel",
+  "resv_headline": "Jetzt Ihren Aufenthalt buchen",
+  "resv_trust": "Keine Kreditkarte nötig · Sofortige Antwort per WhatsApp",
+  "resv_email_ph": "beispiel@email.com"
 }

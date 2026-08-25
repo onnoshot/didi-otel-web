@@ -213,5 +213,8 @@
   "amenity_su_isitici": "Электрочайник",
   "amenity_sac_kurutma": "Фен",
   "amenity_dusakabin": "Душевая кабина",
-  "amenity_banyo_malzeme": "Туалетные принадлежности"
+  "amenity_banyo_malzeme": "Туалетные принадлежности",
+  "resv_headline": "Забронируйте прямо сейчас",
+  "resv_trust": "Банковская карта не требуется · Мгновенный ответ в WhatsApp",
+  "resv_email_ph": "example@mail.com"
 }

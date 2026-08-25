@@ -213,5 +213,8 @@
   "amenity_su_isitici": "Kettle",
   "amenity_sac_kurutma": "Hair Dryer",
   "amenity_dusakabin": "Shower Cabin",
-  "amenity_banyo_malzeme": "Toiletries"
+  "amenity_banyo_malzeme": "Toiletries",
+  "resv_headline": "Reserve Your Stay Now",
+  "resv_trust": "No credit card needed · Instant reply on WhatsApp",
+  "resv_email_ph": "you@example.com"
 }

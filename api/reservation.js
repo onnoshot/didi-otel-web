@@ -6,6 +6,7 @@ import { put, list } from '@vercel/blob';
 
 const s = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 const isDate = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
+const isEmail = (v) => typeof v === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
 const clampInt = (v, lo, hi) => {
   const n = parseInt(v, 10);
   if (Number.isNaN(n)) return lo;
@@ -67,6 +68,7 @@ export default async function handler(req, res) {
       brand: 'didi-otel',
       name,
       phone: s(body.phone, 32),
+      email: isEmail(body.email) ? s(body.email, 120) : '',
       room: s(body.room, 60),
       checkin,
       checkout,

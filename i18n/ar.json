@@ -213,5 +213,8 @@
   "amenity_su_isitici": "غلاية كهربائية",
   "amenity_sac_kurutma": "مجفف شعر",
   "amenity_dusakabin": "كابينة دش",
-  "amenity_banyo_malzeme": "مستلزمات الحمام"
+  "amenity_banyo_malzeme": "مستلزمات الحمام",
+  "resv_headline": "احجز إقامتك الآن",
+  "resv_trust": "لا حاجة لبطاقة ائتمان · رد فوري عبر واتساب",
+  "resv_email_ph": "example@email.com"
 }

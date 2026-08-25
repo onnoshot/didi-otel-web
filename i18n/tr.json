@@ -213,5 +213,8 @@
   "amenity_su_isitici": "Su Isıtıcısı",
   "amenity_sac_kurutma": "Saç Kurutma Makinesi",
   "amenity_dusakabin": "Duşakabin",
-  "amenity_banyo_malzeme": "Banyo Malzemeleri"
+  "amenity_banyo_malzeme": "Banyo Malzemeleri",
+  "resv_headline": "Hemen Rezervasyon Yapın",
+  "resv_trust": "Kredi kartı gerekmez · WhatsApp'tan anında yanıt",
+  "resv_email_ph": "ornek@eposta.com"
 }
