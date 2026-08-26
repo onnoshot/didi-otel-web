@@ -300,7 +300,7 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 .foot-managed a:hover{color:var(--bone);border-color:var(--bone)}
 .foot-credits+.foot-bot{border-top:0;padding-top:18px}
 .foot-madeby{display:inline-flex;align-items:center;gap:10px;padding:8px 17px 8px 13px;border:1px solid rgba(201,176,137,.30);border-radius:999px;background:rgba(201,176,137,.05);text-decoration:none;transition:transform .35s cubic-bezier(.2,.7,.3,1),background .35s,border-color .35s,box-shadow .35s}
-.foot-madeby .mb-ico{width:22px;height:22px;display:block;flex:none;transition:transform .35s cubic-bezier(.2,.7,.3,1)}
+.foot-madeby .mb-ico{width:22px;height:22px;margin:0;filter:none;display:block;flex:none;align-self:center;transition:transform .35s cubic-bezier(.2,.7,.3,1)}
 .foot-madeby .mb-name{font-size:13.5px;font-weight:500;letter-spacing:.01em;color:var(--bone);white-space:nowrap}
 .foot-madeby:hover{border-color:rgba(201,176,137,.7);background:rgba(201,176,137,.11);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
 .foot-madeby:hover .mb-ico{transform:scale(1.1) rotate(-5deg)}
