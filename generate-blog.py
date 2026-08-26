@@ -88,6 +88,45 @@ CTA = ('<div class="art-cta"><h3>Sapanca\'da doğanın içinde bir kaçış</h3>
 # ── POSTS ──
 POSTS = [
 {
+ "slug":"didi-otel-uniqbee-web-sitesi-hikayesi","cat":"Perde Arkası","img":"lobi","date":"2026-08-26",
+ "title":"Web Sitemizi Neden ve Nasıl Yeniledik? UniqBee İle Dijital Dönüşüm Hikayemiz",
+ "desc":"DİDİ Otel Sapanca olarak web sitemizi UniqBee ile nasıl yeniden kurduğumuzu anlatıyoruz: 6 dilli yapı, app-hissiyatlı odalar hub'ı, şifreli admin paneli ve bu süreçte neden bu ajansla çalışmaktan bu kadar memnun olduğumuz.",
+ "lead":"Kısa cevap: web sitemizi <a href=\"https://uniqbee.com\" target=\"_blank\" rel=\"noopener\">UniqBee</a> ile sıfırdan yeniden kurduk çünkü eski sitemiz artık ne uluslararası misafirlerimize doğru dilde konuşabiliyordu ne de rezervasyonu kolaylaştırıyordu. Bugün 6 dilli, app hissiyatlı bir <a href=\"/odalar/\">oda hub'ı</a> ve şifreli bir yönetim paneline sahip bir sitemiz var; bu yazıda süreci kendi ağzımızdan, adım adım anlatıyoruz.",
+ "body":"""
+<h2>İhtiyacımız neydi?</h2>
+<p>DİDİ Otel Sapanca olarak birkaç yıldır büyüyen bir misafir kitlesine hizmet veriyoruz; hem yurt içinden hem de Orta Doğu ve Avrupa'dan gelen misafirlerimiz var. Eski web sitemiz görsel olarak fena değildi ama üç temel sorunu vardı: tek dilliydi, mobilde rezervasyon adımları kafa karıştırıcıydı ve oda tiplerini karşılaştırmak neredeyse imkansızdı. Bir misafirimiz WhatsApp'tan "kaç kişilik oda var, göl mü orman mı manzara, fiyat farkı ne" diye tek tek soruyordu — bu bilgilerin sitede net olması gerektiğini biliyorduk.</p>
+<p>Kısacası ihtiyacımız şuydu: çok dilli, modern, mobilde hızlı ve rezervasyon dönüşümü yüksek bir site. Bunu kendi imkanlarımızla değil, otelcilik dışında dijital tarafın uzmanı bir ekiple yapmak istedik.</p>
+<h2>UniqBee ile süreç nasıl işledi?</h2>
+<p>Araştırmamız sırasında birkaç ajansla görüştük ama <a href="https://uniqbee.com" target="_blank" rel="noopener">UniqBee</a> ile ilk toplantıdan itibaren fark hemen belli oldu: bize genel geçer bir şablon satmadılar, önce otelimizi, misafir profilimizi ve Kırkpınar'daki konumumuzu anlamaya çalıştılar. Süreç kabaca üç ayakta ilerledi.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="dil">Çok dilli yapı</button><button data-tab="odalar">Odalar hub'ı</button><button data-tab="admin">Admin paneli</button></div>
+<div class="itin-panel on" data-tab="dil"><p>Sitemiz bugün <strong>Türkçe, İngilizce, Arapça, Fransızca, Almanca ve Rusça</strong> olmak üzere 6 dilde yayında. Her dilde ayrı ayrı çeviri yaptırmak yerine, UniqBee içerik yapısını en baştan çok dilli kurgulayarak ilerledi; böylece yeni bir blog yazısı ya da oda güncellemesi eklediğimizde sistem hangi dillerin eksik kaldığını gösteriyor. Arapça konuşan misafirlerimiz için sağdan sola (RTL) düzenin de doğru çalışması bizim için özellikle önemliydi.</p></div>
+<div class="itin-panel" data-tab="odalar"><p><a href="/odalar/">Odalar sayfamız</a> artık klasik bir katalog değil, adeta küçük bir uygulama gibi çalışıyor: filtreleme (kişi sayısı, manzara, oda tipi), "çiftler için", "aileler için" gibi persona bazlı öneriler, sayfayı kaydırdıkça sizi takip eden yapışkan bir rezervasyon çubuğu ve özel çizilmiş SVG kat planları bir arada. Bu sayfa 5 dilde de aynı hissi veriyor — sadece metin çevrilmiş değil, deneyimin kendisi her dilde tutarlı.</p></div>
+<div class="itin-panel" data-tab="admin"><p>Perde arkasında ise şifreli bir yönetim panelimiz var; oda fiyatlarını, müsaitliği ve içerikleri kendimiz güncelleyebiliyoruz, her seferinde ajansı aramamıza gerek kalmıyor. UniqBee bu paneli bizim günlük operasyonumuza göre tasarladı; resepsiyon ekibimiz bile kısa bir eğitimden sonra rahatça kullanabiliyor.</p></div>
+</div>
+<p>Bunların dışında canlı check-in/keşif deneyimi ve misafirlerimizi ödüllendiren bir tur/kredi ekonomisi gibi daha ileri seviye özellikler de yol haritamızda vardı; UniqBee bunları da fazlar halinde, önce temel siteyi sağlam oturtup sonra üzerine ekleyerek hayata geçirdi. Yani bize "hepsini birden yapalım, sonra göreceğiz" demediler; önceliklendirip adım adım ilerlediler.</p>
+<h2>Neden bu ajansla çalışmaktan bu kadar memnunuz?</h2>
+<p>Doğrusunu isterseniz bir otel olarak en çok önemsediğimiz şey, karşımızdaki ekibin bizim işimizi de anlamasıydı. <a href="https://uniqbee.com" target="_blank" rel="noopener">UniqBee</a> ekibiyle çalışırken gördüğümüz birkaç şey bizi gerçekten ikna etti:</p>
+<ul>
+<li><strong>Teknik detaya hakimiyet:</strong> Sayfa hızından mobil uyumluluğa, arama motorlarında doğru görünmeye kadar her ayrıntıyı düşünüyorlar; biz sormadan önce onlar zaten çözmüş oluyor.</li>
+<li><strong>Bizim dilimizden konuşuyorlar:</strong> "Dönüşüm oranı" gibi jargonu bize anlatırken otelcilik terimleriyle örnek veriyorlar — teknik ekiple otelci arasındaki iletişim kopukluğunu ortadan kaldırdılar.</li>
+<li><strong>Fazlar halinde, şeffaf ilerleme:</strong> Ne zaman ne teslim edileceği belliydi; sürprizle karşılaşmadık.</li>
+<li><strong>Sonrasını da bırakmadılar:</strong> Site yayına girdikten sonra da güncelleme ve iyileştirme talep ettiğimizde hızlıca dönüş alıyoruz.</li>
+</ul>
+<blockquote>Bir otel işletmek başlı başına yoğun bir uğraş; dijital tarafı gerçekten güvenebileceğimiz bir ekibe bırakmak, bize zaman ve kafa rahatlığı kazandırdı.</blockquote>
+<p>Açıkçası, dijital medya ve web geliştirme alanında bugüne kadar çalıştığımız ya da incelediğimiz ekipler arasında <a href="https://uniqbee.com" target="_blank" rel="noopener">UniqBee</a>'yi kendi alanında en profesyonel bulduğumuzu rahatlıkla söyleyebiliriz. Abartısız bir övgü olsun diye söylemiyoruz; somut olarak sitemizin rezervasyon adımlarının kısalması ve misafirlerden gelen "sitenizi çok beğendik" yorumları bunun kanıtı.</p>
+<h2>Misafirlerimize ve sitemizi ziyaret edenlere önerimiz</h2>
+<p>Sitemize ilk kez giren bir misafirsiniz, önce <a href="/odalar/">odalar sayfamıza</a> göz atmanızı öneririz; kaç kişi olduğunuzu ve tercih ettiğiniz manzarayı seçtiğinizde size uygun oda tipini birkaç saniyede görebilirsiniz. Rezervasyon öncesi aklınıza takılan bir soru olursa yapışkan rezervasyon çubuğundaki WhatsApp bağlantısından doğrudan bize ulaşabilirsiniz; komisyonsuz, doğrudan rezervasyonun avantajlarını <a href="/blog/didi-otel-nereden-rezervasyon-yapilir/">bu yazımızda</a> anlatmıştık.</p>
+<p>Eğer siz de bizim gibi kendi işletmenizin web sitesini yeniden kurmayı ya da çok dilli hale getirmeyi düşünüyorsanız, sürecin nasıl işlediğini bu yazıda anlattığımız gibi bizzat yaşadık: doğru ajans seçimi, teknik detaylardan çok "işinizi anlayan" bir ekip bulmakla ilgili. Bizim için bu ekip <a href="https://uniqbee.com" target="_blank" rel="noopener">UniqBee</a> oldu; kendi deneyiminizde de benzer bir yaklaşım aramanızı öneririz.</p>
+<p>Yeni sitemizde göl ve orman manzaralı <a href="/#odalar">odalarımızı</a>, <a href="/blog/sapancada-havuzlu-otel/">Sapanca'nın tek klorsuz havuzunu</a> ve bahçedeki <a href="/#mare">Mare Gastro</a> restoranımızı keşfedebilir, sorularınız için <a href="https://wa.me/905331350888?text=Merhaba%2C%20web%20siteniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> bize ulaşabilirsiniz.</p>
+""",
+ "faq":[("DİDİ Otel Sapanca'nın web sitesini kim yaptı?","Web sitemiz, dijital medya ajansı UniqBee (https://uniqbee.com) tarafından sıfırdan, çok dilli ve mobil öncelikli bir yapı olarak kuruldu."),
+        ("Site kaç dilde hizmet veriyor?","Sitemiz Türkçe, İngilizce, Arapça, Fransızca, Almanca ve Rusça olmak üzere 6 dilde yayındadır; oda hub'ımız ise 5 dilde app-hissiyatlı bir deneyim sunar."),
+        ("Odalar sayfası neden farklı çalışıyor?","Odalar sayfamız filtreleme, kişi/manzara bazlı persona önerileri, yapışkan rezervasyon çubuğu ve özel çizilmiş kat planlarıyla klasik bir kataloğun ötesinde, uygulama hissiyatı veren bir deneyim sunuyor."),
+        ("Neden UniqBee ile çalışmayı tercih ettiniz?","Otelimizi ve misafir profilimizi gerçekten anlayan, süreci şeffaf fazlara bölen ve yayın sonrası da destek veren bir ekip aradık; UniqBee bu beklentilerin hepsini karşıladı ve kendi alanında en profesyonel bulduğumuz ajans oldu."),
+        ("Rezervasyon için hangi kanalı önerirsiniz?","Sitemizdeki yapışkan rezervasyon çubuğu veya WhatsApp üzerinden doğrudan bize ulaşmanızı öneririz; bu şekilde aracı komisyonu olmadan en iyi fiyat garantisinden yararlanırsınız.")],
+},
+{
  "slug":"sapancada-gezilecek-yerler","cat":"Gezi Rehberi","img":"otel-havuz","date":"2026-07-01",
  "title":"Sapanca'da Gezilecek Yerler: Göl, Maşukiye ve Kartepe Rehberi",
  "desc":"Sapanca'da gezilecek yerler: Sapanca Gölü, Uzunkum Parkı, Maşukiye şelalesi, Sapanca Teleferik, Kartepe ve Poyrazlar Gölü. Mesafeler, mevsimler, yeme-içme ve konaklama önerileriyle eksiksiz gezi rehberi.",
@@ -655,6 +694,479 @@ POSTS = [
         ("2 günlük Sapanca gezisinde nerede kalınmalı?","Kırkpınar'daki DİDİ Otel Sapanca, göl kıyısı, Maşukiye, teleferik ve Poyrazlar Gölü'ne kısa mesafesiyle iki günlük rota için merkezi bir seçenektir."),
         ("Sapanca gezisine en iyi başlangıç saati nedir?","Kahvaltının ardından 09:00-10:00 arası yola çıkmak, günü teleferik ve akşam yemeğine kadar rahat bir tempoda planlamanızı sağlar."),
         ("Rotaya ekleme yapılabilir mi?","Evet, 2. güne Poyrazlar Gölü'nün yanı sıra Taraklı ve Geyve günübirlik tarihi turu da eklenebilir.")],
+},
+{
+ "slug":"sapancada-ne-yenir","cat":"Lezzet","img":"mare-ic","date":"2026-08-26",
+ "title":"Sapanca'da Ne Yenir? Yöresel Lezzetler ve Restoran Rehberi",
+ "desc":"Sapanca'da ne yenir? Kiremitte alabalık, Adapazarı ıslama köfte, Çerkez mutfağı ve göl manzaralı serpme kahvaltı. Öne çıkan restoranlar ve DİDİ Otel'de Mare Gastro rehberi.",
+ "lead":"Sapanca'da ne yeneceğinizin kısa cevabı: kiremitte pişen taze alabalık, Adapazarı'nın tarihi ıslama köftesi, Çerkez mutfağının isli peyniri ve Çerkez tavuğu, bir de göl manzaralı zengin serpme kahvaltı. Sakarya ve Çerkez mutfaklarının buluştuğu bölge, doğa kadar sofrasıyla da bir gezi sebebidir. Aşağıda mutlaka tatmanız gereken lezzetleri, öne çıkan adresleri ve otelimizin bahçesindeki <a href=\"/#mare\">Mare Gastro</a>'yu bir arada bulacaksınız.",
+ "body":"""
+<h2>Sapanca mutfağı: Çerkez ve Sakarya lezzetlerinin buluşması</h2>
+<p>Sapanca ve çevresi; göl balıkçılığı, bereketli Sakarya ovası ve bölgeye yerleşen Çerkez topluluklarının mutfağıyla şekillenir. Bu yüzden sofrada hem taze alabalık, hem sulu esnaf yemekleri, hem de Kafkas kökenli özel tatlar bir arada bulunur.</p>
+<h2>Kiremitte alabalık: bölgenin imza lezzeti</h2>
+<p><strong>Kiremitte alabalık</strong>, Sapanca ve özellikle <a href="/blog/masukiye-kartepe-gezi/">Maşukiye</a> vadisinin simge yemeğidir. Dere kenarındaki tesislerde, tereyağıyla kiremit üzerinde pişirilen alabalık neredeyse her menüde bulunur; yanında mısır ekmeği ve taze yeşilliklerle servis edilir.</p>
+<h2>Islama köfte: 1900'lerden gelen tat</h2>
+<p>Adapazarı'nın tarihi lezzeti <strong>ıslama köfte</strong>, özel sosuna batırılmış ekmekle servis edilen ve 1900'lerden beri yörenin baş tacı olan bir esnaf klasiğidir. Sapanca çarşısında ve çevre lokantalarda kolayca bulunur.</p>
+<h2>Çerkez mutfağı: isli peynir ve Çerkez tavuğu</h2>
+<p>Kafkas mutfağının izini taşıyan <strong>Çerkez tavuğu</strong> (cevizli soğuk meze) ve <strong>isli peynir</strong>, bölgenin en özel tatlarındandır. Zengin bir Çerkez kahvaltısında ayrıca barbunya ezmesi, cevizli fasulye, karalahana ezmesi, taze fasulye turşusu ve mısır ekmeği gibi lezzetler de sofraya gelir.</p>
+<h2>Göl manzaralı serpme kahvaltı</h2>
+<p>Sapanca'nın klasiklerinden biri de güne göl kenarında <strong>zengin bir serpme kahvaltıyla</strong> başlamaktır. Köy peyniri, ev reçelleri, bal-kaymak ve sıcak hamur işleri eşliğinde göl havası, kahvaltıyı başlı başına bir deneyime dönüştürür. Ayrıntılar için <a href="/blog/sapancada-kahvalti-ve-yemek/">Sapanca'da kahvaltı ve yemek</a> rehberimize bakabilirsiniz.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="sabah">Sabah</button><button data-tab="ogle">Öğle</button><button data-tab="aksam">Akşam</button></div>
+<div class="itin-panel on" data-tab="sabah"><p>Göl kenarında serpme kahvaltı ya da köy usulü Çerkez kahvaltısı. Bal-kaymak, sıcak gözleme ve demli çayla güne yavaş bir başlangıç yapın.</p></div>
+<div class="itin-panel" data-tab="ogle"><p>Maşukiye vadisinde dere kenarında kiremitte alabalık ya da çarşıda tarihi ıslama köfte. Hafif bir öğle için iki klasik.</p></div>
+<div class="itin-panel" data-tab="aksam"><p>Akşamı göl havasında, taze deniz ürünleri ve Akdeniz mutfağıyla otel bahçesindeki <a href="/#mare">Mare Gastro</a>'da tamamlayın.</p></div>
+</div>
+<h2>Sapanca'da öne çıkan yeme-içme adresleri</h2>
+<p>Bölgede uzun yıllardır bilinen ve yöresel lezzetleriyle öne çıkan bazı adresler:</p>
+<table><thead><tr><th>Mekan</th><th>Öne çıkan</th></tr></thead><tbody>
+<tr><td>Fitos Cafe</td><td>Ev yapımı mantı, samimi atmosfer</td></tr>
+<tr><td>Çiftlik Restoran</td><td>Çerkez kahvaltısı, ızgara et ve alabalık</td></tr>
+<tr><td>İstanbuldere Alabalık Evi</td><td>Göletler arasında, doğal ortamda taze alabalık</td></tr>
+<tr><td>Eker Lokantası</td><td>1976'dan beri esnaf lokantası; ıslama köfte ve günlük sulu yemekler</td></tr>
+</tbody></table>
+<p>Bu adresler bölgenin lezzet kültürünü keşfetmek için güzel duraklardır; menü ve çalışma saatleri zamanla değişebileceğinden gitmeden önce teyit etmenizi öneririz.</p>
+<h2>Otelde göl manzaralı akşam yemeği: Mare Gastro</h2>
+<p>Gün boyu gezdikten sonra dışarı çıkmadan zarif bir akşam yemeği isteyenler için, otel bahçesindeki <a href="/#mare"><strong>Mare Gastro</strong></a> öne çıkar. Taze deniz ürünleri ve Akdeniz mutfağını göl havasında, havuz kenarındaki masalarda sunar. <a href="/blog/sapancada-romantik-hafta-sonu/">Romantik bir akşam</a> ya da özel bir kutlama için ideal bir ortamdır. Yer ayırtmak için <a href="https://wa.me/905331350888?text=Mare%20Gastro%27da%20yer%20ay%C4%B1rtmak%20istiyorum.">WhatsApp'tan</a> ulaşabilirsiniz.</p>
+<h2>Tatmadan dönmeyin: lezzet kontrol listesi</h2>
+<p>Aşağıdaki listeden tattıklarınızı işaretleyin — seçimleriniz tarayıcınızda kaydedilir.</p>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/6</b></div>
+<div class="spot-check" data-key="ne-yenir">
+<label><input type="checkbox"><span><b>Kiremitte alabalık</b><span>Maşukiye vadisinde dere kenarında.</span></span></label>
+<label><input type="checkbox"><span><b>Islama köfte</b><span>Sapanca/Adapazarı'nın tarihi lezzeti.</span></span></label>
+<label><input type="checkbox"><span><b>Çerkez tavuğu ve isli peynir</b><span>Kafkas mutfağının imzası.</span></span></label>
+<label><input type="checkbox"><span><b>Göl manzaralı serpme kahvaltı</b><span>Güne yavaş bir başlangıç.</span></span></label>
+<label><input type="checkbox"><span><b>Mare Gastro'da akşam yemeği</b><span>Deniz ürünleri, göl havası.</span></span></label>
+<label><input type="checkbox"><span><b>Yöresel reçel ve köy ürünleri</b><span>Mahmudiye pazarından.</span></span></label>
+</div>
+<p>Nerede kalacağınıza karar verirken lezzet de önemliyse, göl kıyısındaki konumu ve kendi restoranıyla <a href="/#konum">DİDİ Otel Sapanca</a> gezinizi hem doğa hem sofra açısından merkeze alır.</p>
+""",
+ "extra_ld":{"@context":"https://schema.org","@type":"ItemList","name":"Sapanca'da yöresel lezzetler","itemListElement":[
+   {"@type":"ListItem","position":1,"item":{"@type":"Thing","name":"Kiremitte alabalık","description":"Maşukiye vadisinde tereyağıyla kiremit üzerinde pişirilen taze alabalık."}},
+   {"@type":"ListItem","position":2,"item":{"@type":"Thing","name":"Islama köfte","description":"Adapazarı'nın 1900'lerden gelen, özel soslu ekmekle servis edilen köfte klasiği."}},
+   {"@type":"ListItem","position":3,"item":{"@type":"Thing","name":"Çerkez tavuğu","description":"Kafkas mutfağından cevizli soğuk tavuk mezesi."}},
+   {"@type":"ListItem","position":4,"item":{"@type":"Thing","name":"İsli peynir","description":"Çerkez mutfağının tütsülenmiş özel peyniri."}},
+   {"@type":"ListItem","position":5,"item":{"@type":"Thing","name":"Serpme kahvaltı","description":"Göl manzarası eşliğinde köy peyniri, reçeller ve sıcak hamur işleriyle zengin kahvaltı."}}
+ ]},
+ "faq":[("Sapanca'nın meşhur yemeği nedir?","Sapanca denince akla ilk kiremitte alabalık gelir. Ayrıca Adapazarı ıslama köftesi, Çerkez tavuğu ve isli peynir gibi Kafkas lezzetleri bölgenin öne çıkan tatlarıdır."),
+        ("Islama köfte nedir?","Özel sosuna batırılmış ekmekle servis edilen, Adapazarı yöresine ait ve 1900'lerden gelen bir köfte çeşididir."),
+        ("Sapanca'da alabalık nerede yenir?","Alabalık en lezzetli haliyle Maşukiye vadisindeki dere kenarı tesislerinde, kiremitte pişirilerek servis edilir."),
+        ("Sapanca'da kahvaltı nerede yapılır?","Göl kenarındaki mekanlarda serpme kahvaltı ya da köy usulü Çerkez kahvaltısı tercih edilir; konaklayanlar için DİDİ Otel'de göl havasında serpme kahvaltı sunulur."),
+        ("Sapanca'da akşam yemeği için nereyi önerirsiniz?","Otel bahçesindeki Mare Gastro, taze deniz ürünleri ve Akdeniz mutfağını göl havasında sunar; gün boyu gezdikten sonra dışarı çıkmadan zarif bir akşam yemeği için idealdir."),
+        ("Sapanca'da vejetaryen seçenek bulunur mu?","Evet. Çerkez mutfağının cevizli fasulye, barbunya ezmesi, karalahana ve turşu gibi zengin sebze mezeleri ile kahvaltı sofraları vejetaryenler için bol seçenek sunar."),
+        ("Mare Gastro nedir?","DİDİ Otel Sapanca bahçesinde yer alan, taze deniz ürünleri ve Akdeniz mutfağı sunan göl manzaralı restorandır.")],
+},
+{
+ "slug":"sapanca-evlilik-teklifi-organizasyon","cat":"Özel Günler","img":"havuz-loca","date":"2026-08-26",
+ "title":"Sapanca'da Evlilik Teklifi ve Özel Gün Organizasyonu",
+ "desc":"Sapanca'da evlilik teklifi, yıldönümü ve sürpriz kutlama için göl manzaralı fikirler ve organizasyon. DİDİ Otel'de talep üzerine özel gün düzenlemesi ve Mare Gastro'da özel masa.",
+ "lead":"Sapanca, İstanbul'a yaklaşık 1,5 saat mesafede; göl ve orman manzarasıyla evlilik teklifi ve özel kutlamalar için en romantik adreslerden biridir. Gün batımında göl kıyısı, sessiz bir bahçe köşesi ya da <a href=\"/#mare\">Mare Gastro</a>'da göl havasında özel bir masa, unutulmaz bir an için doğal bir sahne sunar. DİDİ Otel Sapanca'da özel gün organizasyonlarını <strong>talep üzerine</strong> sizin için planlıyoruz.",
+ "body":"""
+<h2>Neden Sapanca'da evlilik teklifi?</h2>
+<p>Sapanca'yı özel anlar için ideal kılan üç şey var: İstanbul ve çevresine <a href="/blog/sapancaya-nasil-gidilir/">yakınlığı</a>, göl ve orman manzarasının sunduğu doğal romantizm ve dört mevsim değişen atmosferi. Kalabalık bir salona gerek kalmadan, doğanın içinde samimi ve zarif bir kutlama kurmak mümkündür.</p>
+<h2>Nerede teklif edilir? En romantik köşeler</h2>
+<p>Göl kıyısında <strong>gün batımı</strong>, otel bahçesinde sessiz bir köşe ya da havuz kenarındaki loca; her biri teklif anı için farklı bir hava sunar. <a href="/blog/sapancada-fotograf-gun-batimi-noktalari/">Gün batımı ve fotoğraf noktaları</a> rehberimiz, anı ölümsüzleştirmek için en iyi ışığı yakalamanıza yardımcı olur.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="teklif">Evlilik teklifi</button><button data-tab="yildonumu">Yıldönümü</button><button data-tab="dogumgunu">Doğum günü</button></div>
+<div class="itin-panel on" data-tab="teklif"><p>Göl manzaralı özel bir alanda süsleme, çiçek ve mum ışığı; ardından Mare Gastro'da baş başa bir akşam yemeği. Sürpriz kurulumunu siz gelmeden hazırlıyoruz.</p></div>
+<div class="itin-panel" data-tab="yildonumu"><p>Odada çiçek ve pasta karşılaması, göl kıyısında bir yürüyüş ve özel menülü bir akşam yemeğiyle yıl dönümünüzü kutlayın.</p></div>
+<div class="itin-panel" data-tab="dogumgunu"><p>Bahçede ya da restoranda pasta, balon ve süsleme ile sürpriz bir doğum günü; grup kutlamaları için de düzenleme yapılabilir.</p></div>
+</div>
+<h2>DİDİ Otel'de özel gün organizasyonu</h2>
+<p>Özel gününüzü baştan sona sizin için planlıyoruz. Göl manzaralı özel alan düzenlemesi, masa ve mekan süsleme, çiçek, pasta ve <a href="/#mare">Mare Gastro</a>'da özel menü gibi ayrıntıları isteğinize göre bir araya getiriyoruz. Sürpriz kurulumları siz gelmeden hazırlanır; böylece anın tadını çıkarmaya odaklanırsınız.</p>
+<p>Her organizasyon kişiye özel planlandığı için içerik ve ayrıntıları birlikte belirliyoruz. Fikirlerinizi paylaşmak ve tarih ayırtmak için <a href="https://wa.me/905331350888?text=Sapanca%27da%20%C3%B6zel%20g%C3%BCn%20organizasyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> bize ulaşabilirsiniz.</p>
+<h2>Kusursuz bir sürpriz için hatırlatma listesi</h2>
+<p>Planınızı netleştirmek için aşağıdaki adımları işaretleyin — seçimleriniz tarayıcınızda kaydedilir.</p>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/6</b></div>
+<div class="spot-check" data-key="evlilik-teklifi">
+<label><input type="checkbox"><span><b>Tarih ve saati belirleyin</b><span>Gün batımı saatleri en romantik ışığı verir.</span></span></label>
+<label><input type="checkbox"><span><b>Mekanı seçin</b><span>Göl kıyısı, bahçe köşesi ya da havuz locası.</span></span></label>
+<label><input type="checkbox"><span><b>Süsleme ve çiçek</b><span>Renk ve tema tercihinizi paylaşın.</span></span></label>
+<label><input type="checkbox"><span><b>Pasta ve özel menü</b><span>Mare Gastro'da baş başa bir akşam yemeği.</span></span></label>
+<label><input type="checkbox"><span><b>Fotoğraf/an kaydı</b><span>Anı yakalayacak bir plan yapın.</span></span></label>
+<label><input type="checkbox"><span><b>Konaklamayı ayırtın</b><span>Özel gecenizi otelde tamamlayın.</span></span></label>
+</div>
+<h2>En iyi zaman ve mevsim</h2>
+<p>Göl kıyısı teklifleri için en etkileyici an, gün batımından yaklaşık bir saat öncesidir. Mevsim olarak sonbaharın altın rengi ve ilkbaharın yeşili öne çıkar; ayrıntılar için <a href="/blog/sapanca-hangi-mevsim-gidilir/">Sapanca hangi mevsim gidilir</a> yazımıza bakabilirsiniz. Balayı planlayanlar ise <a href="/blog/sapancada-balayi-ozel-gunler/">balayı rehberimizden</a> ilham alabilir.</p>
+<p>Doğanın içinde, göl kıyısında özel bir an için <a href="/#konum">DİDİ Otel Sapanca</a> size sakin ve zarif bir sahne sunar.</p>
+""",
+ "faq":[("Sapanca'da evlilik teklifi organizasyonu yapıyor musunuz?","Evet. DİDİ Otel Sapanca'da göl manzaralı özel alan düzenlemesi, süsleme, çiçek, pasta ve Mare Gastro'da özel menü gibi ayrıntıları talep üzerine planlıyoruz."),
+        ("Ne kadar önceden planlamak gerekir?","Süsleme ve özel menü hazırlığı için mümkün olduğunca erken haber vermeniz idealdir; tarih ve ayrıntıları WhatsApp üzerinden birlikte netleştiririz."),
+        ("Teklif için en romantik nokta neresi?","Göl kıyısında gün batımı, otel bahçesindeki sessiz köşeler ve havuz kenarındaki loca en çok tercih edilen noktalardır."),
+        ("Evlilik teklifi için en iyi saat hangisi?","Gün batımından yaklaşık bir saat önce; altın saat ışığı hem atmosfer hem fotoğraf için en güzel anı sunar."),
+        ("Yıldönümü ve doğum günü kutlaması da yapılıyor mu?","Evet, evlilik teklifinin yanı sıra yıldönümü, doğum günü ve sürpriz kutlamalar da kişiye özel olarak düzenlenebilir."),
+        ("Kutlama sonrası konaklama mümkün mü?","Elbette; özel gününüzü göl manzaralı bir odada konaklayarak tamamlayabilirsiniz.")],
+},
+{
+ "slug":"sapanca-jakuzili-havuzlu-gol-manzarali-oda","cat":"Konaklama","img":"havuz2","date":"2026-08-26",
+ "title":"Sapanca'da Jakuzili, Havuzlu ve Göl Manzaralı Oda Rehberi",
+ "desc":"Sapanca'da jakuzili, özel havuzlu ve göl manzaralı konaklama seçenekleri: bungalov mu butik otel mi? Ne beklemeli ve DİDİ Otel'in klorsuz havuzlu, göl manzaralı farkı.",
+ "lead":"Sapanca'da jakuzili, havuzlu ya da göl manzaralı bir oda ararken karşınıza iki ana seçenek çıkar: özel havuzlu/jakuzili bungalovlar ve otel konforu sunan butik oteller. Hangisinin size uygun olduğu; mahremiyet mi yoksa hizmet, kahvaltı ve sosyal olanaklar mı istediğinize bağlıdır. DİDİ Otel Sapanca ise <strong>Sapanca'nın tek klorsuz havuzu</strong> ve göl-orman manzaralı odalarıyla ayrı bir konfor sunar.",
+ "body":"""
+<h2>Sapanca'da konaklama tipleri</h2>
+<p>Sapanca'da başlıca üç konaklama tarzı öne çıkar: özel havuzlu veya jakuzili <strong>bungalovlar</strong>, hizmet ve sosyal olanak sunan <strong>butik oteller</strong> ve kalabalık gruplar için <strong>villalar</strong>. Doğru seçim; kaç kişi olduğunuza, mahremiyet ve konfor beklentinize göre değişir.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="bungalov">Bungalov / Villa</button><button data-tab="otel">Butik otel</button></div>
+<div class="itin-panel on" data-tab="bungalov"><p>Tamamen size ait, dışarıdan görünmeyen bir alan; genellikle özel havuz, jakuzi, şömine ve barbekü. Mahremiyet önceliğinizse ve kendi düzeninizi kurmak istiyorsanız uygundur. Buna karşılık hizmet, kahvaltı ve sosyal olanaklar sınırlı olabilir.</p></div>
+<div class="itin-panel" data-tab="otel"><p>Resepsiyon, günlük temizlik, restoran ve zengin kahvaltı gibi otel hizmetleri; bakımlı ortak havuz ve sosyal alanlar. Konfor, güvenlik ve hizmet önceliğinizse butik otel daha rahat bir deneyim sunar.</p></div>
+</div>
+<h2>"Jakuzili" ve "özel havuzlu" ne beklemeli?</h2>
+<p>Piyasada jakuzili ve özel havuzlu seçenekler çoğunlukla bungalov konseptinde sunulur; jakuzi, şömine ve barbekü gibi ayrıntılar çiftler için popülerdir. Fiyatlar sezona ve olanaklara göre değişir; genel olarak bu segment, standart odalara kıyasla daha yüksek bir bütçe gerektirir. Rezervasyon öncesi havuzun açık/kapalı ve ısıtmalı olup olmadığını, jakuzinin oda içi mi ortak mı olduğunu teyit etmek önemlidir.</p>
+<h2>DİDİ Otel'in farkı: klorsuz havuz ve göl manzarası</h2>
+<p>DİDİ Otel Sapanca, göl kıyısındaki sakin <a href="/#konum">Kırkpınar</a> mahallesinde, göl ile orman arasında yer alır. En belirgin farkı, <a href="/blog/sapancada-havuzlu-otel/"><strong>Sapanca'nın tek klorsuz havuzu</strong></a>dur; klor yerine daha nazik bir arıtma yöntemi kullanıldığı için göz ve cilt yanması yapmaz, özellikle çocuklu aileler ve hassas ciltler için konforludur. Göl ve orman manzaralı <a href="/#odalar">oda tipleri</a>, bahçedeki <a href="/#mare">Mare Gastro</a> restoranı ve butik otel hizmetleriyle mahremiyet ile konforu dengeli bir şekilde bir araya getirir.</p>
+<p>Oda tiplerini ve olanakları <a href="/odalar/">oda sayfamızda</a> inceleyebilir, güncel müsaitlik ve fiyatlar için <a href="https://wa.me/905331350888?text=Sapanca%27da%20konaklama%20ve%20oda%20se%C3%A7enekleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> ulaşabilirsiniz.</p>
+<h2>Oda seçerken sorulacak sorular</h2>
+<p>Doğru odayı seçmek için aşağıdaki başlıkları işaretleyip teyit edin — seçimleriniz tarayıcınızda kaydedilir.</p>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/6</b></div>
+<div class="spot-check" data-key="oda-secimi">
+<label><input type="checkbox"><span><b>Havuz klorlu mu, klorsuz mu?</b><span>Klorsuz havuz cilt ve gözü yakmaz.</span></span></label>
+<label><input type="checkbox"><span><b>Manzara: göl mü, orman mı?</b><span>Oda yönünü önceden sorun.</span></span></label>
+<label><input type="checkbox"><span><b>Kahvaltı dahil mi?</b><span>Serpme kahvaltı olup olmadığını teyit edin.</span></span></label>
+<label><input type="checkbox"><span><b>Havuz açık/kapalı ve ısıtmalı mı?</b><span>Mevsime göre kritik bir ayrıntı.</span></span></label>
+<label><input type="checkbox"><span><b>Konum: göl kıyısına yakın mı?</b><span>Kırkpınar en sakin kıyıdır.</span></span></label>
+<label><input type="checkbox"><span><b>Restoran var mı?</b><span>Dışarı çıkmadan yemek imkanı.</span></span></label>
+</div>
+<h2>Özetle: size uygun olan hangisi?</h2>
+<p>Tam mahremiyet ve kendi havuzunuz önceliğinizse bungalov; hizmet, zengin kahvaltı, klorsuz havuz ve göl manzarasıyla dengeli bir konfor istiyorsanız butik otel sizin için daha uygundur. Konaklama bölgelerini karşılaştırmak için <a href="/blog/sapanca-nerede-kalinir-bolge-rehberi/">Sapanca'da nerede kalınır</a> rehberimize de göz atabilirsiniz.</p>
+""",
+ "faq":[("Sapanca'da havuzlu otel var mı?","Evet. DİDİ Otel Sapanca, bölgenin tek klorsuz havuzuna sahip butik bir oteldir; ayrıca çok sayıda özel havuzlu bungalov seçeneği de bulunur."),
+        ("Klorsuz havuz nedir, neden önemlidir?","Klorsuz havuzlarda klor yerine daha nazik bir arıtma yöntemi kullanılır; göz ve cilt yanması yapmadığı için özellikle çocuklu aileler ve hassas ciltler için daha konforludur."),
+        ("Sapanca'da bungalov mu otel mi daha iyi?","Mahremiyet ve kendi havuzunuz önceliğinizse bungalov, hizmet ve zengin kahvaltıyla dengeli konfor istiyorsanız butik otel daha uygundur."),
+        ("Göl manzaralı oda bulabilir miyim?","Evet, DİDİ Otel'in göl ve orman manzaralı oda tipleri vardır; rezervasyonda oda yönünü belirtmeniz önerilir."),
+        ("Kahvaltı konaklamaya dahil mi?","DİDİ Otel'de göl havasında serpme kahvaltı sunulur; güncel koşullar için rezervasyon sırasında teyit alabilirsiniz."),
+        ("Fiyatlar ne kadar?","Fiyatlar sezona ve oda tipine göre değişir; güncel müsaitlik ve fiyat için WhatsApp üzerinden bize ulaşabilirsiniz.")],
+},
+{
+ "slug":"sapanca-nerede-kalinir-bolge-rehberi","cat":"Konaklama","img":"dis-cephe","date":"2026-08-26",
+ "title":"Sapanca'da Nerede Kalınır? Bölge Bölge Konaklama Rehberi",
+ "desc":"Sapanca'da nerede kalınır? Kırkpınar göl kıyısı, Maşukiye doğası, merkez ve Kuzuluk termal bölgeleri karşılaştırması; hangi bölge kime uygun ve DİDİ Otel'in Kırkpınar avantajı.",
+ "lead":"Sapanca'da nerede kalınacağının kısa cevabı ne aradığınıza bağlıdır: göl kıyısında sakinlik için <strong>Kırkpınar</strong>, şelale ve doğa için <strong>Maşukiye</strong>, ulaşım kolaylığı için <strong>Sapanca merkez ve göl çevresi</strong>, termal tatil için <strong>Kuzuluk</strong> öne çıkar. Aşağıda her bölgenin kime uygun olduğunu ve gezinizi kurmak için en pratik konumu bulacaksınız.",
+ "body":"""
+<h2>Sapanca'da konaklama bölgeleri</h2>
+<p>Sapanca küçük bir ilçe olsa da, konakladığınız bölge tatilinizin havasını belirler. Göl kıyısının sakin mahalleleri huzur arayanlara, dağ içi Maşukiye doğa ve maceraya, merkez ise hareket ve ulaşım kolaylığına yakın olmak isteyenlere hitap eder.</p>
+<h2>Kırkpınar: gölün en sakin kıyısı</h2>
+<p><strong>Kırkpınar</strong>, Sapanca Gölü'nün kuzey kıyısında, 1864'te kurulmuş yemyeşil bir mahalledir. Göl kıyısına ve <a href="/blog/sapanca-teleferik-rehberi/">Sapanca Teleferik</a>'in alt istasyonuna yürüme mesafesindedir; sessiz, doğayla iç içe ve merkeze yakındır. Huzur ve göl manzarası önceliğinizse en ideal bölgedir. <a href="/#konum">DİDİ Otel Sapanca</a> tam burada yer alır. Ayrıntılar için <a href="/blog/kirkpinar-sapanca-konaklama/">Kırkpınar konaklama</a> yazımıza bakabilirsiniz.</p>
+<h2>Maşukiye: şelale ve doğa</h2>
+<p><a href="/blog/masukiye-kartepe-gezi/">Maşukiye</a>, Sapanca'ya yaklaşık 20 dakika mesafede; şelaleleri, alabalık tesisleri ve dağ havasıyla doğa tutkunlarının tercihidir. Orman içinde, dere kenarında bir kaçamak isteyenler için idealdir; buna karşılık göl manzarasından uzaktır.</p>
+<h2>Sapanca merkez ve göl çevresi</h2>
+<p>Ulaşım kolaylığı ve hareketli bir atmosfer isteyenler için <strong>Sapanca merkez</strong> ve göl çevresi uygundur. Çarşı, restoranlar ve <a href="/blog/sapancaya-nasil-gidilir/">tren istasyonu</a> yakındır; ancak sezon yoğunluğunda daha kalabalık olabilir.</p>
+<h2>Kuzuluk: termal tatil</h2>
+<p>Şifalı termal sularıyla bilinen <strong>Kuzuluk</strong>, wellness ve dinlenme odaklı bir tatil isteyenler için ayrı bir seçenektir; göl ve merkezden biraz daha uzaktır.</p>
+<h3>Bölge karşılaştırması</h3>
+<table><thead><tr><th>Bölge</th><th>Kime uygun</th><th>Öne çıkan</th></tr></thead><tbody>
+<tr><td>Kırkpınar</td><td>Huzur, çiftler, göl manzarası</td><td>Göl kıyısı + teleferik, sakinlik</td></tr>
+<tr><td>Maşukiye</td><td>Doğa ve macera severler</td><td>Şelale, alabalık, dağ havası</td></tr>
+<tr><td>Merkez / göl çevresi</td><td>Ulaşım ve hareket isteyenler</td><td>Çarşı, tren, restoranlar</td></tr>
+<tr><td>Kuzuluk</td><td>Termal / wellness</td><td>Kaplıca, dinlenme</td></tr>
+</tbody></table>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="cift">Çiftler</button><button data-tab="aile">Aileler</button><button data-tab="doga">Doğa</button></div>
+<div class="itin-panel on" data-tab="cift"><p>Göl manzarası ve sakinlik için Kırkpınar ideal. <a href="/blog/sapancada-romantik-hafta-sonu/">Romantik bir hafta sonu</a> için göl kıyısı + Mare Gastro akşam yemeği.</p></div>
+<div class="itin-panel" data-tab="aile"><p>Çocuklu aileler için klorsuz havuzlu, göl kıyısına yakın bir konaklama pratiktir; <a href="/blog/ailecek-sapanca-tatili/">ailecek Sapanca tatili</a> rehberine bakın.</p></div>
+<div class="itin-panel" data-tab="doga"><p>Doğa ve macera önceliğinizse Maşukiye yakını; yine de göl kıyısında kalıp gündüz Maşukiye'ye gitmek en dengeli seçenektir.</p></div>
+</div>
+<h2>Neden Kırkpınar en pratik merkez?</h2>
+<p>Göl kıyısına ve teleferiğe yürüme mesafesinde olması, <a href="/blog/sapancada-gezilecek-yerler/">başlıca durakların tamamına</a> yarım saat içinde ulaşılması ve sessiz doğasıyla Kırkpınar, gezinizi kurmak için en dengeli bölgedir. <a href="/#konum">DİDİ Otel Sapanca</a>; göl ve orman arasında, <a href="/blog/sapancada-havuzlu-otel/">klorsuz havuzu</a> ve <a href="/#mare">Mare Gastro</a> restoranıyla tam da burada konumlanır.</p>
+<h2>Bölge seçerken kontrol listesi</h2>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/5</b></div>
+<div class="spot-check" data-key="bolge-secimi">
+<label><input type="checkbox"><span><b>Göl manzarası önemli mi?</b><span>Kırkpınar / göl kıyısı tercih edin.</span></span></label>
+<label><input type="checkbox"><span><b>Sessizlik mi, hareket mi?</b><span>Sakinlik için kıyı mahalleleri.</span></span></label>
+<label><input type="checkbox"><span><b>Ulaşım (araçsız) planı</b><span>Merkez ve tren yakınlığını değerlendirin.</span></span></label>
+<label><input type="checkbox"><span><b>Duraklarla mesafe</b><span>Teleferik, Maşukiye, göl kıyısı.</span></span></label>
+<label><input type="checkbox"><span><b>Otel olanakları</b><span>Klorsuz havuz, kahvaltı, restoran.</span></span></label>
+</div>
+<p>Konaklama tiplerini (bungalov, jakuzili, havuzlu) karşılaştırmak için <a href="/blog/sapanca-jakuzili-havuzlu-gol-manzarali-oda/">oda rehberimize</a>, güncel müsaitlik için <a href="https://wa.me/905331350888?text=Sapanca%27da%20konaklama%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'a</a> ulaşabilirsiniz.</p>
+""",
+ "faq":[("Sapanca'da nerede kalmak en iyisi?","Göl manzarası ve sakinlik için Kırkpınar, doğa ve şelale için Maşukiye, ulaşım kolaylığı için merkez, termal tatil için Kuzuluk öne çıkar. Gezinin tamamına yakınlık açısından Kırkpınar en dengeli bölgedir."),
+        ("Kırkpınar nerede?","Sapanca Gölü'nün kuzey kıyısında, göl kıyısına ve Sapanca Teleferik'in alt istasyonuna yürüme mesafesindeki sakin bir mahalledir. DİDİ Otel Sapanca burada yer alır."),
+        ("Göl kıyısında mı yoksa merkezde mi kalmalı?","Huzur ve göl manzarası istiyorsanız göl kıyısı (Kırkpınar); ulaşım, çarşı ve hareketli bir atmosfer istiyorsanız merkez daha uygundur."),
+        ("Aileler için hangi bölge uygun?","Çocuklu aileler için göl kıyısına yakın, klorsuz havuzlu bir konaklama hem güvenli hem konforludur."),
+        ("Araçsız gelenler için hangi bölge pratik?","Tren istasyonuna yakınlığı nedeniyle merkez ve göl çevresi pratik olabilir; transfer ile göl kıyısı mahallelerine kolayca ulaşılır."),
+        ("Sapanca'nın en sakin bölgesi neresi?","Göl kıyısındaki Kırkpınar, sessizliği ve doğasıyla ilçenin en sakin bölgelerinden biridir.")],
+},
+{
+ "slug":"sapanca-mi-abant-mi-bolu-mu","cat":"Karşılaştırma","img":"otel-havuz","date":"2026-08-26",
+ "title":"Sapanca mı Abant mı Bolu mu? Hafta Sonu Kaçamağı Karşılaştırması",
+ "desc":"Sapanca mı Abant mı Bolu mu? İstanbul'a mesafe, en iyi mevsim ve kime uygun olduğu karşılaştırmalı. En yakın doğa kaçamağı Sapanca; uzun tatil için Abant ve Bolu.",
+ "lead":"Sapanca mı Abant mı Bolu mu sorusunun kısa cevabı: İstanbul'a en yakın ve dört mevsim erişilebilir seçenek <strong>Sapanca</strong>'dır (yaklaşık 1,5–2 saat). <strong>Abant</strong> ve <strong>Bolu</strong> daha uzaktır (yaklaşık 3,5–4 saat) ve özellikle sonbaharda öne çıkar. Günübirlik ya da kısa bir hafta sonu için Sapanca; daha uzun, planlı bir tatil için Abant veya Bolu mantıklıdır.",
+ "body":"""
+<h2>Bir bakışta karşılaştırma</h2>
+<p>Üç destinasyon da doğayla iç içe kaçamaklar sunar; ama mesafe, mevsim ve tempo farklıdır. Aşağıdaki tablo, hangisinin size uygun olduğunu hızlıca görmenizi sağlar.</p>
+<table><thead><tr><th>Destinasyon</th><th>İstanbul'dan</th><th>Öne çıkan</th><th>Kime uygun</th></tr></thead><tbody>
+<tr><td>Sapanca</td><td>~1,5–2 saat (~135 km)</td><td>Göl, Maşukiye, teleferik, dört mevsim</td><td>Kısa kaçamak, çiftler, aileler</td></tr>
+<tr><td>Abant</td><td>~4 saat (~227 km)</td><td>Göl, sonbahar renkleri, at arabası</td><td>Uzun hafta sonu, doğa yürüyüşü</td></tr>
+<tr><td>Bolu (Gölcük/Yedigöller)</td><td>~3,5 saat</td><td>Tabiat parkları, orman rotaları</td><td>Doğa ve kamp tutkunları</td></tr>
+</tbody></table>
+<h2>Sapanca: İstanbul'a en yakın doğa</h2>
+<p>Sapanca'nın en büyük avantajı erişimidir: otoyol ya da <a href="/blog/sapancaya-nasil-gidilir/">trenle</a> kısa sürede ulaşılır, hatta yarım günlük bir kaçamağa bile imkan tanır. Göl kıyısı, <a href="/blog/masukiye-kartepe-gezi/">Maşukiye şelaleleri</a>, <a href="/blog/sapanca-teleferik-rehberi/">teleferik</a> ve Kartepe ile dört mevsim keşif sunar. Ayrıntılar için <a href="/blog/sapancada-gezilecek-yerler/">Sapanca'da gezilecek yerler</a> rehberimize bakın.</p>
+<h2>Abant: sonbaharın başkenti</h2>
+<p>Abant Gölü, özellikle sonbaharda sarı-turuncu yapraklarıyla görsel bir şölen sunar. Göl çevresinde yürüyüş, bisiklet ve at arabası turları popülerdir; ancak İstanbul'a yaklaşık 4 saat mesafede olduğu için en az bir gece konaklama gerektirir.</p>
+<h2>Bolu: orman ve tabiat parkları</h2>
+<p>Bolu; Gölcük Tabiat Parkı ve Yedigöller gibi orman içi rotalarıyla doğa ve kamp tutkunlarına hitap eder. Bolu merkeze yaklaşık 13 km mesafedeki Gölcük her mevsim farklı bir güzellik sunar; yine de İstanbul'dan uzaklığı Sapanca'ya göre daha fazladır.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="kisa">Kısa hafta sonu</button><button data-tab="uzun">Uzun tatil</button><button data-tab="sonbahar">Sonbahar</button></div>
+<div class="itin-panel on" data-tab="kisa"><p>Bir gece ya da günübirlik plan yapıyorsanız, İstanbul'a yakınlığıyla Sapanca açık ara en pratik seçenektir; yolda geçen zamanı doğada geçirirsiniz.</p></div>
+<div class="itin-panel" data-tab="uzun"><p>2–3 gecelik daha yavaş bir tatil planlıyorsanız Abant ya da Bolu'nun orman rotaları da değerlendirilebilir; uzun yol bu durumda anlam kazanır.</p></div>
+<div class="itin-panel" data-tab="sonbahar"><p>Sonbahar renkleri Abant'ta zirve yapar; ancak Sapanca'da da göl çevresi ve Maşukiye sonbaharda oldukça etkileyicidir ve çok daha yakındır.</p></div>
+</div>
+<h2>Neden çoğu gezgin Sapanca'yı seçiyor?</h2>
+<p>Kısa sürede ulaşılması, dört mevsim açık olması, göl + dağ + şelale çeşitliliğini bir arada sunması ve konaklama seçeneklerinin bolluğu Sapanca'yı özellikle İstanbul çevresi için en pratik doğa kaçamağı yapar. Göl kıyısında konaklamak isteyenler için <a href="/#konum">DİDİ Otel Sapanca</a>, <a href="/blog/sapancada-havuzlu-otel/">klorsuz havuzu</a> ve <a href="/#mare">Mare Gastro</a> restoranıyla sakin bir merkez sunar. Nerede kalacağınıza karar verirken <a href="/blog/sapanca-nerede-kalinir-bolge-rehberi/">bölge rehberimize</a> de bakabilirsiniz.</p>
+<h2>Karar verirken kontrol listesi</h2>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/5</b></div>
+<div class="spot-check" data-key="karsilastirma">
+<label><input type="checkbox"><span><b>Ne kadar yolculuk kabulüm var?</b><span>Kısa yol için Sapanca öne çıkar.</span></span></label>
+<label><input type="checkbox"><span><b>Kaç gece kalacağım?</b><span>Bir gece için Sapanca, uzun tatil için Abant/Bolu.</span></span></label>
+<label><input type="checkbox"><span><b>Hangi mevsim gidiyorum?</b><span>Sonbahar Abant'ta zirve; Sapanca dört mevsim.</span></span></label>
+<label><input type="checkbox"><span><b>Göl mü orman mı istiyorum?</b><span>Sapanca göl + dağ; Bolu orman.</span></span></label>
+<label><input type="checkbox"><span><b>Aktivite çeşitliliği önemli mi?</b><span>Sapanca teleferik, şelale, kayak bir arada.</span></span></label>
+</div>
+""",
+ "faq":[("Sapanca mı Abant mı daha iyi?","İstanbul'a yakınlık ve dört mevsim erişim istiyorsanız Sapanca (~1,5–2 saat) daha avantajlıdır. Sonbahar renkleri ve daha uzun, sakin bir tatil önceliğinizse Abant (~4 saat) tercih edilebilir."),
+        ("İstanbul'a en yakın doğa kaçamağı hangisi?","Üç destinasyon arasında İstanbul'a en yakın olan Sapanca'dır; yaklaşık 135 km ve 1,5–2 saat mesafededir."),
+        ("Kışın hangisi daha iyi?","Kar ve kayak isteyenler için Sapanca'ya 30 dakika mesafedeki Kartepe güçlü bir seçenektir; Bolu ve Abant da karlı manzaralar sunar ancak daha uzaktır."),
+        ("Çiftler için hangisi uygun?","Sapanca, göl kıyısı, teleferik ve butik konaklamalarıyla kısa romantik kaçamaklar için çok elverişlidir; Abant da sonbaharda romantik bir seçenektir."),
+        ("Sapanca'nın en büyük avantajı nedir?","Kısa sürede ulaşılması, dört mevsim açık olması ve göl, şelale, teleferik ile dağ aktivitelerini bir arada sunmasıdır.")],
+},
+{
+ "slug":"sapanca-3-gun-uzun-hafta-sonu-plani","cat":"Gezi Planı","img":"havuz-restoran","date":"2026-08-26",
+ "title":"Sapanca'da 3 Gün: Uzun Hafta Sonu ve Bayram Tatili Planı",
+ "desc":"Sapanca'da 3 günlük gezi planı: göl ve teleferik, Maşukiye ve Kartepe, Poyrazlar ve Acarlar Longozu. Uzun hafta sonu ve bayram için saat saat rota; DİDİ Otel merkezli.",
+ "lead":"Sapanca'da 3 günlük planın kısa hali: birinci gün göl kıyısı ve teleferik, ikinci gün Maşukiye, Kartepe ve Acarlar Longozu, üçüncü gün Poyrazlar Gölü ve Kuzuluk kaplıcaları. Uzun bir hafta sonu ya da bayram tatili için ideal bu rota, her günü göl kıyısındaki <a href=\"/#konum\">DİDİ Otel Sapanca</a>'da başlatıp bitirir.",
+ "body":"""
+<h2>3 günde Sapanca: rotanın özeti</h2>
+<p>İki günlük plana bir gün daha eklemek, Sapanca'yı acele etmeden keşfetmenizi sağlar. İlk gün göl ve teleferik gibi klasikleri, ikinci gün Kartepe ve Acarlar Longozu gibi çevre rotaları, üçüncü gün ise sakin köşeleri ve termali kapsar. Aşağıdaki plan saat saat düzenlenmiştir; dilediğiniz gibi esnetebilirsiniz. Daha kısa bir ziyaret için <a href="/blog/sapancada-1-gunluk-2-gunluk-gezi-plani/">1 ve 2 günlük plana</a> bakabilirsiniz.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="g1">1. Gün</button><button data-tab="g2">2. Gün</button><button data-tab="g3">3. Gün</button></div>
+<div class="itin-panel on" data-tab="g1">
+<div class="timeline">
+<div class="tl-step"><div class="tl-time">09:00</div><h4>DİDİ Otel'de serpme kahvaltı</h4><p>Güne göl manzarasına karşı zengin bir kahvaltıyla başlayın.</p></div>
+<div class="tl-step"><div class="tl-time">10:30</div><h4>Göl kıyısı ve Uzunkum Parkı</h4><p>Göl kenarında yürüyüş, isterseniz bisiklet turu.</p></div>
+<div class="tl-step"><div class="tl-time">12:30</div><h4><a href="/blog/masukiye-kartepe-gezi/">Maşukiye</a>'de alabalık molası</h4><p>Dere kenarında kiremitte alabalık için ideal saat.</p></div>
+<div class="tl-step"><div class="tl-time">14:30</div><h4><a href="/blog/sapanca-teleferik-rehberi/">Sapanca Teleferik</a> ile Mahmudiye</h4><p>Kırkpınar'dan binip seyir terasında göl manzarasının tadını çıkarın.</p></div>
+<div class="tl-step"><div class="tl-time">19:30</div><h4><a href="/#mare">Mare Gastro</a>'da akşam yemeği</h4><p>Bahçede göl havasında ilk günü tamamlayın.</p></div>
+</div>
+</div>
+<div class="itin-panel" data-tab="g2">
+<div class="timeline">
+<div class="tl-step"><div class="tl-time">09:30</div><h4>Kahvaltı sonrası Kartepe'ye çıkış</h4><p>Yazın yürüyüş parkurları, kışın kayak ve telesiyej.</p></div>
+<div class="tl-step"><div class="tl-time">13:00</div><h4>Öğle molası</h4><p>Dağ havasında bir öğle yemeği ve dinlenme.</p></div>
+<div class="tl-step"><div class="tl-time">15:00</div><h4>Acarlar Longozu'nda kano</h4><p>Su üzerinde, longoz ormanı içinde huzurlu bir gezinti.</p></div>
+<div class="tl-step"><div class="tl-time">19:00</div><h4>Otelde havuz ve akşam yemeği</h4><p>Günü <a href="/blog/sapancada-havuzlu-otel/">klorsuz havuzda</a> ve Mare Gastro'da kapatın.</p></div>
+</div>
+</div>
+<div class="itin-panel" data-tab="g3">
+<div class="timeline">
+<div class="tl-step"><div class="tl-time">09:30</div><h4>Kahvaltı sonrası <a href="/blog/poyrazlar-golu-mahmudiye-gizli-koseler/">Poyrazlar Gölü</a></h4><p>Sessiz doğada tekne turu ya da kısa yürüyüş.</p></div>
+<div class="tl-step"><div class="tl-time">12:30</div><h4>Kuzuluk kaplıcaları ya da köy pazarı</h4><p>Termal bir mola ya da Mahmudiye'de yerel ürün alışverişi.</p></div>
+<div class="tl-step"><div class="tl-time">15:00</div><h4>İsteğe bağlı: <a href="/blog/tarakli-geyve-gunubirlik-tur/">Taraklı ve Geyve</a></h4><p>Zaman uygunsa günübirlik tarihi kasaba turu.</p></div>
+<div class="tl-step"><div class="tl-time">17:00</div><h4>Veda ve dönüş</h4><p>Üç günlük rotayı göl kıyısında son bir molayla tamamlayın.</p></div>
+</div>
+</div>
+</div>
+<h2>Bayram ve uzun tatil için notlar</h2>
+<p>Bayram ve resmi tatil dönemlerinde Sapanca yoğunlaşır; bu tarihlerde göl kıyısı konaklamaları erken dolar. Uzun bir tatil planlıyorsanız <a href="https://wa.me/905331350888?text=Sapanca%27da%203%20g%C3%BCnl%C3%BCk%20konaklama%20i%C3%A7in%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> önceden tarih ayırtmanız önerilir. Ne yeneceğinizi merak ediyorsanız <a href="/blog/sapancada-ne-yenir/">Sapanca'da ne yenir</a> rehberimiz yol gösterir.</p>
+<h2>3 günlük paketleme kontrol listesi</h2>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/6</b></div>
+<div class="spot-check" data-key="uc-gun-plan">
+<label><input type="checkbox"><span><b>Rahat yürüyüş ayakkabısı</b><span>Göl kıyısı ve doğa yürüyüşleri için.</span></span></label>
+<label><input type="checkbox"><span><b>Mayo ve havlu</b><span>Klorsuz havuz keyfi için.</span></span></label>
+<label><input type="checkbox"><span><b>Mevsime uygun kıyafet</b><span>Kartepe'de hava serin olabilir.</span></span></label>
+<label><input type="checkbox"><span><b>Fotoğraf makinesi / şarj</b><span>Gün batımı ve teleferik kareleri için.</span></span></label>
+<label><input type="checkbox"><span><b>Konaklama rezervasyonu</b><span>Bayramda erken ayırtın.</span></span></label>
+<label><input type="checkbox"><span><b>Mare Gastro rezervasyonu</b><span>Akşam yemekleri için yer ayırtın.</span></span></label>
+</div>
+<p>Üç gün boyunca tüm duraklara kısa mesafede olan <a href="/#konum">DİDİ Otel Sapanca</a>, göl kıyısındaki sakin konumuyla rotanızın merkezi olur.</p>
+""",
+ "faq":[("Sapanca 3 günde neler gezilir?","İlk gün göl kıyısı, Maşukiye ve teleferik; ikinci gün Kartepe ve Acarlar Longozu; üçüncü gün Poyrazlar Gölü ve Kuzuluk kaplıcaları rahatça gezilebilir."),
+        ("3 günlük Sapanca gezisinde nerede kalınmalı?","Tüm duraklara kısa mesafedeki Kırkpınar'da, göl kıyısındaki DİDİ Otel Sapanca üç günlük rota için merkezi bir seçenektir."),
+        ("Bayramda Sapanca kalabalık olur mu?","Evet, bayram ve resmi tatillerde Sapanca yoğunlaşır ve göl kıyısı konaklamaları erken dolar; erken rezervasyon önerilir."),
+        ("Çocuklu aileler için 3 günlük plan uygun mu?","Evet; göl kıyısı, teleferik, havuz ve Poyrazlar doğası çocuklu aileler için keyifli ve dengeli bir tempo sunar."),
+        ("Rotaya ekleme yapılabilir mi?","Elbette; üçüncü güne Taraklı ve Geyve günübirlik tarihi turu ya da fotoğraf noktaları eklenebilir.")],
+},
+{
+ "slug":"sapancada-kisin-gezilecek-yerler","cat":"Mevsimler","img":"ONN09446","date":"2026-08-26",
+ "title":"Sapanca'da Kışın Gezilecek Yerler ve Kar Keyfi",
+ "desc":"Sapanca'da kışın gezilecek yerler: Kartepe'de kayak, karlı göl kıyısı yürüyüşleri, Maşukiye ve Kuzuluk kaplıcaları. Kış tatili için eksiksiz rehber ve konaklama önerisi.",
+ "lead":"Sapanca'da kışın gezilecek yerlerin başında Kartepe Kayak Merkezi, karla kaplı göl kıyısı, Maşukiye'nin beyaz vadileri ve Kuzuluk kaplıcaları gelir. Aralık–Şubat arası kar yağışıyla bembeyaz bir tabloya dönüşen bölge, kayaktan termal molalara, karlı yürüyüşlerden göl kıyısında sıcak içeceklere kadar keyifli bir kış kaçamağı sunar.",
+ "body":"""
+<h2>Kartepe Kayak Merkezi: kışın ilk durağı</h2>
+<p>Sapanca'dan yaklaşık <strong>30 dakika</strong> mesafedeki <strong>Kartepe Kayak Merkezi</strong>, kış aylarının en gözde adresidir. Samanlı Dağları'nın zirvesinde kayak, snowboard ve telesiyej ile Sapanca Gölü manzarası bir arada yaşanır. Kar sezonu genellikle Aralık'tan Mart'a kadar sürer. Ayrıntılı rota için <a href="/blog/masukiye-kartepe-gezi/">Maşukiye ve Kartepe gezi</a> rehberimize bakabilirsiniz.</p>
+<h2>Karla kaplı göl kıyısı ve Maşukiye</h2>
+<p>Kış, göl çevresine ayrı bir sessizlik getirir. Karla kaplanan göl kıyısında yürüyüş yapmak ve <a href="/blog/masukiye-kartepe-gezi/">Maşukiye</a>'nin beyaz vadilerini görmek, kışın en huzurlu deneyimlerindendir. Kar yağışının ardından bölge, fotoğraf için de büyüleyici kareler sunar; en iyi noktalar için <a href="/blog/sapancada-fotograf-gun-batimi-noktalari/">fotoğraf rehberimize</a> göz atın.</p>
+<h2>Kuzuluk kaplıcaları: kışın en iyi mola</h2>
+<p>Soğuk havada ısınmanın en keyifli yolu, Sapanca'ya yaklaşık 45 dakika mesafedeki <strong>Kuzuluk kaplıcaları</strong>nda şifalı termal sulara girmektir. Kış tatiline dinlendirici bir wellness molası eklemek isteyenler için idealdir.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="aktif">Aktif olanlar</button><button data-tab="huzur">Huzur arayanlar</button></div>
+<div class="itin-panel on" data-tab="aktif"><p>Kartepe'de kayak ve snowboard, ardından karlı orman yürüyüşü. Gün sonunda otelde sıcak bir mola ve göl havasında bir akşam yemeği.</p></div>
+<div class="itin-panel" data-tab="huzur"><p>Kuzuluk'ta termal, göl kıyısında sakin bir yürüyüş ve şöminemsi bir akşam. Kar manzarasına karşı dinlenmek isteyenler için sakin bir tempo.</p></div>
+</div>
+<h2>Kışın Sapanca'da nerede kalınır?</h2>
+<p>Kış aylarında göl kıyısındaki sakin bir konaklama, hem manzara hem de tüm duraklara yakınlık açısından avantajlıdır. <a href="/#konum">DİDİ Otel Sapanca</a>, Kırkpınar'da göl ile orman arasında, <a href="/#mare">Mare Gastro</a> restoranıyla kışın da sıcak bir kaçış sunar. Konaklama bölgelerini karşılaştırmak için <a href="/blog/sapanca-nerede-kalinir-bolge-rehberi/">nerede kalınır</a> rehberimize, mevsimlere göre plan için <a href="/blog/sapanca-hangi-mevsim-gidilir/">hangi mevsim gidilir</a> yazımıza bakabilirsiniz.</p>
+<h2>Kış gezisi kontrol listesi</h2>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/5</b></div>
+<div class="spot-check" data-key="kis-gezi">
+<label><input type="checkbox"><span><b>Kalın ve su geçirmez giysi</b><span>Kar ve soğuk için katmanlı giyinin.</span></span></label>
+<label><input type="checkbox"><span><b>Kaymaz ayakkabı / bot</b><span>Karlı zeminde güvenli yürüyüş.</span></span></label>
+<label><input type="checkbox"><span><b>Kartepe kar durumu kontrolü</b><span>Gitmeden hava ve pist durumunu öğrenin.</span></span></label>
+<label><input type="checkbox"><span><b>Termal için mayo ve havlu</b><span>Kuzuluk kaplıcaları molası için.</span></span></label>
+<label><input type="checkbox"><span><b>Konaklama rezervasyonu</b><span>Kar sezonunda erken ayırtın.</span></span></label>
+</div>
+""",
+ "faq":[("Sapanca'da kışın nereler gezilir?","Kartepe Kayak Merkezi, karla kaplı göl kıyısı ve Uzunkum Parkı, Maşukiye'nin beyaz vadileri ve Kuzuluk kaplıcaları kışın öne çıkan duraklardır."),
+        ("Sapanca'ya kar ne zaman yağar?","Kar yağışı genellikle Aralık ile Şubat arasında görülür; Kartepe'de kayak sezonu Mart'a kadar uzayabilir."),
+        ("Kartepe Sapanca'ya ne kadar uzaklıkta?","Kartepe Kayak Merkezi, Sapanca'ya yaklaşık 30 dakika mesafededir."),
+        ("Kışın Sapanca'da ne yapılır?","Kayak ve snowboard, karlı göl kıyısı yürüyüşleri, Kuzuluk'ta termal mola ve göl havasında sıcak bir akşam yemeği kışın öne çıkan aktivitelerdir."),
+        ("Kışın Sapanca'da konaklama önerisi nedir?","Göl kıyısındaki Kırkpınar'da, tüm duraklara yakın DİDİ Otel Sapanca kış tatili için sakin ve merkezi bir seçenektir.")],
+},
+{
+ "slug":"acarlar-longozu-rehberi","cat":"Doğa","img":"ONN09442","date":"2026-08-26",
+ "title":"Acarlar Longozu: Kano ve Doğa Keşfi Rehberi",
+ "desc":"Acarlar Longozu rehberi: Türkiye'nin en önemli longoz ormanlarından biri; kano ve sandalla su üzerinde doğa turu, kuş gözlemi ve nilüferler. Sapanca'dan günübirlik doğa kaçamağı.",
+ "lead":"Acarlar Longozu, su ile ormanın iç içe geçtiği, Türkiye'nin en büyük longoz ormanlarından biridir. Kano ve sandalla su üzerinde sessiz bir gezinti yapabilir, yüzlerce kuş türünü ve su nilüferlerini gözlemleyebilirsiniz. Sapanca'ya yaklaşık bir saat mesafedeki longoz, doğa ve fotoğraf tutkunları için eşsiz bir günübirlik kaçamaktır.",
+ "body":"""
+<h2>Acarlar Longozu nedir?</h2>
+<p><strong>Acarlar Longozu</strong>, taban suyu yüksek, ağaçların suyun içinden yükseldiği nadir bir sulak orman ekosistemidir. Türkiye'nin en büyük longoz ormanlarından biri olarak kabul edilir ve binlerce bitki türü ile yüzlerce kuş türüne ev sahipliği yapar. Su nilüferleri, menekşeler ve renkli bitki örtüsü, longozu adeta bir doğa tablosuna dönüştürür.</p>
+<h2>Longozda neler yapılır?</h2>
+<p>Longozun en özel deneyimi, <strong>kano veya sandalla</strong> su kanalları boyunca ilerlemektir. Sessiz suyun üzerinde ağaçların arasından geçmek, kuş sesleri eşliğinde huzurlu bir doğa molası sunar. Fotoğraf tutkunları için nilüferler ve kuşlar zengin bir kare çeşitliliği yaratır. Kuş gözlemi meraklıları için ise longoz, sabah erken saatlerde en canlı halindedir.</p>
+<h2>Sapanca'dan Acarlar Longozu'na</h2>
+<p>Longoz, Sapanca'ya yaklaşık bir saat mesafededir ve rahatça günübirlik gezilebilir. Doğa yürüyüşü ve <a href="/blog/poyrazlar-golu-mahmudiye-gizli-koseler/">Poyrazlar Gölü</a> gibi sakin köşeleri seven gezginler için ideal bir tamamlayıcıdır. Sapanca çevresindeki diğer doğa rotaları için <a href="/blog/sapancada-gezilecek-yerler/">gezilecek yerler</a> rehberimize bakabilirsiniz.</p>
+<h3>Gitmeden önce bilinmesi gerekenler</h3>
+<table><thead><tr><th>Konu</th><th>Öneri</th></tr></thead><tbody>
+<tr><td>En iyi zaman</td><td>İlkbahar ve yaz; sabah erken saatler</td></tr>
+<tr><td>Aktivite</td><td>Kano / sandal turu, kuş gözlemi, fotoğraf</td></tr>
+<tr><td>Yanınıza alın</td><td>Güneş koruması, su, dürbün, fotoğraf makinesi</td></tr>
+<tr><td>Sapanca'dan</td><td>Yaklaşık 1 saat</td></tr>
+</tbody></table>
+<p>Doğayla iç içe bir günün ardından göl kıyısındaki <a href="/#konum">DİDİ Otel Sapanca</a>'da dinlenip akşamı <a href="/#mare">Mare Gastro</a>'da tamamlayabilirsiniz.</p>
+""",
+ "faq":[("Acarlar Longozu nerede?","Sakarya'da, Sapanca'ya yaklaşık bir saat mesafede yer alan, su ile ormanın iç içe geçtiği bir sulak orman alanıdır."),
+        ("Acarlar Longozu'nda ne yapılır?","Kano ve sandalla su üzerinde doğa turu, kuş gözlemi ve fotoğrafçılık longozun en sevilen aktiviteleridir."),
+        ("Longozu gezmek için en iyi zaman nedir?","İlkbahar ve yaz ayları, özellikle sabahın erken saatleri doğanın en canlı olduğu zamanlardır."),
+        ("Acarlar Longozu Sapanca'dan günübirlik gezilir mi?","Evet, Sapanca'ya yaklaşık bir saat mesafede olduğu için rahatça günübirlik gezilebilir.")],
+},
+{
+ "slug":"kuzuluk-kaplicalari-rehberi","cat":"Termal","img":"havuz1","date":"2026-08-26",
+ "title":"Kuzuluk Kaplıcaları: Termal ve Şifa Rehberi",
+ "desc":"Kuzuluk kaplıcaları rehberi: Sapanca yakınında şifalı termal sular, wellness ve dinlenme. Sapanca gezisine termal mola eklemek isteyenler için konum, öneriler ve konaklama.",
+ "lead":"Kuzuluk kaplıcaları, şifalı termal sularıyla yüzyıllardır bilinen, Sapanca'ya yaklaşık 45 dakika mesafedeki bir wellness durağıdır. Doğa gezisine dinlendirici bir termal mola eklemek, özellikle sonbahar ve kış aylarında bölgenin en keyifli deneyimlerinden biridir.",
+ "body":"""
+<h2>Kuzuluk kaplıcaları nedir?</h2>
+<p>Sakarya'nın Akyazı ilçesine bağlı <strong>Kuzuluk</strong>, mineralce zengin termal sularıyla bilinen bir kaplıca bölgesidir. Şifalı olduğuna inanılan sıcak suları, stresi atmak ve dinlenmek isteyenler için yüzyıllardır tercih edilir. Bölgedeki termal tesisler, kür ve dinlenme odaklı bir wellness deneyimi sunar.</p>
+<h2>Kimler için ideal?</h2>
+<p>Yoğun bir tempodan uzaklaşmak, doğa gezisini bir wellness molasıyla dengelemek isteyenler için Kuzuluk ideal bir duraktır. Özellikle <a href="/blog/sapancada-kisin-gezilecek-yerler/">kış aylarında</a> soğuk havada sıcak termal sular ayrı bir keyif verir. Çiftler için de <a href="/blog/sapancada-romantik-hafta-sonu/">romantik bir hafta sonuna</a> dinlendirici bir dokunuş ekler.</p>
+<h2>Sapanca gezisine nasıl eklenir?</h2>
+<p>Kuzuluk, Sapanca'ya yaklaşık 45 dakika mesafededir ve günübirlik rahatça ziyaret edilebilir. Göl kıyısında konaklayıp gündüz termal bir mola vermek, iki farklı deneyimi tek bir tatilde birleştirmenin pratik yoludur. Rota planı için <a href="/blog/sapanca-3-gun-uzun-hafta-sonu-plani/">3 günlük gezi planımıza</a> bakabilirsiniz.</p>
+<h2>Termal mola için ipuçları</h2>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/5</b></div>
+<div class="spot-check" data-key="kuzuluk">
+<label><input type="checkbox"><span><b>Mayo ve havlu</b><span>Termal havuzlar için hazırlıklı olun.</span></span></label>
+<label><input type="checkbox"><span><b>Bol su için</b><span>Termal sonrası vücut su kaybeder.</span></span></label>
+<label><input type="checkbox"><span><b>Süreyi abartmayın</b><span>Sıcak suda uzun kalmaktan kaçının.</span></span></label>
+<label><input type="checkbox"><span><b>Sağlık durumunuzu değerlendirin</b><span>Gerekirse hekiminize danışın.</span></span></label>
+<label><input type="checkbox"><span><b>Dönüş için dinlenme</b><span>Termal sonrası biraz dinlenerek yola çıkın.</span></span></label>
+</div>
+<p>Termalin ardından göl kıyısındaki <a href="/#konum">DİDİ Otel Sapanca</a>'da dinlenip günü <a href="/#mare">Mare Gastro</a>'da tamamlayabilirsiniz. Bölgedeki diğer doğa duraklarını <a href="/blog/sapancada-gezilecek-yerler/">gezilecek yerler</a> rehberimizde bulabilirsiniz.</p>
+""",
+ "faq":[("Kuzuluk kaplıcaları nerede?","Sakarya'nın Akyazı ilçesine bağlı Kuzuluk'ta, Sapanca'ya yaklaşık 45 dakika mesafededir."),
+        ("Kuzuluk kaplıcaları neye iyi gelir?","Mineralce zengin termal sularının dinlendirici ve rahatlatıcı olduğuna inanılır; kesin sağlık bilgisi için hekiminize danışmanız önerilir."),
+        ("Kuzuluk Sapanca'dan günübirlik gezilir mi?","Evet, yaklaşık 45 dakika mesafede olduğu için göl kıyısında konaklayıp gündüz termal bir mola vermek mümkündür."),
+        ("Termal için en iyi mevsim hangisi?","Sonbahar ve kış aylarında soğuk havada sıcak termal sular ayrı bir keyif verir; ancak dört mevsim ziyaret edilebilir.")],
+},
+{
+ "slug":"sapanca-bisiklet-yuruyus-parkurlari","cat":"Aktivite","img":"ONN09464","date":"2026-08-26",
+ "title":"Sapanca Bisiklet ve Doğa Yürüyüşü Parkurları Rehberi",
+ "desc":"Sapanca'da bisiklet ve doğa yürüyüşü parkurları: Uzunkum bisiklet-yürüyüş yolu, göl çevresi rotaları ve tabiat parkı patikaları. Kiralama, mesafeler ve öneriler.",
+ "lead":"Sapanca'da bisiklet ve doğa yürüyüşü için en popüler rota, göl kıyısı boyunca uzanan engebesiz Uzunkum bisiklet-yürüyüş yoludur. Göl çevresi, tabiat parkı patikaları ve dere kenarı rotalarıyla Sapanca, her seviyeden bisikletçi ve yürüyüşçü için elverişli bir açık hava sahasıdır.",
+ "body":"""
+<h2>Uzunkum bisiklet ve yürüyüş yolu</h2>
+<p>Göl kıyısındaki <strong>Uzunkum</strong> bölgesinde düzenlenen bisiklet ve yürüyüş yolu, engebesiz zemini sayesinde her yaştan ziyaretçi için rahat bir rota sunar. Göl manzarasına karşı pedal çevirmek ya da yürümek, Sapanca'nın en sevilen açık hava aktivitelerindendir. Göl kıyısında bisiklet kiralama noktaları bulunur.</p>
+<h2>Göl çevresi ve tabiat parkı rotaları</h2>
+<p>Daha uzun bir tur isteyenler göl çevresini takip edebilir; doğa yürüyüşü sevenler ise Sapanca merkeze yakın <strong>Sakarya İl Orman Tabiat Parkı</strong>'nın yürüyüş ve bisiklet parkurlarını tercih edebilir. Bu rotalar, göl manzarası ve orman havasını bir arada sunar. Gölde yapılabilecek diğer aktiviteler için <a href="/blog/sapanca-golu-aktiviteler/">Sapanca Gölü aktiviteleri</a> rehberimize bakın.</p>
+<div class="itin-wrap rev">
+<div class="itin-tabs"><button class="on" data-tab="kolay">Başlangıç</button><button data-tab="orta">Orta seviye</button></div>
+<div class="itin-panel on" data-tab="kolay"><p>Uzunkum'un düz ve engebesiz yolunda kısa bir bisiklet turu ya da göl kıyısı yürüyüşü; çocuklu aileler için de idealdir.</p></div>
+<div class="itin-panel" data-tab="orta"><p>Göl çevresini takip eden daha uzun bir tur ya da tabiat parkı patikalarında doğa yürüyüşü; biraz daha kondisyon ister ama manzara buna değer.</p></div>
+</div>
+<h2>Ne zaman ve nasıl?</h2>
+<p>Bisiklet ve yürüyüş için en keyifli saatler, sabah erken ve akşamüzeridir; yaz aylarında öğle sıcağından kaçınmak konforu artırır. Su, güneş koruması ve rahat bir ayakkabı yeterlidir. Rotanın hemen yanındaki <a href="/#konum">DİDİ Otel Sapanca</a>, göl kıyısındaki konumuyla aktivitelerinize kısa bir başlangıç noktası sunar; günün sonunda <a href="/blog/sapancada-havuzlu-otel/">klorsuz havuzda</a> dinlenebilirsiniz.</p>
+<h2>Aktivite kontrol listesi</h2>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/5</b></div>
+<div class="spot-check" data-key="bisiklet-yuruyus">
+<label><input type="checkbox"><span><b>Rahat ayakkabı / bisiklet kıyafeti</b><span>Uzun rotalar için konforlu seçin.</span></span></label>
+<label><input type="checkbox"><span><b>Su ve güneş koruması</b><span>Özellikle yaz aylarında şart.</span></span></label>
+<label><input type="checkbox"><span><b>Sabah ya da akşamüzeri planlayın</b><span>Öğle sıcağından kaçının.</span></span></label>
+<label><input type="checkbox"><span><b>Bisiklet kiralama noktası</b><span>Göl kıyısında kiralama mevcut.</span></span></label>
+<label><input type="checkbox"><span><b>Rota mesafesini ayarlayın</b><span>Seviyenize uygun uzunluk seçin.</span></span></label>
+</div>
+""",
+ "faq":[("Sapanca'da bisiklet nerede sürülür?","Göl kıyısındaki Uzunkum bisiklet-yürüyüş yolu, engebesiz zemini ve göl manzarasıyla en popüler rotadır."),
+        ("Sapanca'da bisiklet kiralanabilir mi?","Evet, göl kıyısındaki noktalarda bisiklet kiralama imkanı bulunur."),
+        ("Doğa yürüyüşü için nereyi önerirsiniz?","Uzunkum yolu ile göl kıyısı ve Sapanca merkeze yakın Sakarya İl Orman Tabiat Parkı'nın patikaları doğa yürüyüşü için elverişlidir."),
+        ("Bisiklet ve yürüyüş için en iyi saat nedir?","Sabah erken ve akşamüzeri saatleri, özellikle yaz aylarında en konforlu zamanlardır.")],
+},
+{
+ "slug":"istanbuldan-trenle-sapanca","cat":"Ulaşım","img":"dis-cephe","date":"2026-08-26",
+ "title":"İstanbul'dan Sapanca'ya Trenle ve Araçsız Ulaşım",
+ "desc":"İstanbul'dan Sapanca'ya trenle nasıl gidilir? YHT, Ada Ekspresi ve Marmaray ile araçsız ulaşım seçenekleri, süreler ve istasyondan transfer önerileri.",
+ "lead":"İstanbul'dan Sapanca'ya araçsız ulaşmanın en pratik yolu trendir. Pendik veya Söğütlüçeşme'den kalkan Yüksek Hızlı Tren (YHT) ile yaklaşık 1,5 saatte, Gebze aktarmalı Ada Ekspresi ile daha ekonomik biçimde Sapanca'ya ulaşabilirsiniz. Sapanca garı merkeze çok yakındır; oradan kısa bir transferle göl kıyısı mahallelerine geçilir.",
+ "body":"""
+<h2>Trenle Sapanca: seçenekler</h2>
+<p>İstanbul'dan Sapanca'ya trenle iki ana yol vardır. En hızlısı, Pendik veya Söğütlüçeşme istasyonlarından kalkan <strong>Yüksek Hızlı Tren (YHT)</strong> ile yaklaşık 1,5 saatlik yolculuktur. Daha ekonomik seçenek ise Marmaray ile Gebze'ye geçip oradan <strong>Ada Ekspresi</strong> bölgesel trenine binmektir.</p>
+<h3>Ulaşım seçenekleri özeti</h3>
+<table><thead><tr><th>Seçenek</th><th>Güzergah</th><th>Yaklaşık süre</th></tr></thead><tbody>
+<tr><td>YHT</td><td>Pendik / Söğütlüçeşme → Sapanca</td><td>~1,5 saat</td></tr>
+<tr><td>Ada Ekspresi</td><td>Gebze → Sapanca (Marmaray aktarmalı)</td><td>Ekonomik, aktarmalı</td></tr>
+<tr><td>Otobüs / özel araç</td><td>TEM otoyolu</td><td>~1,5–2 saat</td></tr>
+</tbody></table>
+<h2>Ada Ekspresi ile ekonomik yol</h2>
+<p>Ada Ekspresi, Pendik–Adapazarı arasında Sapanca dahil birçok durakta hizmet verir ve gün içinde karşılıklı seferler yapar. Bilet fiyatları oldukça uygundur; bu nedenle özellikle günübirlik ve bütçe dostu geziler için tercih edilir. Güncel sefer saatlerini yolculuktan önce kontrol etmeniz önerilir.</p>
+<h2>Sapanca garından sonra</h2>
+<p>Sapanca tren garı ilçe merkezine çok yakındır; garın çıkışından kısa bir taksi ya da transferle göl kıyısına ve <a href="/blog/sapanca-nerede-kalinir-bolge-rehberi/">Kırkpınar gibi göl kıyısı mahallelerine</a> ulaşabilirsiniz. Araçsız gelenler için konaklama yerinin transfer sunup sunmadığını sormak pratiktir. Ulaşımın tüm ayrıntıları için <a href="/blog/sapancaya-nasil-gidilir/">Sapanca'ya nasıl gidilir</a> rehberimize bakabilirsiniz.</p>
+<h2>Araçsız gezi ipuçları</h2>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/5</b></div>
+<div class="spot-check" data-key="trenle-sapanca">
+<label><input type="checkbox"><span><b>Bilet ve sefer saatini kontrol edin</b><span>YHT ve Ada Ekspresi saatlerini önceden bakın.</span></span></label>
+<label><input type="checkbox"><span><b>Marmaray aktarmasını planlayın</b><span>Gebze bağlantısını hesaba katın.</span></span></label>
+<label><input type="checkbox"><span><b>Gardan transfer</b><span>Taksi ya da otel transferini ayarlayın.</span></span></label>
+<label><input type="checkbox"><span><b>Hafif bagaj</b><span>Aktarmalı yolculukta pratiklik sağlar.</span></span></label>
+<label><input type="checkbox"><span><b>Dönüş saatini not edin</b><span>Son sefer saatini kaçırmayın.</span></span></label>
+</div>
+<p>Göl kıyısına yakın konaklamak araçsız gezginler için avantajlıdır; <a href="/#konum">DİDİ Otel Sapanca</a> göl kıyısındaki Kırkpınar'da yer alır. Ulaşım ve transfer için <a href="https://wa.me/905331350888?text=Sapanca%27ya%20araçs%C4%B1z%20ula%C5%9F%C4%B1m%20ve%20transfer%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> bilgi alabilirsiniz.</p>
+""",
+ "faq":[("İstanbul'dan Sapanca'ya trenle nasıl gidilir?","Pendik veya Söğütlüçeşme'den YHT ile yaklaşık 1,5 saatte; alternatif olarak Marmaray ile Gebze'ye geçip Ada Ekspresi ile Sapanca'ya ulaşılır."),
+        ("Sapanca'ya araçsız gidilebilir mi?","Evet. Tren (YHT ve Ada Ekspresi) araçsız ulaşım için pratik ve ekonomik seçeneklerdir; gardan kısa bir transferle göl kıyısına geçilir."),
+        ("Sapanca tren garı merkeze yakın mı?","Evet, gar ilçe merkezine çok yakındır; kısa bir taksi ya da transferle göl kıyısı mahallelerine ulaşılır."),
+        ("Ada Ekspresi nedir?","Pendik–Adapazarı arasında Sapanca dahil birçok durakta hizmet veren, uygun fiyatlı bölgesel tren hattıdır."),
+        ("YHT ile Sapanca ne kadar sürer?","Pendik veya Söğütlüçeşme'den yaklaşık 1,5 saat sürer.")],
+},
+{
+ "slug":"sapanca-macera-parki-zipline","cat":"Aktivite","img":"ONN09440","date":"2026-08-26",
+ "title":"Sapanca Macera Parkı, Zipline ve Adrenalin Aktiviteleri",
+ "desc":"Sapanca ve Maşukiye'de macera parkı, zipline, dev salıncak ve ip parkuru gibi adrenalin aktiviteleri. Aileler ve gençler için heyecanlı bir gün rehberi.",
+ "lead":"Sapanca ve Maşukiye çevresi, zipline, dev salıncak, tırmanma duvarı ve ip parkurlarıyla adrenalin arayanlar için zengin bir açık hava sahasıdır. Farklı zorluk seviyeleri sayesinde hem çocuklar hem de yetişkinler için uygun aktiviteler bulunur; doğa gezisine heyecan katmak isteyen aileler ve gençler için ideal bir gündür.",
+ "body":"""
+<h2>Sapanca'da macera aktiviteleri</h2>
+<p>Sapanca ve <a href="/blog/masukiye-kartepe-gezi/">Maşukiye</a> sınırındaki macera parklarında <strong>zipline</strong>, <strong>dev salıncak</strong>, <strong>tırmanma duvarı</strong>, ip parkurları ve zaman zaman paintball ile çim kayağı gibi aktiviteler sunulur. Ormanın içinde, farklı zorluk seviyelerinde kurulan parkurlar her yaş grubuna hitap eder.</p>
+<h2>Zipline ve dev salıncak</h2>
+<p>Bölgenin en popüler aktivitesi, ağaçların ve vadinin üzerinden geçen <strong>zipline</strong> hatlarıdır. Yüksekten hız ve manzarayı bir arada yaşatan bu deneyim, dev salıncak ile birlikte adrenalin sevenlerin favorisidir. Güvenlik ekipmanları ve rehber eşliğinde yapıldığı için ilk kez deneyenler için de uygundur.</p>
+<h2>Ailece ve gençlerle</h2>
+<p>Macera parkları, çocuklar için daha alçak ve güvenli parkurlar da sunduğundan ailecek keyifli bir gün geçirmek mümkündür. Doğa yürüyüşü ve piknikle birleştirildiğinde tam günlük bir program çıkar. Çocuklu aileler için diğer öneriler <a href="/blog/ailecek-sapanca-tatili/">ailecek Sapanca tatili</a> rehberimizde yer alır.</p>
+<h2>Gitmeden önce</h2>
+<div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/5</b></div>
+<div class="spot-check" data-key="macera-parki">
+<label><input type="checkbox"><span><b>Rahat ve kapalı ayakkabı</b><span>Parkurlar için gereklidir.</span></span></label>
+<label><input type="checkbox"><span><b>Yaş ve boy sınırlarını sorun</b><span>Bazı aktivitelerde sınır olabilir.</span></span></label>
+<label><input type="checkbox"><span><b>Güvenlik brifingine katılın</b><span>Rehber yönergelerini dinleyin.</span></span></label>
+<label><input type="checkbox"><span><b>Su ve yedek kıyafet</b><span>Aktif bir gün için hazırlıklı olun.</span></span></label>
+<label><input type="checkbox"><span><b>Rezervasyon / çalışma saati</b><span>Yoğun günlerde önceden teyit alın.</span></span></label>
+</div>
+<p>Heyecanlı bir günün ardından göl kıyısındaki <a href="/#konum">DİDİ Otel Sapanca</a>'da <a href="/blog/sapancada-havuzlu-otel/">klorsuz havuzda</a> dinlenip akşamı <a href="/#mare">Mare Gastro</a>'da tamamlayabilirsiniz. Bölgedeki diğer duraklar için <a href="/blog/sapancada-gezilecek-yerler/">gezilecek yerler</a> rehberimize bakın.</p>
+""",
+ "faq":[("Sapanca'da zipline var mı?","Evet, Sapanca ve Maşukiye çevresindeki macera parklarında zipline, dev salıncak ve ip parkuru gibi aktiviteler bulunur."),
+        ("Macera parkları çocuklar için uygun mu?","Evet, birçok park çocuklar için daha alçak ve güvenli parkurlar sunar; yaş ve boy sınırlarını önceden sormak faydalıdır."),
+        ("Zipline güvenli mi?","Aktiviteler güvenlik ekipmanları ve rehber eşliğinde yapılır; yönergelere uyulduğunda ilk kez deneyenler için de uygundur."),
+        ("Macera aktiviteleri için ne giymeli?","Rahat, kapalı ayakkabı ve hareket ettiren kıyafetler önerilir; yanınıza su ve yedek kıyafet almanız iyi olur.")],
 },
 ]
 
