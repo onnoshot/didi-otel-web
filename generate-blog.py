@@ -759,8 +759,8 @@ POSTS = [
 {
  "slug":"sapanca-evlilik-teklifi-organizasyon","cat":"Özel Günler","img":"havuz-loca","date":"2026-08-26",
  "title":"Sapanca'da Evlilik Teklifi ve Özel Gün Organizasyonu",
- "desc":"Sapanca'da evlilik teklifi, yıldönümü ve sürpriz kutlama için göl manzaralı fikirler ve organizasyon. DİDİ Otel'de talep üzerine özel gün düzenlemesi ve Mare Gastro'da özel masa.",
- "lead":"Sapanca, İstanbul'a yaklaşık 1,5 saat mesafede; göl ve orman manzarasıyla evlilik teklifi ve özel kutlamalar için en romantik adreslerden biridir. Gün batımında göl kıyısı, sessiz bir bahçe köşesi ya da <a href=\"/#mare\">Mare Gastro</a>'da göl havasında özel bir masa, unutulmaz bir an için doğal bir sahne sunar. DİDİ Otel Sapanca'da özel gün organizasyonlarını <strong>talep üzerine</strong> sizin için planlıyoruz.",
+ "desc":"Sapanca'da evlilik teklifi, yıldönümü ve doğum günü için göl manzaralı fikirler. Mare Gastro'da rezervasyonda belirtilirse pasta, mum ışığı ve masa süslemesi gibi özel gün dokunuşları.",
+ "lead":"Sapanca, İstanbul'a yaklaşık 1,5 saat mesafede; göl ve orman manzarasıyla evlilik teklifi ve özel kutlamalar için en romantik adreslerden biridir. Gün batımında göl kıyısı, sessiz bir bahçe köşesi ya da <a href=\"/#mare\">Mare Gastro</a>'da göl havasında özel bir masa, unutulmaz bir an için doğal bir sahne sunar. Mare Gastro'da <strong>rezervasyonunuz sırasında belirtmeniz halinde</strong> pasta, mum ışığı ve masa süslemesi gibi özel gün dokunuşları hazırlanabilir.",
  "body":"""
 <h2>Neden Sapanca'da evlilik teklifi?</h2>
 <p>Sapanca'yı özel anlar için ideal kılan üç şey var: İstanbul ve çevresine <a href="/blog/sapancaya-nasil-gidilir/">yakınlığı</a>, göl ve orman manzarasının sunduğu doğal romantizm ve dört mevsim değişen atmosferi. Kalabalık bir salona gerek kalmadan, doğanın içinde samimi ve zarif bir kutlama kurmak mümkündür.</p>
@@ -768,21 +768,21 @@ POSTS = [
 <p>Göl kıyısında <strong>gün batımı</strong>, otel bahçesinde sessiz bir köşe ya da havuz kenarındaki loca; her biri teklif anı için farklı bir hava sunar. <a href="/blog/sapancada-fotograf-gun-batimi-noktalari/">Gün batımı ve fotoğraf noktaları</a> rehberimiz, anı ölümsüzleştirmek için en iyi ışığı yakalamanıza yardımcı olur.</p>
 <div class="itin-wrap rev">
 <div class="itin-tabs"><button class="on" data-tab="teklif">Evlilik teklifi</button><button data-tab="yildonumu">Yıldönümü</button><button data-tab="dogumgunu">Doğum günü</button></div>
-<div class="itin-panel on" data-tab="teklif"><p>Göl manzaralı özel bir alanda süsleme, çiçek ve mum ışığı; ardından Mare Gastro'da baş başa bir akşam yemeği. Sürpriz kurulumunu siz gelmeden hazırlıyoruz.</p></div>
-<div class="itin-panel" data-tab="yildonumu"><p>Odada çiçek ve pasta karşılaması, göl kıyısında bir yürüyüş ve özel menülü bir akşam yemeğiyle yıl dönümünüzü kutlayın.</p></div>
-<div class="itin-panel" data-tab="dogumgunu"><p>Bahçede ya da restoranda pasta, balon ve süsleme ile sürpriz bir doğum günü; grup kutlamaları için de düzenleme yapılabilir.</p></div>
+<div class="itin-panel on" data-tab="teklif"><p>Gün batımında göl kıyısı ya da Mare Gastro'da göl havasında baş başa bir akşam yemeği. Rezervasyonunuzda belirtirseniz masaya pasta, mum ışığı ve süsleme dokunuşu eklenebilir.</p></div>
+<div class="itin-panel" data-tab="yildonumu"><p>Göl kıyısında bir yürüyüş ve Mare Gastro'da özel bir akşam yemeği; pasta ve mum ışığıyla yıl dönümünüze zarif bir dokunuş katın.</p></div>
+<div class="itin-panel" data-tab="dogumgunu"><p>Mare Gastro'da göl havasında bir doğum günü sofrası; önceden belirtmeniz halinde pasta ve masa süslemesi hazırlanabilir.</p></div>
 </div>
-<h2>DİDİ Otel'de özel gün organizasyonu</h2>
-<p>Özel gününüzü baştan sona sizin için planlıyoruz. Göl manzaralı özel alan düzenlemesi, masa ve mekan süsleme, çiçek, pasta ve <a href="/#mare">Mare Gastro</a>'da özel menü gibi ayrıntıları isteğinize göre bir araya getiriyoruz. Sürpriz kurulumları siz gelmeden hazırlanır; böylece anın tadını çıkarmaya odaklanırsınız.</p>
-<p>Her organizasyon kişiye özel planlandığı için içerik ve ayrıntıları birlikte belirliyoruz. Fikirlerinizi paylaşmak ve tarih ayırtmak için <a href="https://wa.me/905331350888?text=Sapanca%27da%20%C3%B6zel%20g%C3%BCn%20organizasyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> bize ulaşabilirsiniz.</p>
+<h2>Mare Gastro'da özel gün dokunuşları</h2>
+<p>Özel gününüzü unutulmaz kılmak için <a href="/#mare">Mare Gastro</a>'da <strong>rezervasyonunuz sırasında belirtmeniz halinde</strong> pasta, mum ışığı ve masa süslemesi gibi özel gün dokunuşları hazırlanabilir. Böylece göl havasında, hazırlığı sizin yerinize yapılmış zarif bir kutlama masası sizi bekler.</p>
+<p>Talebinizi önceden iletmeniz, hazırlığın eksiksiz yapılabilmesi için önemlidir. Tarih ayırtmak ve dokunuşları belirtmek için Mare Gastro rezervasyonunuz sırasında ya da <a href="https://wa.me/905331350888?text=Mare%20Gastro%27da%20%C3%B6zel%20g%C3%BCn%20i%C3%A7in%20rezervasyon%20yapmak%20istiyorum.">WhatsApp'tan</a> bize iletebilirsiniz.</p>
 <h2>Kusursuz bir sürpriz için hatırlatma listesi</h2>
 <p>Planınızı netleştirmek için aşağıdaki adımları işaretleyin — seçimleriniz tarayıcınızda kaydedilir.</p>
 <div class="spot-progress rev"><span>İlerleme</span><div class="track"><i></i></div><b>0/6</b></div>
 <div class="spot-check" data-key="evlilik-teklifi">
 <label><input type="checkbox"><span><b>Tarih ve saati belirleyin</b><span>Gün batımı saatleri en romantik ışığı verir.</span></span></label>
 <label><input type="checkbox"><span><b>Mekanı seçin</b><span>Göl kıyısı, bahçe köşesi ya da havuz locası.</span></span></label>
-<label><input type="checkbox"><span><b>Süsleme ve çiçek</b><span>Renk ve tema tercihinizi paylaşın.</span></span></label>
-<label><input type="checkbox"><span><b>Pasta ve özel menü</b><span>Mare Gastro'da baş başa bir akşam yemeği.</span></span></label>
+<label><input type="checkbox"><span><b>Pasta, mum ve süsleme</b><span>Mare rezervasyonunda belirtin, masaya hazırlansın.</span></span></label>
+<label><input type="checkbox"><span><b>Özel bir akşam yemeği</b><span>Mare Gastro'da göl havasında baş başa.</span></span></label>
 <label><input type="checkbox"><span><b>Fotoğraf/an kaydı</b><span>Anı yakalayacak bir plan yapın.</span></span></label>
 <label><input type="checkbox"><span><b>Konaklamayı ayırtın</b><span>Özel gecenizi otelde tamamlayın.</span></span></label>
 </div>
@@ -790,8 +790,8 @@ POSTS = [
 <p>Göl kıyısı teklifleri için en etkileyici an, gün batımından yaklaşık bir saat öncesidir. Mevsim olarak sonbaharın altın rengi ve ilkbaharın yeşili öne çıkar; ayrıntılar için <a href="/blog/sapanca-hangi-mevsim-gidilir/">Sapanca hangi mevsim gidilir</a> yazımıza bakabilirsiniz. Balayı planlayanlar ise <a href="/blog/sapancada-balayi-ozel-gunler/">balayı rehberimizden</a> ilham alabilir.</p>
 <p>Doğanın içinde, göl kıyısında özel bir an için <a href="/#konum">DİDİ Otel Sapanca</a> size sakin ve zarif bir sahne sunar.</p>
 """,
- "faq":[("Sapanca'da evlilik teklifi organizasyonu yapıyor musunuz?","Evet. DİDİ Otel Sapanca'da göl manzaralı özel alan düzenlemesi, süsleme, çiçek, pasta ve Mare Gastro'da özel menü gibi ayrıntıları talep üzerine planlıyoruz."),
-        ("Ne kadar önceden planlamak gerekir?","Süsleme ve özel menü hazırlığı için mümkün olduğunca erken haber vermeniz idealdir; tarih ve ayrıntıları WhatsApp üzerinden birlikte netleştiririz."),
+ "faq":[("Sapanca'da özel gün için düzenleme yapıyor musunuz?","Evet. Mare Gastro'da rezervasyonunuz sırasında belirtmeniz halinde pasta, mum ışığı ve masa süslemesi gibi özel gün dokunuşları hazırlanabilir."),
+        ("Ne kadar önceden haber vermeliyim?","Pasta ve süsleme hazırlığının eksiksiz yapılabilmesi için talebinizi mümkün olduğunca erken, rezervasyonunuz sırasında iletmeniz idealdir."),
         ("Teklif için en romantik nokta neresi?","Göl kıyısında gün batımı, otel bahçesindeki sessiz köşeler ve havuz kenarındaki loca en çok tercih edilen noktalardır."),
         ("Evlilik teklifi için en iyi saat hangisi?","Gün batımından yaklaşık bir saat önce; altın saat ışığı hem atmosfer hem fotoğraf için en güzel anı sunar."),
         ("Yıldönümü ve doğum günü kutlaması da yapılıyor mu?","Evet, evlilik teklifinin yanı sıra yıldönümü, doğum günü ve sürpriz kutlamalar da kişiye özel olarak düzenlenebilir."),
@@ -800,8 +800,8 @@ POSTS = [
 {
  "slug":"sapanca-jakuzili-havuzlu-gol-manzarali-oda","cat":"Konaklama","img":"havuz2","date":"2026-08-26",
  "title":"Sapanca'da Jakuzili, Havuzlu ve Göl Manzaralı Oda Rehberi",
- "desc":"Sapanca'da jakuzili, özel havuzlu ve göl manzaralı konaklama seçenekleri: bungalov mu butik otel mi? Ne beklemeli ve DİDİ Otel'in klorsuz havuzlu, göl manzaralı farkı.",
- "lead":"Sapanca'da jakuzili, havuzlu ya da göl manzaralı bir oda ararken karşınıza iki ana seçenek çıkar: özel havuzlu/jakuzili bungalovlar ve otel konforu sunan butik oteller. Hangisinin size uygun olduğu; mahremiyet mi yoksa hizmet, kahvaltı ve sosyal olanaklar mı istediğinize bağlıdır. DİDİ Otel Sapanca ise <strong>Sapanca'nın tek klorsuz havuzu</strong> ve göl-orman manzaralı odalarıyla ayrı bir konfor sunar.",
+ "desc":"Sapanca'da jakuzili, özel havuzlu ve göl manzaralı konaklama seçenekleri: bungalov mu butik otel mi? DİDİ Otel'in jakuzili odaları, klorsuz havuzu ve göl manzaralı farkı.",
+ "lead":"Sapanca'da jakuzili, havuzlu ya da göl manzaralı bir oda ararken karşınıza iki ana seçenek çıkar: özel havuzlu/jakuzili bungalovlar ve otel konforu sunan butik oteller. Hangisinin size uygun olduğu; mahremiyet mi yoksa hizmet, kahvaltı ve sosyal olanaklar mı istediğinize bağlıdır. DİDİ Otel Sapanca ise <strong>jakuzili odaları</strong>, <strong>Sapanca'nın tek klorsuz havuzu</strong> ve göl-orman manzaralı odalarıyla bu beklentilerin çoğunu tek çatı altında, otel konforuyla birlikte sunar.",
  "body":"""
 <h2>Sapanca'da konaklama tipleri</h2>
 <p>Sapanca'da başlıca üç konaklama tarzı öne çıkar: özel havuzlu veya jakuzili <strong>bungalovlar</strong>, hizmet ve sosyal olanak sunan <strong>butik oteller</strong> ve kalabalık gruplar için <strong>villalar</strong>. Doğru seçim; kaç kişi olduğunuza, mahremiyet ve konfor beklentinize göre değişir.</p>
@@ -812,8 +812,8 @@ POSTS = [
 </div>
 <h2>"Jakuzili" ve "özel havuzlu" ne beklemeli?</h2>
 <p>Piyasada jakuzili ve özel havuzlu seçenekler çoğunlukla bungalov konseptinde sunulur; jakuzi, şömine ve barbekü gibi ayrıntılar çiftler için popülerdir. Fiyatlar sezona ve olanaklara göre değişir; genel olarak bu segment, standart odalara kıyasla daha yüksek bir bütçe gerektirir. Rezervasyon öncesi havuzun açık/kapalı ve ısıtmalı olup olmadığını, jakuzinin oda içi mi ortak mı olduğunu teyit etmek önemlidir.</p>
-<h2>DİDİ Otel'in farkı: klorsuz havuz ve göl manzarası</h2>
-<p>DİDİ Otel Sapanca, göl kıyısındaki sakin <a href="/#konum">Kırkpınar</a> mahallesinde, göl ile orman arasında yer alır. En belirgin farkı, <a href="/blog/sapancada-havuzlu-otel/"><strong>Sapanca'nın tek klorsuz havuzu</strong></a>dur; klor yerine daha nazik bir arıtma yöntemi kullanıldığı için göz ve cilt yanması yapmaz, özellikle çocuklu aileler ve hassas ciltler için konforludur. Göl ve orman manzaralı <a href="/#odalar">oda tipleri</a>, bahçedeki <a href="/#mare">Mare Gastro</a> restoranı ve butik otel hizmetleriyle mahremiyet ile konforu dengeli bir şekilde bir araya getirir.</p>
+<h2>DİDİ Otel'in farkı: jakuzili oda, klorsuz havuz ve göl manzarası</h2>
+<p>DİDİ Otel Sapanca, göl kıyısındaki sakin <a href="/#konum">Kırkpınar</a> mahallesinde, göl ile orman arasında yer alır. Çiftlerin sıkça aradığı <strong>jakuzili odalar</strong>, otelde bungalov konforunu otel hizmetleriyle birleştirir; böylece hem oda içinde jakuzi keyfini hem de resepsiyon, kahvaltı ve restoran gibi olanakları bir arada yaşarsınız. Bir diğer belirgin farkı ise <a href="/blog/sapancada-havuzlu-otel/"><strong>Sapanca'nın tek klorsuz havuzu</strong></a>dur; klor yerine daha nazik bir arıtma yöntemi kullanıldığı için göz ve cilt yanması yapmaz, özellikle çocuklu aileler ve hassas ciltler için konforludur. Göl ve orman manzaralı <a href="/#odalar">oda tipleri</a>, bahçedeki <a href="/#mare">Mare Gastro</a> restoranı ve butik otel hizmetleriyle mahremiyet ile konforu dengeli bir şekilde bir araya getirir.</p>
 <p>Oda tiplerini ve olanakları <a href="/odalar/">oda sayfamızda</a> inceleyebilir, güncel müsaitlik ve fiyatlar için <a href="https://wa.me/905331350888?text=Sapanca%27da%20konaklama%20ve%20oda%20se%C3%A7enekleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> ulaşabilirsiniz.</p>
 <h2>Oda seçerken sorulacak sorular</h2>
 <p>Doğru odayı seçmek için aşağıdaki başlıkları işaretleyip teyit edin — seçimleriniz tarayıcınızda kaydedilir.</p>
@@ -827,11 +827,12 @@ POSTS = [
 <label><input type="checkbox"><span><b>Restoran var mı?</b><span>Dışarı çıkmadan yemek imkanı.</span></span></label>
 </div>
 <h2>Özetle: size uygun olan hangisi?</h2>
-<p>Tam mahremiyet ve kendi havuzunuz önceliğinizse bungalov; hizmet, zengin kahvaltı, klorsuz havuz ve göl manzarasıyla dengeli bir konfor istiyorsanız butik otel sizin için daha uygundur. Konaklama bölgelerini karşılaştırmak için <a href="/blog/sapanca-nerede-kalinir-bolge-rehberi/">Sapanca'da nerede kalınır</a> rehberimize de göz atabilirsiniz.</p>
+<p>Tam mahremiyet ve tek başına bir alan önceliğinizse bungalov; jakuzi keyfini otel hizmetleri, zengin kahvaltı, klorsuz havuz ve göl manzarasıyla birlikte istiyorsanız DİDİ Otel'in <strong>jakuzili odaları</strong> her iki dünyanın da avantajını sunar. Konaklama bölgelerini karşılaştırmak için <a href="/blog/sapanca-nerede-kalinir-bolge-rehberi/">Sapanca'da nerede kalınır</a> rehberimize de göz atabilirsiniz.</p>
 """,
- "faq":[("Sapanca'da havuzlu otel var mı?","Evet. DİDİ Otel Sapanca, bölgenin tek klorsuz havuzuna sahip butik bir oteldir; ayrıca çok sayıda özel havuzlu bungalov seçeneği de bulunur."),
+ "faq":[("DİDİ Otel'de jakuzili oda var mı?","Evet, DİDİ Otel Sapanca'da jakuzili odalar bulunur; oda içi jakuzi keyfini otel konforuyla birlikte sunar. Güncel müsaitlik için rezervasyon sırasında teyit alabilirsiniz."),
+        ("Sapanca'da havuzlu otel var mı?","Evet. DİDİ Otel Sapanca, bölgenin tek klorsuz havuzuna sahip butik bir oteldir; ayrıca çok sayıda özel havuzlu bungalov seçeneği de bulunur."),
         ("Klorsuz havuz nedir, neden önemlidir?","Klorsuz havuzlarda klor yerine daha nazik bir arıtma yöntemi kullanılır; göz ve cilt yanması yapmadığı için özellikle çocuklu aileler ve hassas ciltler için daha konforludur."),
-        ("Sapanca'da bungalov mu otel mi daha iyi?","Mahremiyet ve kendi havuzunuz önceliğinizse bungalov, hizmet ve zengin kahvaltıyla dengeli konfor istiyorsanız butik otel daha uygundur."),
+        ("Sapanca'da bungalov mu otel mi daha iyi?","Mahremiyet ve tek başına bir alan önceliğinizse bungalov; jakuzi keyfini hizmet, kahvaltı ve klorsuz havuzla birlikte istiyorsanız DİDİ Otel'in jakuzili odaları avantajlıdır."),
         ("Göl manzaralı oda bulabilir miyim?","Evet, DİDİ Otel'in göl ve orman manzaralı oda tipleri vardır; rezervasyonda oda yönünü belirtmeniz önerilir."),
         ("Kahvaltı konaklamaya dahil mi?","DİDİ Otel'de göl havasında serpme kahvaltı sunulur; güncel koşullar için rezervasyon sırasında teyit alabilirsiniz."),
         ("Fiyatlar ne kadar?","Fiyatlar sezona ve oda tipine göre değişir; güncel müsaitlik ve fiyat için WhatsApp üzerinden bize ulaşabilirsiniz.")],
