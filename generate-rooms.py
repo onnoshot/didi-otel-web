@@ -179,7 +179,7 @@ def foot_html(lang):
 <div><h5>{d["foot_sayfalar"]}</h5><ul><li><a href="{home_url(lang)}odalar/">{d["nav_odalar"]}</a></li><li><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a></li><li><a href="{home_url(lang)}#mare">Mare Gastro</a></li><li><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a></li><li><a href="{home_url(lang)}#galeri">{d["gal_kick"]}</a></li></ul></div>
 <div><h5>{d["nav_iletisim"]}</h5><ul><li><a href="tel:+902645921212" dir="ltr">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=K%C4%B1rkp%C4%B1nar+Sapanca%2C+Sakarya" target="_blank" rel="noopener">{d["foot_yol_tarifi"]}</a></li></ul></div>
 </div>
-<div class="foot-credits"><span>{d["foot_credit1"]}</span><span>{d["foot_credit2"]}</span></div>
+<div class="foot-credits"><a class="foot-madeby" href="https://uniqbee.com" target="_blank" rel="noopener"><span class="mb-label">{d["foot_credit1"]}</span><span class="mb-name">UniqBee<span class="mb-arrow" aria-hidden="true">&#8599;</span></span></a><span class="foot-managed">{d["foot_credit2"]}</span></div>
 <div class="foot-bot"><span>{d["foot_rights"]}</span><span>Kırkpınar · Sapanca · Sakarya</span></div>
 </div></footer>
 <a class="wa" href="https://wa.me/905331350888?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.8-1.4.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
@@ -271,7 +271,7 @@ def build(meta, lang):
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps(crumb_ld,ensure_ascii=False)}</script>
-<link rel="stylesheet" href="/css/site.css?v=11">
+<link rel="stylesheet" href="/css/site.css?v=12">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->

@@ -249,6 +249,8 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 @media(max-width:600px){
 .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:30px 18px;text-align:center}
 .gal{columns:1}.foot-grid{grid-template-columns:1fr}
+.foot-credits{flex-direction:column;align-items:center;text-align:center;gap:20px}
+.foot-bot{flex-direction:column;align-items:center;text-align:center;gap:9px}
 .nav .btn-line{display:none}
 .hero-cta{width:100%}.hero-cta .btn{flex:1;justify-content:center}
 .book-card{padding:10px;grid-template-columns:1fr}.book-f{border-right:0;border-bottom:1px solid var(--line2)}
@@ -292,9 +294,18 @@ width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:g
 @media(max-width:560px){.rgal{grid-template-columns:repeat(2,1fr);gap:10px}.others{grid-template-columns:1fr 1fr}.rmeta-row{gap:16px}}
 
 /* footer credits (ajans + otelyonet) */
-.foot-credits{display:flex;justify-content:space-between;gap:10px 30px;flex-wrap:wrap;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(244,240,232,.55)}
-.foot-credits a{color:rgba(244,240,232,.85);text-decoration:underline;text-underline-offset:2px;transition:color .3s}
-.foot-credits+.foot-bot{border-top:0;padding-top:16px}
+.foot-credits{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-top:30px;margin-top:12px;border-top:1px solid rgba(255,255,255,.09)}
+.foot-managed{font-size:12.5px;color:rgba(244,240,232,.42);line-height:1.6}
+.foot-managed a{color:rgba(244,240,232,.62);text-decoration:none;border-bottom:1px solid rgba(244,240,232,.22);transition:color .3s,border-color .3s}
+.foot-managed a:hover{color:var(--bone);border-color:var(--bone)}
+.foot-credits+.foot-bot{border-top:0;padding-top:18px}
+.foot-madeby{display:inline-flex;align-items:center;gap:11px;padding:7px 8px 7px 15px;border:1px solid rgba(201,176,137,.30);border-radius:999px;background:rgba(201,176,137,.05);text-decoration:none;transition:transform .35s cubic-bezier(.2,.7,.3,1),background .35s,border-color .35s,box-shadow .35s}
+.foot-madeby .mb-label{font-size:9.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(244,240,232,.48);white-space:nowrap}
+.foot-madeby .mb-name{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;letter-spacing:.01em;color:var(--bone)}
+.foot-madeby .mb-arrow{display:grid;place-items:center;width:21px;height:21px;border-radius:50%;background:var(--sand);color:var(--ink);font-size:11px;font-weight:800;transition:transform .35s cubic-bezier(.2,.7,.3,1),background .35s}
+.foot-madeby:hover{border-color:rgba(201,176,137,.7);background:rgba(201,176,137,.11);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.foot-madeby:hover .mb-arrow{background:var(--sand2);transform:translate(2px,-2px)}
+.foot-madeby:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
 
 /* ── blog ── */
 .blog-hero{padding:150px 0 40px;text-align:center}
@@ -602,7 +613,7 @@ transition:box-shadow .5s var(--ease),border-color .5s var(--ease)}
 .crumb a:hover{opacity:1}
 .rgal a:hover img{transform:scale(1.05)}
 .ocard:hover img{transform:scale(1.06)}
-.foot-credits a:hover{color:#fff}
+.foot-managed a:hover{color:#fff}
 .bcard:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(26,25,22,.12)}
 .bcard:hover .bcard-img img{transform:scale(1.05)}
 .art-cta .btn-fill:hover{background:var(--bone)}
