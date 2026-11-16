@@ -18,7 +18,7 @@ SEO = 10 mavi linkte sırala. GEO/AEO = AI'ın cevabı yazarken ALINTILADIĞI ka
 ## Hotel JSON-LD iskelet (anahtar alanlar)
 @type:Hotel, name, url, logo, image[], description, telephone, email, priceRange, currenciesAccepted,
 starRating:{@type:Rating,ratingValue:5}, checkinTime:"14:00", checkoutTime:"12:00", numberOfRooms,
-address:PostalAddress(Sapanca/Sakarya/54600/TR), geo:GeoCoordinates(40.6906,30.2628), hasMap,
+address:PostalAddress(Sapanca/Sakarya/54600/TR), geo:GeoCoordinates(40.7002438,30.222254), hasMap,
 amenityFeature:[LocationFeatureSpecification{name,value:true}...] (WiFi, Havuz, Restoran, Göl Manzarası, Otopark, Kahvaltı, Toplantı Salonu, Bar),
 makesOffer:Offer(TRY fiyat), containsPlace:[HotelRoom{name,description,occupancy:QuantitativeValue,bed:BedDetails{typeOfBed,numberOfBeds},amenityFeature}],
 sameAs:[instagram, facebook, tripadvisor, google maps]

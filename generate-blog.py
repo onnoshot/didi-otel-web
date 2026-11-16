@@ -40,7 +40,7 @@ FOOT = '''<footer class="foot"><div class="wrap">
 <div class="foot-grid">
 <div><img src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><p>Kırkpınar Sapanca'da göl ve orman arasında butik bir konaklama. Sapanca'nın tek klorsuz havuzu ve Mare Gastro restoranıyla.</p></div>
 <div><h5>Sayfalar</h5><ul><li><a href="/#odalar">Odalar</a></li><li><a href="/#mare">Mare Gastro</a></li><li><a href="/#konum">Konum</a></li><li><a href="/blog/">Blog</a></li><li><a href="/#galeri">Galeri</a></li></ul></div>
-<div><h5>İletişim</h5><ul><li><a href="tel:+902645921212">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=K%C4%B1rkp%C4%B1nar+Sapanca%2C+Sakarya" target="_blank" rel="noopener">Yol Tarifi</a></li></ul></div>
+<div><h5>İletişim</h5><ul><li><a href="tel:+902645921212">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=40.7002438%2C30.222254" target="_blank" rel="noopener">Yol Tarifi</a></li></ul></div>
 </div>
 <div class="foot-credits"><a class="foot-madeby" href="https://uniqbee.com" target="_blank" rel="noopener"><img class="mb-ico" src="/assets/brand/uniqbee.svg" alt="UniqBee" width="22" height="22"><span class="mb-name">UniqBee Dijital Medya Ajansı</span></a><span class="foot-managed">DİDİ Otel, <a href="https://otelyonet.com.tr/" target="_blank" rel="noopener">Otelyonet</a> sistemleri ile yönetilmektedir.</span></div>
 <div class="foot-bot"><span>© 2026 DİDİ Otel Sapanca. Tüm hakları saklıdır.</span><span>Kırkpınar · Sapanca · Sakarya</span></div>
@@ -362,7 +362,7 @@ POSTS = [
 <h2>Sapanca'da araçsız gezilir mi?</h2>
 <p>Kısmen. Göl kıyısı ve teleferik, Kırkpınar'da kalıyorsanız kısa taksi mesafesindedir; Maşukiye ve Ormanya da taksiyle 15 dakika civarındadır. Kartepe, Poyrazlar Gölü ve Kuzuluk gibi uzak duraklar için araç kiralamak ya da gün boyu transfer ayarlamak daha mantıklıdır. Hangi durağın ne kadar uzakta olduğunu <a href="/blog/sapancada-gezilecek-yerler/">Sapanca'da gezilecek yerler</a> rehberimizdeki tabloda bulabilirsiniz.</p>
 <h2>Yol tarifi ve rezervasyon</h2>
-<p>Kırkpınar'a gelmek için <a href="https://www.google.com/maps/dir/?api=1&destination=K%C4%B1rkp%C4%B1nar+Sapanca%2C+Sakarya" target="_blank" rel="noopener">Google Haritalar'dan rota alabilir</a> ya da varış saatinizi <a href="https://wa.me/905331350888?text=Merhaba%2C%20Sapanca%27ya%20gelece%C4%9Fim%2C%20yol%20tarifi%20ve%20m%C3%BCsaitlik%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> yazarak tarifi doğrudan bizden alabilirsiniz. Giriş saatimiz 14:00, çıkış saatimiz 12:00'dir; erken giriş müsaitliğe bağlıdır. Oda seçenekleri için <a href="/odalar/">odalar sayfamıza</a> göz atın.</p>
+<p>Kırkpınar'a gelmek için <a href="https://www.google.com/maps/dir/?api=1&destination=40.7002438%2C30.222254" target="_blank" rel="noopener">Google Haritalar'dan rota alabilir</a> ya da varış saatinizi <a href="https://wa.me/905331350888?text=Merhaba%2C%20Sapanca%27ya%20gelece%C4%9Fim%2C%20yol%20tarifi%20ve%20m%C3%BCsaitlik%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">WhatsApp'tan</a> yazarak tarifi doğrudan bizden alabilirsiniz. Giriş saatimiz 14:00, çıkış saatimiz 12:00'dir; erken giriş müsaitliğe bağlıdır. Oda seçenekleri için <a href="/odalar/">odalar sayfamıza</a> göz atın.</p>
 """,
  "sources":[("Gebze–Adapazarı bölgesel tren saatleri (e-Yaşam Rehberi, 17.08.2026)","https://e-yasamrehberi.com/tren-saatleri/bolgesel-trenler/gebze-adapazari-tren-saatleri.html"),
             ("İstanbul–Sakarya (Arifiye) hızlı tren saatleri (e-Yaşam Rehberi, 17.10.2026)","https://www.e-yasamrehberi.com/tren-saatleri/anahat-trenleri/istanbul-sakarya-hizli-tren-saatleri.html"),
@@ -559,7 +559,7 @@ POSTS = [
 </ul>
 <p>Mare Gastro'da yer ayırtmak için <a href="https://wa.me/905331350888?text=Mare%20Gastro%20rezervasyonu%20yapmak%20istiyorum.">WhatsApp'tan</a> ulaşabilirsiniz.</p>
 """,
- "faq":[("DİDİ Otel'de kahvaltı dahil mi?","Evet, tüm konaklamalara zengin serpme kahvaltı dahildir."),
+ "faq":[("DİDİ Otel'de kahvaltı dahil mi?","Evet, tüm konaklamalara tabak kahvaltı dahildir; kahvaltı otel bahçesindeki Mare Gastro'da servis edilir. Serpme kahvaltı isteyen misafirlerimize fiyat farkıyla sunulur."),
         ("Mare Gastro nerede?","Mare Gastro, DİDİ Otel'in bahçesindedir ve göl havasında Akdeniz mutfağı sunar."),
         ("Restoran rezervasyonu gerekiyor mu?","Yoğun dönemlerde yerinizi güvence altına almak için rezervasyon önerilir; WhatsApp'tan ayırtabilirsiniz.")],
 },

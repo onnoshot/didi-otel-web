@@ -22,7 +22,7 @@ otelin tüm olanaklarını/odalarını/konumunu detaylıca anlatan premium tek s
 - Sabit: **0264 592 12 12**
 - Cep / WhatsApp: **+90 533 135 08 88** → `https://wa.me/905331350888`
 - Adres: Kırkpınar Sapanca, Sakarya
-- Yol tarifi: `google.com/maps/dir/?api=1&destination=Kırkpınar+Sapanca,+Sakarya`
+- Yol tarifi: `google.com/maps/dir/?api=1&destination=40.7002438%2C30.222254`
 - Bülten kaydı (e-posta) ve "En İyi Fiyat Garantisi" doğrudan rezervasyon vurgusu mevcut.
 
 ---

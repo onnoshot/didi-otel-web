@@ -177,7 +177,7 @@ def foot_html(lang):
 <div class="foot-grid">
 <div><img src="/assets/brand/adidilogo.png" alt="DİDİ Otel Sapanca"><p>{d["foot_desc"]}</p></div>
 <div><h5>{d["foot_sayfalar"]}</h5><ul><li><a href="{home_url(lang)}odalar/">{d["nav_odalar"]}</a></li><li><a href="{home_url(lang)}#deneyim">{d["nav_deneyim"]}</a></li><li><a href="{home_url(lang)}#mare">Mare Gastro</a></li><li><a href="{home_url(lang)}#konum">{d["nav_konum"]}</a></li><li><a href="{home_url(lang)}#galeri">{d["gal_kick"]}</a></li></ul></div>
-<div><h5>{d["nav_iletisim"]}</h5><ul><li><a href="tel:+902645921212" dir="ltr">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=K%C4%B1rkp%C4%B1nar+Sapanca%2C+Sakarya" target="_blank" rel="noopener">{d["foot_yol_tarifi"]}</a></li></ul></div>
+<div><h5>{d["nav_iletisim"]}</h5><ul><li><a href="tel:+902645921212" dir="ltr">0264 592 12 12</a></li><li><a href="https://wa.me/905331350888">WhatsApp</a></li><li><a href="mailto:info@sapancadidiotel.com">info@sapancadidiotel.com</a></li><li><a href="https://www.google.com/maps/dir/?api=1&destination=40.7002438%2C30.222254" target="_blank" rel="noopener">{d["foot_yol_tarifi"]}</a></li></ul></div>
 </div>
 <div class="foot-credits"><a class="foot-madeby" href="https://uniqbee.com" target="_blank" rel="noopener"><img class="mb-ico" src="/assets/brand/uniqbee.svg" alt="UniqBee" width="22" height="22"><span class="mb-name">{d["foot_credit1"]}</span></a><span class="foot-managed">{d["foot_credit2"]}</span></div>
 <div class="foot-bot"><span>{d["foot_rights"]}</span><span>Kırkpınar · Sapanca · Sakarya</span></div>

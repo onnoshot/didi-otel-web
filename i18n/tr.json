@@ -1,10 +1,10 @@
 {
   "meta_title": "DİDİ Otel Sapanca | Kırkpınar'da Göl ve Orman Manzaralı Otel",
-  "meta_desc": "Sapanca Kırkpınar'da, göl ile orman arasında butik bir otel. Klorsuz havuz, serpme kahvaltı ve Mare Gastro restoranı ile huzurlu bir mola.",
-  "og_desc": "Kırkpınar Sapanca'da göl ve orman arasında butik bir otel. Klorsuz havuz, serpme kahvaltı ve Mare Gastro restoranı.",
+  "meta_desc": "Sapanca Kırkpınar'da, göl ile orman arasında butik bir otel. Klorsuz havuz, kahvaltı dahil konaklama ve Mare Gastro restoranı ile huzurlu bir mola.",
+  "og_desc": "Kırkpınar Sapanca'da göl ve orman arasında butik bir otel. Klorsuz havuz, kahvaltı dahil konaklama ve Mare Gastro restoranı.",
   "amenity_wifi": "Ücretsiz WiFi",
   "amenity_havuz": "Açık Havuz",
-  "amenity_kahvalti": "Serpme Kahvaltı",
+  "amenity_kahvalti": "Tabak Kahvaltı",
   "amenity_restoran": "Restoran (Mare Gastro)",
   "amenity_cabana": "Bahçe Cabana",
   "amenity_toplanti": "Toplantı Salonu",
@@ -20,7 +20,7 @@
   "faq_q2": "DİDİ Otel Sapanca merkeze ve havalimanına ne kadar uzaklıkta?",
   "faq_a2": "Otel, Sapanca merkeze 3 km, İstanbul-Ankara otoyolu Sapanca gişelerine 500 m, Sakarya merkeze 15 km ve Sabiha Gökçen Havalimanı'na yaklaşık 95 km mesafededir.",
   "faq_q3": "Kahvaltı fiyata dahil mi?",
-  "faq_a3": "Evet, tüm konaklamalara zengin serpme kahvaltı dahildir.",
+  "faq_a3": "Evet, tüm konaklamalara tabak kahvaltı dahildir; kahvaltı otel bahçesindeki Mare Gastro'da servis edilir. Serpme kahvaltı isteyen misafirlerimize fiyat farkıyla sunulur.",
   "nav_odalar": "Odalar",
   "nav_deneyim": "Deneyim",
   "nav_konum": "Konum",
@@ -136,7 +136,7 @@
   "btn_incele": "İncele",
   "btn_bu_odayi_sec": "Bu Odayı Seç",
   "exp_h2": "Günü dolu dolu yaşayın",
-  "exp_lead": "Sabah serpme kahvaltı, gün boyu havuz ve bahçe, akşam Mare Gastro'da yemek. Her an doğanın içinde.",
+  "exp_lead": "Sabah kahvaltı, gün boyu havuz ve bahçe, akşam Mare Gastro'da yemek. Her an doğanın içinde.",
   "exp_havuz_p": "Begonvillerle çevrili sezonluk havuz",
   "exp_cabana_p": "Beyaz perdeli, gölgeli dinlenme alanları",
   "exp_kahvalti_p": "Güne zengin bir sofrayla başlayın",
@@ -220,5 +220,6 @@
   "resv_err_name": "Adınızı ve soyadınızı girin.",
   "resv_err_phone": "Telefon numaranızı girin.",
   "resv_err_email": "Geçerli bir e-posta adresi girin.",
-  "resv_err_room": "Devam etmek için bir oda seçin."
+  "resv_err_room": "Devam etmek için bir oda seçin.",
+  "room_offer_note": "Güncel oda fiyatı için WhatsApp hattımızdan iletişime geçin."
 }

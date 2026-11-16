@@ -4,7 +4,7 @@
   "og_desc": "A boutique hotel between the lake and the forest in Kırkpınar, Sapanca. Chlorine-free pool, generous breakfast, and Mare Gastro restaurant.",
   "amenity_wifi": "Free WiFi",
   "amenity_havuz": "Outdoor Pool",
-  "amenity_kahvalti": "Breakfast Buffet",
+  "amenity_kahvalti": "Plated Breakfast",
   "amenity_restoran": "Restaurant (Mare Gastro)",
   "amenity_cabana": "Garden Cabana",
   "amenity_toplanti": "Meeting Room",
@@ -20,7 +20,7 @@
   "faq_q2": "How far is DİDİ Hotel Sapanca from the town centre and the airport?",
   "faq_a2": "The hotel is 3 km from Sapanca centre, 500 m from the Sapanca toll gates on the İstanbul-Ankara motorway, 15 km from Sakarya centre, and about 95 km from Sabiha Gökçen Airport.",
   "faq_q3": "Is breakfast included in the room rate?",
-  "faq_a3": "Yes, a generous breakfast buffet is included with every stay.",
+  "faq_a3": "Yes, a plated breakfast is included with every stay and is served at Mare Gastro in the hotel garden. A traditional Turkish spread breakfast is available for an extra charge.",
   "nav_odalar": "Rooms",
   "nav_deneyim": "Experience",
   "nav_konum": "Location",
@@ -220,5 +220,6 @@
   "resv_err_name": "Please enter your full name.",
   "resv_err_phone": "Please enter your phone number.",
   "resv_err_email": "Please enter a valid email address.",
-  "resv_err_room": "Please select a room to continue."
+  "resv_err_room": "Please select a room to continue.",
+  "room_offer_note": "Contact us on WhatsApp for current room rates."
 }
