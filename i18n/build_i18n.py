@@ -118,9 +118,6 @@ def mob_langs(cur):
 for l in LANGS:
     out = template
     d = strings[l]
-    out = out.replace("@@HREFLANG@@", hreflang)
-    out = out.replace("@@LANGSW@@", langsw(l))
-    out = out.replace("@@MOBLANGS@@", mob_langs(l))
     out = out.replace("@@RESVSEND@@", RESV_SEND)
     out = out.replace("@@SENDWA@@", SEND_WA)
     for key, val in d.items():
@@ -140,6 +137,10 @@ for l in LANGS:
     out = out.replace('href="%s/"' % SITE, 'href="%s"' % lang_url(l))
     out = out.replace('content="%s/"' % SITE, 'content="%s"' % lang_url(l))
     out = out.replace('"url":"%s/"' % SITE, '"url":"%s"' % lang_url(l))
+    # hreflang/dil seçici kök-URL değişiminden SONRA eklenir (aksi halde tr/x-default /<dil>/'e kayıyordu)
+    out = out.replace("@@HREFLANG@@", hreflang)
+    out = out.replace("@@LANGSW@@", langsw(l))
+    out = out.replace("@@MOBLANGS@@", mob_langs(l))
     out = out.replace('content="tr_TR"', 'content="%s"' % LOCALE[l])
     out = out.replace("'tr-TR'", "'%s'" % JSLOCALE[l])
     out = out.replace('"inLanguage":"tr"', '"inLanguage":"%s"' % l)
