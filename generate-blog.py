@@ -2444,6 +2444,14 @@ POSTS = [
 
 def slug_url(s): return f"{SITE}/blog/{s}/"
 
+# EN çevirisi olan yazılar (blog_en/<slug>.json) için tr+en+x-default hreflang. generate-blog-en.py ile eşlenir.
+EN_SLUGS = {f[:-5] for f in os.listdir(f"{ROOT}/blog_en") if f.endswith(".json")} if os.path.isdir(f"{ROOT}/blog_en") else set()
+def hl_block(slug=None):
+    if slug is not None and slug not in EN_SLUGS: return ""
+    tr = f"{SITE}/blog/" + (f"{slug}/" if slug else ""); en = f"{SITE}/en/blog/" + (f"{slug}/" if slug else "")
+    return (f'\n<link rel="alternate" hreflang="tr" href="{tr}">\n<link rel="alternate" hreflang="en" href="{en}">'
+            f'\n<link rel="alternate" hreflang="x-default" href="{tr}">')
+
 def article_ld(p):
     return {"@context":"https://schema.org","@type":"Article",
       "headline":p["title"],"description":p["desc"],
@@ -2515,7 +2523,7 @@ def build_post(p, others):
 <title>{html.escape(p.get("seo_title") or (p["title"]+" | DİDİ Otel Sapanca"),quote=False)}</title>
 <meta name="description" content="{html.escape(p["desc"])}">
 <meta name="theme-color" content="#F5F1EA">
-<link rel="canonical" href="{slug_url(p["slug"])}">
+<link rel="canonical" href="{slug_url(p["slug"])}">{hl_block(p["slug"])}
 <meta property="og:type" content="article">
 <meta property="og:title" content="{html.escape(p.get("seo_title") or p["title"])}">
 <meta property="og:description" content="{html.escape(p["desc"])}">
@@ -2592,7 +2600,7 @@ def build_index():
 <title>Blog — Sapanca Gezi ve Konaklama Rehberi | DİDİ Otel Sapanca</title>
 <meta name="description" content="Sapanca gezi rehberi, göl çevresi aktiviteler, Maşukiye ve Kartepe rotaları, konaklama ve lezzet önerileri. DİDİ Otel Sapanca blog.">
 <meta name="theme-color" content="#F5F1EA">
-<link rel="canonical" href="{SITE}/blog/">
+<link rel="canonical" href="{SITE}/blog/">{hl_block() if EN_SLUGS else ""}
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blog — Sapanca Gezi ve Konaklama Rehberi | DİDİ Otel Sapanca">
 <meta property="og:description" content="Sapanca gezi rehberi, göl çevresi aktiviteler, konaklama ve lezzet önerileri.">

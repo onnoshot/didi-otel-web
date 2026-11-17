@@ -145,6 +145,8 @@ for l in LANGS:
     out = out.replace('"inLanguage":"tr"', '"inLanguage":"%s"' % l)
     if l != "tr":
         out = out.replace('href="/odalar/', 'href="/%s/odalar/' % l)
+    if l == "en":  # İngilizce blog bölümü (generate-blog-en.py); ru/ar/de /blog/'a bakmaya devam eder
+        out = out.replace('href="/blog/"', 'href="/en/blog/"')
 
     outdir = PROJ if l == "tr" else f"{PROJ}/{l}"
     os.makedirs(outdir, exist_ok=True)
